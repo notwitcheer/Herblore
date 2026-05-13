@@ -1,0 +1,429 @@
+[
+  {
+    "slug": "magnesium-glycinate",
+    "category": "mineral",
+    "name": { "en": "Magnesium Glycinate", "fr": "Glycinate de Magnésium", "it": "Glicinato di Magnesio" },
+    "summary": {
+      "en": "A highly bioavailable form of magnesium chelated with glycine, supporting relaxation and sleep.",
+      "fr": "Une forme de magnésium hautement biodisponible chélatée avec de la glycine, favorisant la relaxation et le sommeil.",
+      "it": "Una forma di magnesio altamente biodisponibile chelata con glicina, che favorisce il rilassamento e il sonno."
+    },
+    "dosageMin": 200,
+    "dosageMax": 400,
+    "dosageUnit": "mg",
+    "bestTime": ["evening"],
+    "withFood": true,
+    "useMode": "continuous",
+    "contraindications": {
+      "en": ["Kidney disease", "Myasthenia gravis", "May interact with antibiotics and bisphosphonates"],
+      "fr": ["Maladie rénale", "Myasthénie grave", "Peut interagir avec les antibiotiques et les bisphosphonates"],
+      "it": ["Malattia renale", "Miastenia grave", "Può interagire con antibiotici e bifosfonati"]
+    },
+    "sourceRefs": ["PMID:28526403", "PMID:32272859"],
+    "isPopular": true,
+    "benefits": [
+      {
+        "benefit": { "en": "Improves sleep quality and reduces time to fall asleep", "fr": "Améliore la qualité du sommeil et réduit le temps d'endormissement", "it": "Migliora la qualità del sonno e riduce il tempo di addormentamento" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["sleep"],
+        "sourceRef": "PMID:32272859"
+      },
+      {
+        "benefit": { "en": "Reduces symptoms of anxiety and stress", "fr": "Réduit les symptômes d'anxiété et de stress", "it": "Riduce i sintomi di ansia e stress" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["stress"],
+        "sourceRef": "PMID:28526403"
+      },
+      {
+        "benefit": { "en": "Supports muscle relaxation and recovery", "fr": "Favorise la relaxation musculaire et la récupération", "it": "Favorisce il rilassamento muscolare e il recupero" },
+        "evidenceLevel": "observational",
+        "goalTags": ["recovery"]
+      }
+    ]
+  },
+  {
+    "slug": "vitamin-d3",
+    "category": "vitamin",
+    "name": { "en": "Vitamin D3", "fr": "Vitamine D3", "it": "Vitamina D3" },
+    "summary": {
+      "en": "The sunshine vitamin — essential for bone health, immunity, and mood. Most people are deficient.",
+      "fr": "La vitamine du soleil — essentielle pour les os, l'immunité et l'humeur. La plupart des gens sont carencés.",
+      "it": "La vitamina del sole — essenziale per le ossa, l'immunità e l'umore. La maggior parte delle persone è carente."
+    },
+    "dosageMin": 1000,
+    "dosageMax": 4000,
+    "dosageUnit": "IU",
+    "bestTime": ["morning"],
+    "withFood": true,
+    "useMode": "continuous",
+    "contraindications": {
+      "en": ["Hypercalcemia", "Kidney disease", "Sarcoidosis", "High doses may interact with thiazide diuretics"],
+      "fr": ["Hypercalcémie", "Maladie rénale", "Sarcoïdose", "Les doses élevées peuvent interagir avec les diurétiques thiazidiques"],
+      "it": ["Ipercalcemia", "Malattia renale", "Sarcoidosi", "Dosi elevate possono interagire con i diuretici tiazidici"]
+    },
+    "sourceRefs": ["PMID:28202713", "PMID:31405892"],
+    "isPopular": true,
+    "benefits": [
+      {
+        "benefit": { "en": "Supports immune function and reduces risk of respiratory infections", "fr": "Soutient la fonction immunitaire et réduit le risque d'infections respiratoires", "it": "Supporta la funzione immunitaria e riduce il rischio di infezioni respiratorie" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["immunity"],
+        "sourceRef": "PMID:28202713"
+      },
+      {
+        "benefit": { "en": "Essential for calcium absorption and bone mineral density", "fr": "Essentiel pour l'absorption du calcium et la densité minérale osseuse", "it": "Essenziale per l'assorbimento del calcio e la densità minerale ossea" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["joint_health"]
+      },
+      {
+        "benefit": { "en": "May improve mood and reduce symptoms of depression", "fr": "Peut améliorer l'humeur et réduire les symptômes de dépression", "it": "Può migliorare l'umore e ridurre i sintomi della depressione" },
+        "evidenceLevel": "observational",
+        "goalTags": ["stress"]
+      }
+    ]
+  },
+  {
+    "slug": "ashwagandha",
+    "category": "adaptogen",
+    "name": { "en": "Ashwagandha", "fr": "Ashwagandha", "it": "Ashwagandha" },
+    "summary": {
+      "en": "A powerful adaptogen from Ayurvedic medicine that helps the body manage stress and supports hormonal balance.",
+      "fr": "Un puissant adaptogène de la médecine ayurvédique qui aide le corps à gérer le stress et soutient l'équilibre hormonal.",
+      "it": "Un potente adattogeno della medicina ayurvedica che aiuta il corpo a gestire lo stress e supporta l'equilibrio ormonale."
+    },
+    "dosageMin": 300,
+    "dosageMax": 600,
+    "dosageUnit": "mg",
+    "bestTime": ["morning"],
+    "withFood": false,
+    "useMode": "cure",
+    "cureOnWeeks": 8,
+    "cureOffWeeks": 2,
+    "cureRationale": {
+      "en": "Adaptogens may downregulate receptor sensitivity with prolonged continuous use. Cycling 8 weeks on / 2 weeks off helps maintain efficacy.",
+      "fr": "Les adaptogènes peuvent réduire la sensibilité des récepteurs avec un usage continu prolongé. Un cycle de 8 semaines on / 2 semaines off aide à maintenir l'efficacité.",
+      "it": "Gli adattogeni possono ridurre la sensibilità dei recettori con uso continuo prolungato. Un ciclo di 8 settimane on / 2 settimane off aiuta a mantenere l'efficacia."
+    },
+    "contraindications": {
+      "en": ["Pregnancy and breastfeeding", "Thyroid disorders (may increase thyroid hormones)", "Autoimmune conditions", "May interact with sedatives and immunosuppressants"],
+      "fr": ["Grossesse et allaitement", "Troubles thyroïdiens (peut augmenter les hormones thyroïdiennes)", "Maladies auto-immunes", "Peut interagir avec les sédatifs et immunosuppresseurs"],
+      "it": ["Gravidanza e allattamento", "Disturbi tiroidei (può aumentare gli ormoni tiroidei)", "Condizioni autoimmuni", "Può interagire con sedativi e immunosoppressori"]
+    },
+    "sourceRefs": ["PMID:32021735", "PMID:23439798"],
+    "isPopular": true,
+    "benefits": [
+      {
+        "benefit": { "en": "Significantly reduces cortisol levels and perceived stress", "fr": "Réduit significativement les niveaux de cortisol et le stress perçu", "it": "Riduce significativamente i livelli di cortisolo e lo stress percepito" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["stress"],
+        "sourceRef": "PMID:23439798"
+      },
+      {
+        "benefit": { "en": "Improves sleep quality in adults with insomnia", "fr": "Améliore la qualité du sommeil chez les adultes souffrant d'insomnie", "it": "Migliora la qualità del sonno negli adulti con insonnia" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["sleep"],
+        "sourceRef": "PMID:32021735"
+      },
+      {
+        "benefit": { "en": "May enhance physical performance and muscle strength", "fr": "Peut améliorer les performances physiques et la force musculaire", "it": "Può migliorare le prestazioni fisiche e la forza muscolare" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["energy", "recovery"]
+      }
+    ]
+  },
+  {
+    "slug": "spirulina",
+    "category": "superfood",
+    "name": { "en": "Spirulina", "fr": "Spiruline", "it": "Spirulina" },
+    "summary": {
+      "en": "A nutrient-dense blue-green algae rich in protein, iron, B vitamins, and powerful antioxidants.",
+      "fr": "Une algue bleu-vert dense en nutriments, riche en protéines, fer, vitamines B et antioxydants puissants.",
+      "it": "Un'alga blu-verde ricca di nutrienti, proteine, ferro, vitamine del gruppo B e potenti antiossidanti."
+    },
+    "dosageMin": 1,
+    "dosageMax": 3,
+    "dosageUnit": "g",
+    "bestTime": ["morning"],
+    "withFood": true,
+    "useMode": "continuous",
+    "contraindications": {
+      "en": ["Autoimmune conditions (may stimulate immune system)", "Phenylketonuria (contains phenylalanine)", "May interact with immunosuppressants and anticoagulants"],
+      "fr": ["Maladies auto-immunes (peut stimuler le système immunitaire)", "Phénylcétonurie (contient de la phénylalanine)", "Peut interagir avec les immunosuppresseurs et anticoagulants"],
+      "it": ["Condizioni autoimmuni (può stimolare il sistema immunitario)", "Fenilchetonuria (contiene fenilalanina)", "Può interagire con immunosoppressori e anticoagulanti"]
+    },
+    "sourceRefs": ["PMID:27259333", "PMID:31742426"],
+    "isPopular": true,
+    "benefits": [
+      {
+        "benefit": { "en": "Reduces LDL cholesterol and triglycerides", "fr": "Réduit le cholestérol LDL et les triglycérides", "it": "Riduce il colesterolo LDL e i trigliceridi" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["longevity"],
+        "sourceRef": "PMID:27259333"
+      },
+      {
+        "benefit": { "en": "Rich source of bioavailable iron and B12 for energy", "fr": "Source riche en fer biodisponible et B12 pour l'énergie", "it": "Fonte ricca di ferro biodisponibile e B12 per l'energia" },
+        "evidenceLevel": "observational",
+        "goalTags": ["energy"]
+      },
+      {
+        "benefit": { "en": "Potent antioxidant properties (phycocyanin)", "fr": "Propriétés antioxydantes puissantes (phycocyanine)", "it": "Potenti proprietà antiossidanti (ficocianina)" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["immunity", "skin"]
+      }
+    ]
+  },
+  {
+    "slug": "omega-3-epa-dha",
+    "category": "fatty_acid",
+    "name": { "en": "Omega-3 (EPA/DHA)", "fr": "Oméga-3 (EPA/DHA)", "it": "Omega-3 (EPA/DHA)" },
+    "summary": {
+      "en": "Essential fatty acids critical for brain health, heart function, and reducing systemic inflammation.",
+      "fr": "Acides gras essentiels critiques pour la santé cérébrale, la fonction cardiaque et la réduction de l'inflammation systémique.",
+      "it": "Acidi grassi essenziali critici per la salute cerebrale, la funzione cardiaca e la riduzione dell'infiammazione sistemica."
+    },
+    "dosageMin": 1000,
+    "dosageMax": 3000,
+    "dosageUnit": "mg",
+    "bestTime": ["morning"],
+    "withFood": true,
+    "useMode": "continuous",
+    "contraindications": {
+      "en": ["Fish/shellfish allergy (for fish-derived)", "May interact with blood thinners", "High doses may increase bleeding risk before surgery"],
+      "fr": ["Allergie au poisson/crustacés (pour les dérivés de poisson)", "Peut interagir avec les anticoagulants", "Des doses élevées peuvent augmenter le risque de saignement avant une chirurgie"],
+      "it": ["Allergia al pesce/crostacei (per derivati dal pesce)", "Può interagire con anticoagulanti", "Dosi elevate possono aumentare il rischio di sanguinamento prima di un intervento"]
+    },
+    "sourceRefs": ["PMID:29494205", "PMID:30019643"],
+    "isPopular": true,
+    "benefits": [
+      {
+        "benefit": { "en": "Reduces systemic inflammation and inflammatory markers", "fr": "Réduit l'inflammation systémique et les marqueurs inflammatoires", "it": "Riduce l'infiammazione sistemica e i marcatori infiammatori" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["recovery", "joint_health"],
+        "sourceRef": "PMID:29494205"
+      },
+      {
+        "benefit": { "en": "Supports cardiovascular health and healthy triglyceride levels", "fr": "Soutient la santé cardiovasculaire et des niveaux sains de triglycérides", "it": "Supporta la salute cardiovascolare e livelli sani di trigliceridi" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["longevity"]
+      },
+      {
+        "benefit": { "en": "May support cognitive function and reduce cognitive decline", "fr": "Peut soutenir la fonction cognitive et réduire le déclin cognitif", "it": "Può supportare la funzione cognitiva e ridurre il declino cognitivo" },
+        "evidenceLevel": "observational",
+        "goalTags": ["focus"]
+      }
+    ]
+  },
+  {
+    "slug": "lions-mane",
+    "category": "mushroom",
+    "name": { "en": "Lion's Mane", "fr": "Crinière de Lion", "it": "Criniera di Leone" },
+    "summary": {
+      "en": "A medicinal mushroom that stimulates nerve growth factor (NGF) production, supporting brain health and neuroplasticity.",
+      "fr": "Un champignon médicinal qui stimule la production de facteur de croissance nerveuse (NGF), soutenant la santé cérébrale et la neuroplasticité.",
+      "it": "Un fungo medicinale che stimola la produzione del fattore di crescita nervoso (NGF), supportando la salute cerebrale e la neuroplasticità."
+    },
+    "dosageMin": 500,
+    "dosageMax": 3000,
+    "dosageUnit": "mg",
+    "bestTime": ["morning"],
+    "withFood": true,
+    "useMode": "cure",
+    "cureOnWeeks": 12,
+    "cureOffWeeks": 4,
+    "cureRationale": {
+      "en": "NGF stimulation benefits plateau after prolonged use. A 12-week on / 4-week off cycle is commonly recommended by practitioners.",
+      "fr": "Les bénéfices de la stimulation du NGF atteignent un plateau après un usage prolongé. Un cycle de 12 semaines on / 4 semaines off est couramment recommandé.",
+      "it": "I benefici della stimolazione del NGF raggiungono un plateau dopo un uso prolungato. Un ciclo di 12 settimane on / 4 settimane off è comunemente raccomandato."
+    },
+    "contraindications": {
+      "en": ["Mushroom allergy", "May interact with anticoagulants", "Caution with immunosuppressants"],
+      "fr": ["Allergie aux champignons", "Peut interagir avec les anticoagulants", "Prudence avec les immunosuppresseurs"],
+      "it": ["Allergia ai funghi", "Può interagire con anticoagulanti", "Cautela con immunosoppressori"]
+    },
+    "sourceRefs": ["PMID:24266378", "PMID:31413233"],
+    "isPopular": true,
+    "benefits": [
+      {
+        "benefit": { "en": "Stimulates nerve growth factor (NGF) synthesis in the brain", "fr": "Stimule la synthèse du facteur de croissance nerveuse (NGF) dans le cerveau", "it": "Stimola la sintesi del fattore di crescita nervoso (NGF) nel cervello" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["focus"],
+        "sourceRef": "PMID:24266378"
+      },
+      {
+        "benefit": { "en": "May improve mild cognitive impairment in older adults", "fr": "Peut améliorer les troubles cognitifs légers chez les personnes âgées", "it": "Può migliorare il deterioramento cognitivo lieve negli anziani" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["focus", "longevity"]
+      },
+      {
+        "benefit": { "en": "May reduce symptoms of anxiety and depression", "fr": "Peut réduire les symptômes d'anxiété et de dépression", "it": "Può ridurre i sintomi di ansia e depressione" },
+        "evidenceLevel": "observational",
+        "goalTags": ["stress"]
+      }
+    ]
+  },
+  {
+    "slug": "zinc",
+    "category": "mineral",
+    "name": { "en": "Zinc", "fr": "Zinc", "it": "Zinco" },
+    "summary": {
+      "en": "An essential trace mineral critical for immune function, wound healing, and protein synthesis. Best absorbed as picolinate or citrate.",
+      "fr": "Un oligo-élément essentiel crucial pour la fonction immunitaire, la cicatrisation et la synthèse protéique. Mieux absorbé sous forme de picolinate ou citrate.",
+      "it": "Un oligoelemento essenziale cruciale per la funzione immunitaria, la guarigione delle ferite e la sintesi proteica. Meglio assorbito come picolinato o citrato."
+    },
+    "dosageMin": 15,
+    "dosageMax": 30,
+    "dosageUnit": "mg",
+    "bestTime": ["evening"],
+    "withFood": true,
+    "useMode": "continuous",
+    "contraindications": {
+      "en": ["Doses above 40mg/day may cause copper deficiency", "May interact with antibiotics and penicillamine", "Take away from iron supplements"],
+      "fr": ["Les doses supérieures à 40mg/jour peuvent causer une carence en cuivre", "Peut interagir avec les antibiotiques et la pénicillamine", "Prendre loin des suppléments de fer"],
+      "it": ["Dosi superiori a 40mg/giorno possono causare carenza di rame", "Può interagire con antibiotici e penicillamina", "Assumere lontano dagli integratori di ferro"]
+    },
+    "sourceRefs": ["PMID:28515951", "PMID:33085924"],
+    "isPopular": true,
+    "benefits": [
+      {
+        "benefit": { "en": "Reduces duration of common cold when taken within 24h of symptom onset", "fr": "Réduit la durée du rhume lorsqu'il est pris dans les 24h suivant l'apparition des symptômes", "it": "Riduce la durata del raffreddore se assunto entro 24h dall'insorgenza dei sintomi" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["immunity"],
+        "sourceRef": "PMID:28515951"
+      },
+      {
+        "benefit": { "en": "Supports testosterone production and reproductive health", "fr": "Soutient la production de testostérone et la santé reproductive", "it": "Supporta la produzione di testosterone e la salute riproduttiva" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["energy", "recovery"]
+      },
+      {
+        "benefit": { "en": "May improve skin health and reduce acne severity", "fr": "Peut améliorer la santé de la peau et réduire la sévérité de l'acné", "it": "Può migliorare la salute della pelle e ridurre la gravità dell'acne" },
+        "evidenceLevel": "observational",
+        "goalTags": ["skin"]
+      }
+    ]
+  },
+  {
+    "slug": "l-theanine",
+    "category": "amino_acid",
+    "name": { "en": "L-Theanine", "fr": "L-Théanine", "it": "L-Teanina" },
+    "summary": {
+      "en": "An amino acid found in green tea that promotes calm focus without drowsiness. Synergizes with caffeine.",
+      "fr": "Un acide aminé présent dans le thé vert qui favorise une concentration calme sans somnolence. Synergie avec la caféine.",
+      "it": "Un amminoacido presente nel tè verde che promuove una concentrazione calma senza sonnolenza. Sinergia con la caffeina."
+    },
+    "dosageMin": 100,
+    "dosageMax": 400,
+    "dosageUnit": "mg",
+    "bestTime": ["morning", "afternoon"],
+    "withFood": false,
+    "useMode": "continuous",
+    "contraindications": {
+      "en": ["Generally very well tolerated", "May enhance effects of blood pressure medications"],
+      "fr": ["Généralement très bien toléré", "Peut renforcer les effets des médicaments contre l'hypertension"],
+      "it": ["Generalmente molto ben tollerata", "Può potenziare gli effetti dei farmaci per la pressione sanguigna"]
+    },
+    "sourceRefs": ["PMID:30580081", "PMID:21040626"],
+    "isPopular": true,
+    "benefits": [
+      {
+        "benefit": { "en": "Increases alpha brain wave activity, promoting relaxed alertness", "fr": "Augmente l'activité des ondes cérébrales alpha, favorisant une vigilance détendue", "it": "Aumenta l'attività delle onde cerebrali alfa, promuovendo una vigilanza rilassata" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["focus", "stress"],
+        "sourceRef": "PMID:30580081"
+      },
+      {
+        "benefit": { "en": "Improves attention and reaction time when combined with caffeine", "fr": "Améliore l'attention et le temps de réaction en combinaison avec la caféine", "it": "Migliora l'attenzione e il tempo di reazione se combinata con caffeina" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["focus"],
+        "sourceRef": "PMID:21040626"
+      },
+      {
+        "benefit": { "en": "May improve sleep quality without causing daytime drowsiness", "fr": "Peut améliorer la qualité du sommeil sans causer de somnolence diurne", "it": "Può migliorare la qualità del sonno senza causare sonnolenza diurna" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["sleep"]
+      }
+    ]
+  },
+  {
+    "slug": "turmeric-curcumin",
+    "category": "herb",
+    "name": { "en": "Turmeric / Curcumin", "fr": "Curcuma / Curcumine", "it": "Curcuma / Curcumina" },
+    "summary": {
+      "en": "A potent anti-inflammatory compound from turmeric root. Requires piperine (black pepper) or lipid formulation for absorption.",
+      "fr": "Un puissant composé anti-inflammatoire issu de la racine de curcuma. Nécessite de la pipérine (poivre noir) ou une formulation lipidique pour l'absorption.",
+      "it": "Un potente composto antinfiammatorio dalla radice di curcuma. Richiede piperina (pepe nero) o formulazione lipidica per l'assorbimento."
+    },
+    "dosageMin": 500,
+    "dosageMax": 1500,
+    "dosageUnit": "mg",
+    "bestTime": ["morning"],
+    "withFood": true,
+    "useMode": "continuous",
+    "contraindications": {
+      "en": ["May interact with blood thinners (anticoagulants)", "Gallbladder disease or bile duct obstruction", "May lower blood sugar — caution with diabetes medications", "Avoid high doses before surgery"],
+      "fr": ["Peut interagir avec les anticoagulants", "Maladie de la vésicule biliaire ou obstruction des voies biliaires", "Peut abaisser la glycémie — prudence avec les médicaments pour le diabète", "Éviter les doses élevées avant une chirurgie"],
+      "it": ["Può interagire con anticoagulanti", "Malattia della cistifellea o ostruzione delle vie biliari", "Può abbassare la glicemia — cautela con farmaci per il diabete", "Evitare dosi elevate prima di un intervento"]
+    },
+    "sourceRefs": ["PMID:29065496", "PMID:28924905"],
+    "isPopular": true,
+    "benefits": [
+      {
+        "benefit": { "en": "Reduces markers of systemic inflammation (comparable to some NSAIDs)", "fr": "Réduit les marqueurs d'inflammation systémique (comparable à certains AINS)", "it": "Riduce i marcatori di infiammazione sistemica (comparabile ad alcuni FANS)" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["recovery", "joint_health"],
+        "sourceRef": "PMID:29065496"
+      },
+      {
+        "benefit": { "en": "May reduce joint pain and improve function in osteoarthritis", "fr": "Peut réduire les douleurs articulaires et améliorer la fonction dans l'arthrose", "it": "Può ridurre il dolore articolare e migliorare la funzione nell'osteoartrosi" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["joint_health"]
+      },
+      {
+        "benefit": { "en": "Potent antioxidant that may support brain health and neuroplasticity", "fr": "Puissant antioxydant qui peut soutenir la santé cérébrale et la neuroplasticité", "it": "Potente antiossidante che può supportare la salute cerebrale e la neuroplasticità" },
+        "evidenceLevel": "observational",
+        "goalTags": ["focus", "longevity"]
+      }
+    ]
+  },
+  {
+    "slug": "probiotics-lactobacillus",
+    "category": "probiotic",
+    "name": { "en": "Probiotics (Lactobacillus)", "fr": "Probiotiques (Lactobacillus)", "it": "Probiotici (Lactobacillus)" },
+    "summary": {
+      "en": "Beneficial bacteria that support gut microbiome diversity, digestive health, and immune function.",
+      "fr": "Bactéries bénéfiques qui soutiennent la diversité du microbiome intestinal, la santé digestive et la fonction immunitaire.",
+      "it": "Batteri benefici che supportano la diversità del microbioma intestinale, la salute digestiva e la funzione immunitaria."
+    },
+    "dosageMin": 10,
+    "dosageMax": 50,
+    "dosageUnit": "B CFU",
+    "bestTime": ["morning"],
+    "withFood": false,
+    "useMode": "continuous",
+    "contraindications": {
+      "en": ["Severely immunocompromised individuals", "Short bowel syndrome", "Central venous catheters", "May cause temporary bloating during first week"],
+      "fr": ["Personnes sévèrement immunodéprimées", "Syndrome de l'intestin court", "Cathéters veineux centraux", "Peut causer des ballonnements temporaires la première semaine"],
+      "it": ["Individui gravemente immunocompromessi", "Sindrome dell'intestino corto", "Cateteri venosi centrali", "Può causare gonfiore temporaneo durante la prima settimana"]
+    },
+    "sourceRefs": ["PMID:28639575", "PMID:30673668"],
+    "isPopular": true,
+    "benefits": [
+      {
+        "benefit": { "en": "Improves digestive health and reduces IBS symptoms", "fr": "Améliore la santé digestive et réduit les symptômes du SII", "it": "Migliora la salute digestiva e riduce i sintomi dell'IBS" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["digestion"],
+        "sourceRef": "PMID:28639575"
+      },
+      {
+        "benefit": { "en": "Supports immune system function and reduces infection frequency", "fr": "Soutient la fonction du système immunitaire et réduit la fréquence des infections", "it": "Supporta la funzione del sistema immunitario e riduce la frequenza delle infezioni" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["immunity"]
+      },
+      {
+        "benefit": { "en": "May improve skin conditions like eczema and acne via gut-skin axis", "fr": "Peut améliorer les conditions cutanées comme l'eczéma et l'acné via l'axe intestin-peau", "it": "Può migliorare le condizioni della pelle come eczema e acne tramite l'asse intestino-pelle" },
+        "evidenceLevel": "observational",
+        "goalTags": ["skin"]
+      }
+    ]
+  }
+]
