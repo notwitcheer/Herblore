@@ -5,6 +5,7 @@ import { useRouter } from "expo-router";
 import { useTranslation } from "react-i18next";
 import Animated, { FadeInDown, FadeIn } from "react-native-reanimated";
 import { colors, spacing, radii, typography } from "@/lib/constants";
+import { localizedField, type SupportedLocale } from "@/lib/types";
 import { useStackContext } from "@/lib/StackContext";
 import { generateTimeline } from "@/lib/timeline-engine";
 
@@ -18,7 +19,8 @@ const BLOCK_ICONS: Record<string, string> = {
 };
 
 export default function PreviewScreen() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const locale = i18n.language as SupportedLocale;
   const router = useRouter();
   const { items } = useStackContext();
   const timeline = useMemo(() => generateTimeline(items), [items]);
@@ -69,7 +71,7 @@ export default function PreviewScreen() {
                   <View key={i} style={styles.previewItem}>
                     <View style={styles.previewItemDot} />
                     <Text style={styles.previewItemName} numberOfLines={1}>
-                      {item.aliment.name_en}
+                      {localizedField(item.aliment, "name", locale)}
                     </Text>
                     <View style={styles.blurOverlay}>
                       <Text style={styles.blurText}>

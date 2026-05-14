@@ -3,11 +3,11 @@ import Animated, {
   useAnimatedStyle,
   useSharedValue,
   withSpring,
-  withTiming,
   FadeInDown,
 } from "react-native-reanimated";
 import { useTranslation } from "react-i18next";
 import { colors, spacing, radii, typography } from "@/lib/constants";
+import { localizedField, type SupportedLocale } from "@/lib/types";
 import type { TimeBlock as TimeBlockType, TimelineItem } from "@/lib/types";
 
 const AnimatedPressable = Animated.createAnimatedComponent(Pressable);
@@ -45,7 +45,8 @@ export function TimelineBlock({
   onToggle,
   index = 0,
 }: TimelineBlockProps) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const locale = i18n.language as SupportedLocale;
   const scale = useSharedValue(1);
 
   const animatedStyle = useAnimatedStyle(() => ({
@@ -98,7 +99,7 @@ export function TimelineBlock({
                 style={[styles.itemName, taken && styles.textTaken]}
                 numberOfLines={1}
               >
-                {item.aliment.name_en}
+                {localizedField(item.aliment, "name", locale)}
               </Text>
               {item.dosage != null && (
                 <Text style={styles.itemDosage}>
