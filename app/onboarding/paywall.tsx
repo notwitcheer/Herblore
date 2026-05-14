@@ -9,10 +9,10 @@ import { colors, spacing, radii, typography } from "@/lib/constants";
 type Plan = "weekly" | "yearly";
 
 const FEATURE_KEYS = [
-  { icon: "📚", key: "feature1" },
-  { icon: "⏰", key: "feature2" },
-  { icon: "⚡", key: "feature3" },
-  { icon: "🎯", key: "feature4" },
+  { icon: "📜", key: "feature1" },
+  { icon: "🕯️", key: "feature2" },
+  { icon: "⚗️", key: "feature3" },
+  { icon: "🔮", key: "feature4" },
 ];
 
 export default function PaywallScreen() {
@@ -36,10 +36,14 @@ export default function PaywallScreen() {
 
           <Text style={styles.brandIcon}>🌿</Text>
           <Text style={styles.title}>{t("paywall.title")}</Text>
+          <View style={styles.ornamentDivider}>
+            <View style={styles.ornamentLine} />
+            <Text style={styles.ornamentDot}>✦</Text>
+            <View style={styles.ornamentLine} />
+          </View>
           <Text style={styles.subtitle}>{t("paywall.subtitle")}</Text>
         </Animated.View>
 
-        {/* Features */}
         <Animated.View
           entering={FadeInDown.delay(200).duration(400).springify()}
           style={styles.features}
@@ -54,7 +58,6 @@ export default function PaywallScreen() {
           ))}
         </Animated.View>
 
-        {/* Plans */}
         <Animated.View
           entering={FadeInDown.delay(400).duration(400).springify()}
           style={styles.plans}
@@ -90,7 +93,6 @@ export default function PaywallScreen() {
           </Pressable>
         </Animated.View>
 
-        {/* Social proof */}
         <Animated.View
           entering={FadeInDown.delay(500).duration(400)}
           style={styles.socialProof}
@@ -108,7 +110,6 @@ export default function PaywallScreen() {
         <Pressable
           style={styles.ctaButton}
           onPress={() => {
-            // TODO: RevenueCat purchase flow
             router.replace("/(tabs)/library");
           }}
         >
@@ -159,7 +160,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.border,
   },
   progressDotActive: {
-    backgroundColor: colors.primary,
+    backgroundColor: colors.accent,
     width: 24,
     borderRadius: 4,
   },
@@ -167,16 +168,31 @@ const styles = StyleSheet.create({
     width: 8,
     height: 8,
     borderRadius: 4,
-    backgroundColor: colors.primaryLight,
+    backgroundColor: colors.accentWarm,
   },
   brandIcon: {
     fontSize: 56,
   },
   title: {
     ...typography.h1,
-    color: colors.textPrimary,
+    color: colors.parchment,
     textAlign: "center",
     letterSpacing: -0.5,
+  },
+  ornamentDivider: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: spacing.sm,
+    width: "60%",
+  },
+  ornamentLine: {
+    flex: 1,
+    height: 1,
+    backgroundColor: colors.border,
+  },
+  ornamentDot: {
+    fontSize: 10,
+    color: colors.accent,
   },
   subtitle: {
     ...typography.body,
@@ -218,8 +234,8 @@ const styles = StyleSheet.create({
     borderColor: colors.border,
   },
   planCardSelected: {
-    borderColor: colors.primary,
-    backgroundColor: "rgba(45, 106, 79, 0.04)",
+    borderColor: colors.accent,
+    backgroundColor: "rgba(212, 168, 71, 0.06)",
   },
   savingsBadge: {
     backgroundColor: colors.accent,
@@ -231,7 +247,7 @@ const styles = StyleSheet.create({
   },
   savingsText: {
     ...typography.label,
-    color: "#FFFFFF",
+    color: colors.background,
     textTransform: "uppercase",
   },
   planName: {
@@ -243,7 +259,7 @@ const styles = StyleSheet.create({
   },
   planPrice: {
     ...typography.h2,
-    color: colors.textPrimary,
+    color: colors.parchment,
     letterSpacing: -0.5,
   },
   planBreakdown: {
@@ -251,10 +267,12 @@ const styles = StyleSheet.create({
     color: colors.textTertiary,
   },
   socialProof: {
-    backgroundColor: "rgba(45, 106, 79, 0.04)",
+    backgroundColor: "rgba(212, 168, 71, 0.06)",
     borderRadius: radii.lg,
     padding: spacing.md,
     alignItems: "center",
+    borderWidth: 1,
+    borderColor: "rgba(212, 168, 71, 0.12)",
   },
   socialText: {
     ...typography.caption,
@@ -270,20 +288,20 @@ const styles = StyleSheet.create({
     gap: spacing.sm,
   },
   ctaButton: {
-    backgroundColor: colors.primary,
+    backgroundColor: colors.accent,
     paddingVertical: spacing.md + 4,
     borderRadius: radii.lg,
     alignItems: "center",
     width: "100%",
-    shadowColor: colors.primaryDark,
+    shadowColor: colors.accent,
     shadowOffset: { width: 0, height: 6 },
-    shadowOpacity: 0.25,
+    shadowOpacity: 0.3,
     shadowRadius: 12,
     elevation: 6,
   },
   ctaText: {
     ...typography.bodyBold,
-    color: "#FFFFFF",
+    color: colors.background,
     fontSize: 17,
     letterSpacing: 0.3,
   },
@@ -293,7 +311,7 @@ const styles = StyleSheet.create({
   },
   restoreText: {
     ...typography.caption,
-    color: colors.primary,
+    color: colors.accent,
     textDecorationLine: "underline",
   },
   legal: {

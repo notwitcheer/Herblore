@@ -11,7 +11,6 @@ import Animated, {
   useAnimatedStyle,
   useSharedValue,
   withTiming,
-  FadeIn,
 } from "react-native-reanimated";
 import { colors, spacing, radii, typography } from "@/lib/constants";
 
@@ -42,7 +41,7 @@ export function SearchBar({
   const borderOpacity = useSharedValue(0);
 
   const animatedBorder = useAnimatedStyle(() => ({
-    borderColor: `rgba(45, 106, 79, ${borderOpacity.value})`,
+    borderColor: `rgba(212, 168, 71, ${borderOpacity.value * 0.6})`,
   }));
 
   const handleFocus = () => {
@@ -70,6 +69,7 @@ export function SearchBar({
           onBlur={handleBlur}
           returnKeyType="search"
           clearButtonMode="while-editing"
+          keyboardAppearance="dark"
         />
       </Animated.View>
 
@@ -115,17 +115,13 @@ const styles = StyleSheet.create({
     borderRadius: radii.lg,
     paddingHorizontal: spacing.md,
     height: 48,
-    borderWidth: 1.5,
+    borderWidth: 1,
     borderColor: colors.border,
-    shadowColor: "#1B4332",
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.04,
-    shadowRadius: 8,
-    elevation: 2,
   },
   icon: {
     fontSize: 16,
     marginRight: spacing.sm,
+    opacity: 0.7,
   },
   input: {
     flex: 1,
@@ -146,14 +142,14 @@ const styles = StyleSheet.create({
     borderColor: colors.border,
   },
   filterChipActive: {
-    backgroundColor: colors.primaryDark,
-    borderColor: colors.primaryDark,
+    backgroundColor: colors.accent,
+    borderColor: colors.accent,
   },
   filterLabel: {
     ...typography.captionBold,
     color: colors.textSecondary,
   },
   filterLabelActive: {
-    color: "#FFFFFF",
+    color: colors.background,
   },
 });

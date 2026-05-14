@@ -208,14 +208,14 @@ const styles = StyleSheet.create({
     marginBottom: spacing.md,
   },
   browseButton: {
-    backgroundColor: colors.primary,
+    backgroundColor: colors.accent,
     paddingHorizontal: spacing.lg,
     paddingVertical: spacing.md,
     borderRadius: radii.lg,
   },
   browseButtonText: {
     ...typography.bodyBold,
-    color: "#FFFFFF",
+    color: colors.background,
   },
   interactionsSection: {
     gap: spacing.md,
@@ -235,7 +235,9 @@ const styles = StyleSheet.create({
     borderRadius: radii.lg,
     padding: spacing.md,
     gap: spacing.md,
-    shadowColor: "#1B4332",
+    borderWidth: 1,
+    borderColor: colors.border,
+    shadowColor: colors.accentWarm,
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.06,
     shadowRadius: 12,
@@ -283,7 +285,7 @@ const styles = StyleSheet.create({
     color: colors.textSecondary,
   },
   removeButton: {
-    backgroundColor: "rgba(220, 38, 38, 0.06)",
+    backgroundColor: "rgba(196, 92, 74, 0.10)",
   },
   removeText: {
     ...typography.captionBold,

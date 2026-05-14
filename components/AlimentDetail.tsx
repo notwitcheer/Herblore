@@ -3,24 +3,24 @@ import Animated, { FadeInDown, FadeIn } from "react-native-reanimated";
 import { useTranslation } from "react-i18next";
 import { colors, spacing, radii, typography } from "@/lib/constants";
 import { localizedField } from "@/lib/types";
-import type { Aliment, SupportedLocale, Interaction } from "@/lib/types";
+import type { Aliment, SupportedLocale } from "@/lib/types";
 import { EvidenceBadge } from "./EvidenceBadge";
 import { InteractionBadge } from "./InteractionBadge";
 
 const CATEGORY_COLORS: Record<string, string> = {
-  vitamin: "#3B82F6",
-  mineral: "#6366F1",
-  amino_acid: "#8B5CF6",
-  adaptogen: "#059669",
-  mushroom: "#92400E",
-  superfood: "#16A34A",
-  herb: "#2D6A4F",
-  spice: "#DC2626",
-  fermented_food: "#D97706",
-  functional_food: "#0891B2",
-  fatty_acid: "#0EA5E9",
-  probiotic: "#7C3AED",
-  specialty_compound: "#4F46E5",
+  vitamin: "#6B9E78",
+  mineral: "#7B8FA8",
+  amino_acid: "#9E7CB5",
+  adaptogen: "#5BA66B",
+  mushroom: "#C4813D",
+  superfood: "#6B9E78",
+  herb: "#4A7C59",
+  spice: "#C45C4A",
+  fermented_food: "#D4A847",
+  functional_food: "#7BA8A0",
+  fatty_acid: "#7B8FA8",
+  probiotic: "#9E7CB5",
+  specialty_compound: "#7B8FA8",
 };
 
 interface AlimentDetailProps {
@@ -43,7 +43,10 @@ function Section({
       entering={FadeInDown.delay(delay).duration(400).springify()}
       style={styles.section}
     >
-      <Text style={styles.sectionTitle}>{title}</Text>
+      <View style={styles.sectionHeader}>
+        <Text style={styles.sectionTitle}>{title}</Text>
+        <View style={styles.sectionRule} />
+      </View>
       {children}
     </Animated.View>
   );
@@ -71,15 +74,14 @@ export function AlimentDetail({
       contentContainerStyle={styles.contentContainer}
       showsVerticalScrollIndicator={false}
     >
-      {/* Hero */}
       <Animated.View
         entering={FadeIn.duration(500)}
-        style={[styles.hero, { backgroundColor: `${categoryColor}08` }]}
+        style={styles.hero}
       >
         <View
           style={[
             styles.categoryPill,
-            { backgroundColor: `${categoryColor}15` },
+            { backgroundColor: `${categoryColor}18`, borderColor: `${categoryColor}30` },
           ]}
         >
           <Text style={[styles.categoryText, { color: categoryColor }]}>
@@ -88,6 +90,13 @@ export function AlimentDetail({
         </View>
 
         <Text style={styles.heroName}>{name}</Text>
+
+        <View style={styles.ornamentDivider}>
+          <View style={styles.ornamentLine} />
+          <Text style={styles.ornamentDot}>✦</Text>
+          <View style={styles.ornamentLine} />
+        </View>
+
         <Text style={styles.heroSummary}>{summary}</Text>
 
         {aliment.dosage_min != null && (
@@ -127,7 +136,6 @@ export function AlimentDetail({
         </View>
       </Animated.View>
 
-      {/* Cure info */}
       {aliment.use_mode === "cure" && (
         <Section title={t("library.cureRationale")} delay={100}>
           <View style={styles.cureCard}>
@@ -149,7 +157,6 @@ export function AlimentDetail({
         </Section>
       )}
 
-      {/* Benefits */}
       {aliment.benefits && aliment.benefits.length > 0 && (
         <Section title={t("library.benefits")} delay={200}>
           <View style={styles.benefitsList}>
@@ -176,7 +183,6 @@ export function AlimentDetail({
         </Section>
       )}
 
-      {/* Interactions */}
       {aliment.interactions && aliment.interactions.length > 0 && (
         <Section title={t("library.interactions")} delay={300}>
           <View style={styles.interactionsList}>
@@ -197,7 +203,6 @@ export function AlimentDetail({
         </Section>
       )}
 
-      {/* Contraindications */}
       {contraindications.length > 0 && (
         <Section title={t("library.contraindications")} delay={400}>
           <View style={styles.contraindicationsList}>
@@ -211,7 +216,6 @@ export function AlimentDetail({
         </Section>
       )}
 
-      {/* Sources */}
       {aliment.source_refs.length > 0 && (
         <Section title={t("library.sources")} delay={500}>
           <View style={styles.sourcesList}>
@@ -224,7 +228,6 @@ export function AlimentDetail({
         </Section>
       )}
 
-      {/* Add to Stack button */}
       {onAddToStack && (
         <Animated.View
           entering={FadeInDown.delay(600).duration(400).springify()}
@@ -263,14 +266,18 @@ const styles = StyleSheet.create({
     padding: spacing.lg,
     paddingTop: spacing.md,
     gap: spacing.sm,
+    backgroundColor: colors.backgroundAlt,
     borderBottomLeftRadius: radii.xl,
     borderBottomRightRadius: radii.xl,
+    borderBottomWidth: 1,
+    borderBottomColor: colors.border,
   },
   categoryPill: {
     alignSelf: "flex-start",
     paddingHorizontal: spacing.sm + 2,
     paddingVertical: spacing.xs,
     borderRadius: radii.full,
+    borderWidth: 1,
   },
   categoryText: {
     ...typography.label,
@@ -278,8 +285,23 @@ const styles = StyleSheet.create({
   },
   heroName: {
     ...typography.h1,
-    color: colors.textPrimary,
+    color: colors.parchment,
     letterSpacing: -0.5,
+  },
+  ornamentDivider: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: spacing.sm,
+    marginVertical: spacing.xs,
+  },
+  ornamentLine: {
+    flex: 1,
+    height: 1,
+    backgroundColor: colors.border,
+  },
+  ornamentDot: {
+    fontSize: 10,
+    color: colors.accent,
   },
   heroSummary: {
     ...typography.body,
@@ -295,7 +317,7 @@ const styles = StyleSheet.create({
   dosageValue: {
     fontSize: 32,
     fontWeight: "800",
-    color: colors.textPrimary,
+    color: colors.accent,
     fontVariant: ["tabular-nums"],
     letterSpacing: -1,
   },
@@ -332,10 +354,20 @@ const styles = StyleSheet.create({
     paddingTop: spacing.lg,
     gap: spacing.md,
   },
+  sectionHeader: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: spacing.sm,
+  },
   sectionTitle: {
     ...typography.h3,
-    color: colors.textPrimary,
+    color: colors.parchment,
     letterSpacing: -0.2,
+  },
+  sectionRule: {
+    flex: 1,
+    height: 1,
+    backgroundColor: colors.border,
   },
   benefitsList: {
     gap: spacing.sm,
@@ -348,7 +380,7 @@ const styles = StyleSheet.create({
     padding: spacing.md,
     borderRadius: radii.md,
     borderWidth: 1,
-    borderColor: colors.divider,
+    borderColor: colors.border,
   },
   benefitContent: {
     flex: 1,
@@ -368,7 +400,7 @@ const styles = StyleSheet.create({
     ...typography.label,
     color: colors.textTertiary,
     textTransform: "uppercase",
-    backgroundColor: colors.divider,
+    backgroundColor: colors.backgroundAlt,
     paddingHorizontal: 6,
     paddingVertical: 2,
     borderRadius: radii.sm,
@@ -378,11 +410,11 @@ const styles = StyleSheet.create({
     gap: spacing.sm,
   },
   cureCard: {
-    backgroundColor: "rgba(244, 162, 97, 0.06)",
+    backgroundColor: "rgba(212, 168, 71, 0.08)",
     borderRadius: radii.md,
     padding: spacing.md,
     borderWidth: 1,
-    borderColor: "rgba(244, 162, 97, 0.15)",
+    borderColor: "rgba(212, 168, 71, 0.2)",
     gap: spacing.sm,
   },
   cureHeader: {
@@ -425,7 +457,8 @@ const styles = StyleSheet.create({
   },
   sourceRef: {
     ...typography.caption,
-    color: colors.primary,
+    color: colors.accent,
+    fontStyle: "italic",
     fontVariant: ["tabular-nums"],
   },
   ctaContainer: {
@@ -433,13 +466,13 @@ const styles = StyleSheet.create({
     paddingTop: spacing.xl,
   },
   ctaButton: {
-    backgroundColor: colors.primary,
+    backgroundColor: colors.accent,
     paddingVertical: spacing.md,
     borderRadius: radii.lg,
     alignItems: "center",
-    shadowColor: colors.primaryDark,
+    shadowColor: colors.accent,
     shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.2,
+    shadowOpacity: 0.25,
     shadowRadius: 8,
     elevation: 4,
   },
@@ -450,7 +483,7 @@ const styles = StyleSheet.create({
   },
   ctaText: {
     ...typography.bodyBold,
-    color: "#FFFFFF",
+    color: colors.background,
     letterSpacing: 0.3,
   },
   ctaTextInStack: {

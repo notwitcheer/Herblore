@@ -14,19 +14,19 @@ import { EvidenceDots } from "./EvidenceBadge";
 const AnimatedPressable = Animated.createAnimatedComponent(Pressable);
 
 const CATEGORY_COLORS: Record<string, string> = {
-  vitamin: "#3B82F6",
-  mineral: "#6366F1",
-  amino_acid: "#8B5CF6",
-  adaptogen: "#059669",
-  mushroom: "#92400E",
-  superfood: "#16A34A",
-  herb: "#2D6A4F",
-  spice: "#DC2626",
-  fermented_food: "#D97706",
-  functional_food: "#0891B2",
-  fatty_acid: "#0EA5E9",
-  probiotic: "#7C3AED",
-  specialty_compound: "#4F46E5",
+  vitamin: "#6B9E78",
+  mineral: "#7B8FA8",
+  amino_acid: "#9E7CB5",
+  adaptogen: "#5BA66B",
+  mushroom: "#C4813D",
+  superfood: "#6B9E78",
+  herb: "#4A7C59",
+  spice: "#C45C4A",
+  fermented_food: "#D4A847",
+  functional_food: "#7BA8A0",
+  fatty_acid: "#7B8FA8",
+  probiotic: "#9E7CB5",
+  specialty_compound: "#7B8FA8",
 };
 
 interface AlimentCardProps {
@@ -69,7 +69,7 @@ export function AlimentCard({
       entering={FadeInDown.delay(index * 60).duration(400).springify()}
       style={[styles.card, animatedStyle]}
     >
-      <View style={[styles.accent, { backgroundColor: categoryColor }]} />
+      <View style={[styles.accent, { backgroundColor: colors.accent }]} />
 
       <View style={styles.content}>
         <View style={styles.topRow}>
@@ -92,7 +92,7 @@ export function AlimentCard({
           <View
             style={[
               styles.categoryPill,
-              { backgroundColor: `${categoryColor}10` },
+              { backgroundColor: `${categoryColor}18`, borderColor: `${categoryColor}30` },
             ]}
           >
             <Text style={[styles.categoryText, { color: categoryColor }]}>
@@ -149,14 +149,16 @@ const styles = StyleSheet.create({
     backgroundColor: colors.surface,
     borderRadius: radii.lg,
     overflow: "hidden",
-    shadowColor: "#1B4332",
+    borderWidth: 1,
+    borderColor: colors.border,
+    shadowColor: colors.accentWarm,
     shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.06,
+    shadowOpacity: 0.08,
     shadowRadius: 12,
     elevation: 3,
   },
   accent: {
-    width: 4,
+    width: 3,
   },
   content: {
     flex: 1,
@@ -174,7 +176,7 @@ const styles = StyleSheet.create({
     gap: 2,
   },
   name: {
-    ...typography.bodyBold,
+    ...typography.h3,
     color: colors.textPrimary,
     letterSpacing: -0.2,
   },
@@ -187,6 +189,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: spacing.sm,
     paddingVertical: 3,
     borderRadius: radii.full,
+    borderWidth: 1,
   },
   categoryText: {
     ...typography.label,
@@ -216,7 +219,7 @@ const styles = StyleSheet.create({
     ...typography.label,
     color: colors.accent,
     textTransform: "uppercase",
-    backgroundColor: "rgba(244, 162, 97, 0.1)",
+    backgroundColor: "rgba(212, 168, 71, 0.12)",
     paddingHorizontal: 6,
     paddingVertical: 2,
     borderRadius: radii.sm,
@@ -224,7 +227,7 @@ const styles = StyleSheet.create({
   },
   lockOverlay: {
     ...StyleSheet.absoluteFillObject,
-    backgroundColor: "rgba(250, 250, 245, 0.7)",
+    backgroundColor: "rgba(26, 22, 18, 0.75)",
     justifyContent: "center",
     alignItems: "center",
     borderRadius: radii.lg,

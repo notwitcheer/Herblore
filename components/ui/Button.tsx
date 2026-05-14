@@ -4,7 +4,7 @@ import Animated, {
   useSharedValue,
   withSpring,
 } from "react-native-reanimated";
-import { colors, spacing, radii, typography } from "@/lib/constants";
+import { colors, spacing, radii } from "@/lib/constants";
 
 const AnimatedPressable = Animated.createAnimatedComponent(Pressable);
 
@@ -19,9 +19,9 @@ interface ButtonProps {
 
 const VARIANTS = {
   primary: {
-    bg: colors.primary,
-    text: "#FFFFFF",
-    shadow: colors.primaryDark,
+    bg: colors.accent,
+    text: colors.background,
+    shadow: colors.accent,
   },
   secondary: {
     bg: colors.surfaceElevated,
@@ -30,11 +30,11 @@ const VARIANTS = {
   },
   ghost: {
     bg: "transparent",
-    text: colors.primary,
+    text: colors.accent,
     shadow: "transparent",
   },
   danger: {
-    bg: "rgba(220, 38, 38, 0.08)",
+    bg: "rgba(196, 92, 74, 0.10)",
     text: colors.danger,
     shadow: "transparent",
   },

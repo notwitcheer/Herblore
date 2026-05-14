@@ -3,30 +3,44 @@ import { Dimensions } from "react-native";
 export const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } =
   Dimensions.get("window");
 
+export const fonts = {
+  serif: "CrimsonPro-Regular",
+  serifMedium: "CrimsonPro-Medium",
+  serifSemiBold: "CrimsonPro-SemiBold",
+  serifBold: "CrimsonPro-Bold",
+} as const;
+
 export const colors = {
-  primary: "#2D6A4F",
-  primaryLight: "#52B788",
-  primaryDark: "#1B4332",
-  accent: "#F4A261",
+  background: "#1A1612",
+  backgroundAlt: "#231E18",
+  surface: "#2A2318",
+  surfaceElevated: "#342C20",
 
-  background: "#FAFAF5",
-  surface: "#FFFFFF",
-  surfaceElevated: "#F5F5F0",
+  parchment: "#E8DCC8",
+  parchmentDark: "#C4B59A",
 
-  textPrimary: "#1A1A1A",
-  textSecondary: "#6B7280",
-  textTertiary: "#9CA3AF",
+  primary: "#4A7C59",
+  primaryLight: "#6B9E78",
+  primaryDark: "#2D5A3A",
 
-  evidenceClinical: "#16A34A",
-  evidenceObservational: "#EAB308",
-  evidenceTraditional: "#F97316",
+  accent: "#D4A847",
+  accentGlow: "#E8C56D",
+  accentWarm: "#C4813D",
 
-  danger: "#DC2626",
-  synergy: "#059669",
-  warning: "#F59E0B",
+  textPrimary: "#E8DCC8",
+  textSecondary: "#9E8E75",
+  textTertiary: "#6B5D4A",
 
-  border: "#E5E7EB",
-  divider: "#F3F4F6",
+  evidenceClinical: "#5BA66B",
+  evidenceObservational: "#D4A847",
+  evidenceTraditional: "#C4813D",
+
+  danger: "#C45C4A",
+  synergy: "#5BA66B",
+  warning: "#D4A847",
+
+  border: "#3D3428",
+  divider: "#2E271E",
 } as const;
 
 export const spacing = {
@@ -40,35 +54,56 @@ export const spacing = {
 
 export const radii = {
   sm: 6,
-  md: 12,
-  lg: 16,
-  xl: 24,
+  md: 10,
+  lg: 14,
+  xl: 22,
   full: 9999,
 } as const;
 
 export const typography = {
-  h1: { fontSize: 28, fontWeight: "700" as const, lineHeight: 34 },
-  h2: { fontSize: 22, fontWeight: "700" as const, lineHeight: 28 },
-  h3: { fontSize: 18, fontWeight: "600" as const, lineHeight: 24 },
+  h1: {
+    fontSize: 30,
+    fontFamily: fonts.serifBold,
+    lineHeight: 36,
+  },
+  h2: {
+    fontSize: 24,
+    fontFamily: fonts.serifSemiBold,
+    lineHeight: 30,
+  },
+  h3: {
+    fontSize: 19,
+    fontFamily: fonts.serifSemiBold,
+    lineHeight: 25,
+  },
   body: { fontSize: 16, fontWeight: "400" as const, lineHeight: 22 },
   bodyBold: { fontSize: 16, fontWeight: "600" as const, lineHeight: 22 },
   caption: { fontSize: 13, fontWeight: "400" as const, lineHeight: 18 },
   captionBold: { fontSize: 13, fontWeight: "600" as const, lineHeight: 18 },
-  label: { fontSize: 11, fontWeight: "600" as const, lineHeight: 14, letterSpacing: 0.5 },
-  dosage: { fontSize: 20, fontWeight: "700" as const, fontVariant: ["tabular-nums" as const] },
+  label: {
+    fontSize: 12,
+    fontFamily: fonts.serifMedium,
+    lineHeight: 16,
+    letterSpacing: 0.8,
+  },
+  dosage: {
+    fontSize: 22,
+    fontWeight: "700" as const,
+    fontVariant: ["tabular-nums" as const],
+  },
 } as const;
 
 export const GOALS = [
-  { slug: "energy", icon: "⚡", color: "#F59E0B" },
-  { slug: "sleep", icon: "🌙", color: "#6366F1" },
-  { slug: "immunity", icon: "🛡️", color: "#3B82F6" },
-  { slug: "focus", icon: "🎯", color: "#8B5CF6" },
-  { slug: "stress", icon: "🧘", color: "#14B8A6" },
-  { slug: "digestion", icon: "🫆", color: "#F97316" },
-  { slug: "skin", icon: "✨", color: "#EC4899" },
-  { slug: "longevity", icon: "🧬", color: "#06B6D4" },
-  { slug: "recovery", icon: "💪", color: "#EF4444" },
-  { slug: "joint_health", icon: "🦴", color: "#78716C" },
+  { slug: "energy", icon: "⚡", color: "#D4A847" },
+  { slug: "sleep", icon: "🌙", color: "#7B8FA8" },
+  { slug: "immunity", icon: "🛡️", color: "#5BA66B" },
+  { slug: "focus", icon: "🎯", color: "#9E7CB5" },
+  { slug: "stress", icon: "🧘", color: "#6B9E78" },
+  { slug: "digestion", icon: "🫆", color: "#C4813D" },
+  { slug: "skin", icon: "✨", color: "#C48A6B" },
+  { slug: "longevity", icon: "🧬", color: "#7BA8A0" },
+  { slug: "recovery", icon: "💪", color: "#C45C4A" },
+  { slug: "joint_health", icon: "🦴", color: "#9E8E75" },
 ] as const;
 
 export const TIME_BLOCKS = [

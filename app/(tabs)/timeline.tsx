@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
   },
   progressFill: {
     height: "100%",
-    backgroundColor: colors.synergy,
+    backgroundColor: colors.accent,
     borderRadius: 3,
   },
   progressText: {

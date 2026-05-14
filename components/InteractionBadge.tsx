@@ -11,26 +11,26 @@ const TYPE_CONFIG: Record<
     icon: "↗",
     labelKey: "interactions.synergy",
     color: colors.synergy,
-    bg: "rgba(5, 150, 105, 0.08)",
+    bg: "rgba(91, 166, 107, 0.10)",
   },
   conflict: {
     icon: "⚠",
     labelKey: "interactions.conflict",
     color: colors.danger,
-    bg: "rgba(220, 38, 38, 0.06)",
+    bg: "rgba(196, 92, 74, 0.10)",
   },
   timing_separation: {
     icon: "⏱",
     labelKey: "interactions.timing",
     color: colors.warning,
-    bg: "rgba(245, 158, 11, 0.08)",
+    bg: "rgba(212, 168, 71, 0.10)",
   },
 };
 
 const SEVERITY_BORDER: Record<InteractionSeverity, string> = {
-  info: "transparent",
-  warning: "rgba(245, 158, 11, 0.3)",
-  danger: "rgba(220, 38, 38, 0.3)",
+  info: colors.border,
+  warning: "rgba(212, 168, 71, 0.3)",
+  danger: "rgba(196, 92, 74, 0.3)",
 };
 
 interface InteractionBadgeProps {
@@ -54,7 +54,7 @@ export function InteractionBadge({
 
   if (compact) {
     return (
-      <View style={[styles.compactBadge, { backgroundColor: config.bg }]}>
+      <View style={[styles.compactBadge, { backgroundColor: config.bg, borderColor: `${config.color}30` }]}>
         <Text style={styles.compactIcon}>{config.icon}</Text>
         <Text style={[styles.compactLabel, { color: config.color }]}>
           {label}
@@ -131,6 +131,7 @@ const styles = StyleSheet.create({
     paddingVertical: spacing.xs,
     borderRadius: radii.full,
     gap: 4,
+    borderWidth: 1,
   },
   compactIcon: {
     fontSize: 10,

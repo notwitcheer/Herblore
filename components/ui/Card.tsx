@@ -34,7 +34,9 @@ const styles = StyleSheet.create({
   base: {
     backgroundColor: colors.surface,
     borderRadius: radii.lg,
-    shadowColor: "#1B4332",
+    borderWidth: 1,
+    borderColor: colors.border,
+    shadowColor: colors.accentWarm,
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.06,
     shadowRadius: 12,
@@ -48,7 +50,5 @@ const styles = StyleSheet.create({
   outline: {
     shadowOpacity: 0,
     elevation: 0,
-    borderWidth: 1,
-    borderColor: colors.border,
   },
 });

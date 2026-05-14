@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { View, Text, StyleSheet, Pressable, ScrollView } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useRouter } from "expo-router";
@@ -57,7 +56,7 @@ export default function CurrentStackScreen() {
                       : addToStack(aliment)
                   }
                 >
-                  <Text style={styles.quickCardCheck}>
+                  <Text style={[styles.quickCardCheck, inStack && styles.quickCardCheckActive]}>
                     {inStack ? "✓" : "+"}
                   </Text>
                   <Text
@@ -132,7 +131,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.border,
   },
   progressDotActive: {
-    backgroundColor: colors.primary,
+    backgroundColor: colors.accent,
     width: 24,
     borderRadius: 4,
   },
@@ -140,11 +139,11 @@ const styles = StyleSheet.create({
     width: 8,
     height: 8,
     borderRadius: 4,
-    backgroundColor: colors.primaryLight,
+    backgroundColor: colors.accentWarm,
   },
   title: {
     ...typography.h1,
-    color: colors.textPrimary,
+    color: colors.parchment,
     letterSpacing: -0.5,
   },
   subtitle: {
@@ -163,29 +162,27 @@ const styles = StyleSheet.create({
     padding: spacing.md,
     width: 155,
     gap: spacing.xs,
-    borderWidth: 1.5,
+    borderWidth: 1,
     borderColor: colors.border,
-    shadowColor: "#1B4332",
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.03,
-    shadowRadius: 6,
-    elevation: 1,
   },
   quickCardActive: {
-    borderColor: colors.primary,
-    backgroundColor: "rgba(45, 106, 79, 0.04)",
+    borderColor: colors.accent,
+    backgroundColor: "rgba(212, 168, 71, 0.08)",
   },
   quickCardCheck: {
     ...typography.bodyBold,
-    color: colors.primary,
+    color: colors.textTertiary,
     fontSize: 18,
+  },
+  quickCardCheckActive: {
+    color: colors.accent,
   },
   quickCardName: {
     ...typography.captionBold,
     color: colors.textPrimary,
   },
   quickCardNameActive: {
-    color: colors.primary,
+    color: colors.accent,
   },
   quickCardDosage: {
     ...typography.caption,
@@ -204,7 +201,9 @@ const styles = StyleSheet.create({
     paddingVertical: spacing.md + 2,
     borderRadius: radii.lg,
     alignItems: "center",
-    backgroundColor: colors.surfaceElevated,
+    backgroundColor: colors.surface,
+    borderWidth: 1,
+    borderColor: colors.border,
   },
   skipText: {
     ...typography.bodyBold,
@@ -212,19 +211,19 @@ const styles = StyleSheet.create({
   },
   nextButton: {
     flex: 2,
-    backgroundColor: colors.primary,
+    backgroundColor: colors.accent,
     paddingVertical: spacing.md + 2,
     borderRadius: radii.lg,
     alignItems: "center",
-    shadowColor: colors.primaryDark,
+    shadowColor: colors.accent,
     shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.2,
+    shadowOpacity: 0.25,
     shadowRadius: 8,
     elevation: 4,
   },
   nextButtonText: {
     ...typography.bodyBold,
-    color: "#FFFFFF",
+    color: colors.background,
     letterSpacing: 0.3,
   },
 });

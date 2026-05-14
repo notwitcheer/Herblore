@@ -149,7 +149,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.border,
   },
   progressDotActive: {
-    backgroundColor: colors.primary,
+    backgroundColor: colors.accent,
     width: 24,
     borderRadius: 4,
   },
@@ -157,11 +157,11 @@ const styles = StyleSheet.create({
     width: 8,
     height: 8,
     borderRadius: 4,
-    backgroundColor: colors.primaryLight,
+    backgroundColor: colors.accentWarm,
   },
   title: {
     ...typography.h1,
-    color: colors.textPrimary,
+    color: colors.parchment,
     letterSpacing: -0.5,
   },
   subtitle: {
@@ -177,7 +177,9 @@ const styles = StyleSheet.create({
     borderRadius: radii.lg,
     padding: spacing.md,
     gap: spacing.sm,
-    shadowColor: "#1B4332",
+    borderWidth: 1,
+    borderColor: colors.border,
+    shadowColor: colors.accentWarm,
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.06,
     shadowRadius: 12,
@@ -192,7 +194,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
   },
   previewLabel: {
-    ...typography.bodyBold,
+    ...typography.h3,
     color: colors.textPrimary,
     flex: 1,
   },
@@ -210,7 +212,7 @@ const styles = StyleSheet.create({
     width: 5,
     height: 5,
     borderRadius: 2.5,
-    backgroundColor: colors.primary,
+    backgroundColor: colors.accent,
   },
   previewItemName: {
     ...typography.body,
@@ -234,10 +236,10 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     gap: spacing.sm,
     paddingVertical: spacing.md,
-    backgroundColor: "rgba(45, 106, 79, 0.06)",
+    backgroundColor: "rgba(212, 168, 71, 0.06)",
     borderRadius: radii.lg,
     borderWidth: 1,
-    borderColor: "rgba(45, 106, 79, 0.12)",
+    borderColor: "rgba(212, 168, 71, 0.2)",
     borderStyle: "dashed",
   },
   unlockIcon: {
@@ -245,7 +247,7 @@ const styles = StyleSheet.create({
   },
   unlockText: {
     ...typography.bodyBold,
-    color: colors.primary,
+    color: colors.accent,
   },
   emptyPreview: {
     alignItems: "center",
@@ -264,19 +266,19 @@ const styles = StyleSheet.create({
     paddingTop: spacing.md,
   },
   nextButton: {
-    backgroundColor: colors.primary,
+    backgroundColor: colors.accent,
     paddingVertical: spacing.md + 2,
     borderRadius: radii.lg,
     alignItems: "center",
-    shadowColor: colors.primaryDark,
+    shadowColor: colors.accent,
     shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.2,
+    shadowOpacity: 0.25,
     shadowRadius: 8,
     elevation: 4,
   },
   nextButtonText: {
     ...typography.bodyBold,
-    color: "#FFFFFF",
+    color: colors.background,
     letterSpacing: 0.3,
   },
 });

@@ -1,11 +1,11 @@
 import { Tabs } from "expo-router";
 import { useTranslation } from "react-i18next";
 import { Text } from "react-native";
-import { colors } from "@/lib/constants";
+import { colors, fonts } from "@/lib/constants";
 
 function TabIcon({ icon, focused }: { icon: string; focused: boolean }) {
   return (
-    <Text style={{ fontSize: 22, opacity: focused ? 1 : 0.5 }}>{icon}</Text>
+    <Text style={{ fontSize: 22, opacity: focused ? 1 : 0.45 }}>{icon}</Text>
   );
 }
 
@@ -16,15 +16,17 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         headerShown: false,
-        tabBarActiveTintColor: colors.primary,
+        tabBarActiveTintColor: colors.accent,
         tabBarInactiveTintColor: colors.textTertiary,
         tabBarStyle: {
-          backgroundColor: colors.surface,
+          backgroundColor: colors.background,
           borderTopColor: colors.border,
+          borderTopWidth: 1,
         },
         tabBarLabelStyle: {
           fontSize: 11,
-          fontWeight: "600",
+          fontFamily: fonts.serifMedium,
+          letterSpacing: 0.3,
         },
       }}
     >
@@ -33,7 +35,7 @@ export default function TabLayout() {
         options={{
           title: t("tabs.library"),
           tabBarIcon: ({ focused }) => (
-            <TabIcon icon="📚" focused={focused} />
+            <TabIcon icon="📜" focused={focused} />
           ),
         }}
       />
@@ -42,7 +44,7 @@ export default function TabLayout() {
         options={{
           title: t("tabs.stack"),
           tabBarIcon: ({ focused }) => (
-            <TabIcon icon="💊" focused={focused} />
+            <TabIcon icon="⚗️" focused={focused} />
           ),
         }}
       />
@@ -51,7 +53,7 @@ export default function TabLayout() {
         options={{
           title: t("tabs.timeline"),
           tabBarIcon: ({ focused }) => (
-            <TabIcon icon="🕐" focused={focused} />
+            <TabIcon icon="🕯️" focused={focused} />
           ),
         }}
       />
@@ -60,7 +62,7 @@ export default function TabLayout() {
         options={{
           title: t("tabs.profile"),
           tabBarIcon: ({ focused }) => (
-            <TabIcon icon="👤" focused={focused} />
+            <TabIcon icon="🔮" focused={focused} />
           ),
         }}
       />

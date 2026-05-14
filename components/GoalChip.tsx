@@ -3,7 +3,6 @@ import Animated, {
   useAnimatedStyle,
   useSharedValue,
   withSpring,
-  withTiming,
 } from "react-native-reanimated";
 import { useTranslation } from "react-i18next";
 import { colors, spacing, radii, typography } from "@/lib/constants";
@@ -24,7 +23,7 @@ export function GoalChip({
   icon,
   selected,
   onPress,
-  color = colors.primary,
+  color = colors.accent,
 }: GoalChipProps) {
   const { t } = useTranslation();
   const scale = useSharedValue(1);
@@ -48,12 +47,20 @@ export function GoalChip({
       onPressOut={handlePressOut}
       style={[
         styles.chip,
-        selected && { backgroundColor: color, borderColor: color },
+        selected && {
+          backgroundColor: `${color}20`,
+          borderColor: color,
+        },
         animatedStyle,
       ]}
     >
       <Text style={styles.icon}>{icon}</Text>
-      <Text style={[styles.label, selected && styles.labelSelected]}>
+      <Text
+        style={[
+          styles.label,
+          selected && { color: colors.parchment },
+        ]}
+      >
         {t(`goals.${slug}`)}
       </Text>
     </AnimatedPressable>
@@ -71,20 +78,12 @@ const styles = StyleSheet.create({
     borderWidth: 1.5,
     borderColor: colors.border,
     gap: spacing.xs,
-    shadowColor: "#1B4332",
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.04,
-    shadowRadius: 4,
-    elevation: 1,
   },
   icon: {
     fontSize: 16,
   },
   label: {
     ...typography.captionBold,
-    color: colors.textPrimary,
-  },
-  labelSelected: {
-    color: "#FFFFFF",
+    color: colors.textSecondary,
   },
 });

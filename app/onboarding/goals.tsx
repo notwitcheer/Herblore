@@ -67,7 +67,9 @@ export default function GoalsScreen() {
           onPress={() => router.push("/onboarding/current-stack")}
           disabled={selected.length === 0}
         >
-          <Text style={styles.nextButtonText}>{t("onboarding.next")}</Text>
+          <Text style={[styles.nextButtonText, selected.length === 0 && styles.nextButtonTextDisabled]}>
+            {t("onboarding.next")}
+          </Text>
         </Pressable>
       </Animated.View>
     </SafeAreaView>
@@ -100,13 +102,13 @@ const styles = StyleSheet.create({
     backgroundColor: colors.border,
   },
   progressDotActive: {
-    backgroundColor: colors.primary,
+    backgroundColor: colors.accent,
     width: 24,
     borderRadius: 4,
   },
   title: {
     ...typography.h1,
-    color: colors.textPrimary,
+    color: colors.parchment,
     letterSpacing: -0.5,
   },
   subtitle: {
@@ -125,24 +127,29 @@ const styles = StyleSheet.create({
     paddingTop: spacing.md,
   },
   nextButton: {
-    backgroundColor: colors.primary,
+    backgroundColor: colors.accent,
     paddingVertical: spacing.md + 2,
     borderRadius: radii.lg,
     alignItems: "center",
-    shadowColor: colors.primaryDark,
+    shadowColor: colors.accent,
     shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.2,
+    shadowOpacity: 0.25,
     shadowRadius: 8,
     elevation: 4,
   },
   nextButtonDisabled: {
-    backgroundColor: colors.border,
+    backgroundColor: colors.surface,
+    borderWidth: 1,
+    borderColor: colors.border,
     shadowOpacity: 0,
     elevation: 0,
   },
   nextButtonText: {
     ...typography.bodyBold,
-    color: "#FFFFFF",
+    color: colors.background,
     letterSpacing: 0.3,
+  },
+  nextButtonTextDisabled: {
+    color: colors.textTertiary,
   },
 });

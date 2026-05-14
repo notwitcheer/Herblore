@@ -57,12 +57,12 @@ const styles = StyleSheet.create({
   },
   backArrow: {
     fontSize: 22,
-    color: colors.primary,
+    color: colors.accent,
     fontWeight: "600",
   },
   backLabel: {
     ...typography.body,
-    color: colors.primary,
+    color: colors.accent,
   },
   notFound: {
     flex: 1,

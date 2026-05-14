@@ -82,7 +82,9 @@ export function TimelineBlock({
               <Text style={[styles.blockLabel, taken && styles.textTaken]}>
                 {t(`timeline.${timeBlock}`)}
               </Text>
-              <Text style={styles.timeText}>{BLOCK_TIMES[timeBlock]}</Text>
+              <Text style={[styles.timeText, taken && styles.timeTextTaken]}>
+                {BLOCK_TIMES[timeBlock]}
+              </Text>
             </View>
           </View>
 
@@ -102,7 +104,7 @@ export function TimelineBlock({
                 {localizedField(item.aliment, "name", locale)}
               </Text>
               {item.dosage != null && (
-                <Text style={styles.itemDosage}>
+                <Text style={[styles.itemDosage, taken && styles.itemDosageTaken]}>
                   {item.dosage} {item.dosageUnit}
                 </Text>
               )}
@@ -126,17 +128,19 @@ const styles = StyleSheet.create({
     borderRadius: radii.lg,
     padding: spacing.md,
     gap: spacing.md,
-    shadowColor: "#1B4332",
+    borderWidth: 1,
+    borderColor: colors.border,
+    shadowColor: colors.accentWarm,
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.06,
     shadowRadius: 12,
     elevation: 3,
-    borderWidth: 1,
-    borderColor: "transparent",
   },
   cardTaken: {
-    backgroundColor: "rgba(5, 150, 105, 0.04)",
-    borderColor: "rgba(5, 150, 105, 0.15)",
+    backgroundColor: "rgba(91, 166, 107, 0.06)",
+    borderColor: "rgba(91, 166, 107, 0.25)",
+    shadowColor: colors.synergy,
+    shadowOpacity: 0.1,
   },
   header: {
     flexDirection: "row",
@@ -152,13 +156,16 @@ const styles = StyleSheet.create({
     fontSize: 24,
   },
   blockLabel: {
-    ...typography.bodyBold,
+    ...typography.h3,
     color: colors.textPrimary,
   },
   timeText: {
     ...typography.caption,
-    color: colors.textTertiary,
+    color: colors.accent,
     fontVariant: ["tabular-nums"],
+  },
+  timeTextTaken: {
+    color: colors.synergy,
   },
   checkCircle: {
     width: 32,
@@ -170,11 +177,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   checkCircleDone: {
-    backgroundColor: colors.synergy,
-    borderColor: colors.synergy,
+    backgroundColor: colors.accent,
+    borderColor: colors.accent,
   },
   checkMark: {
-    color: "#FFFFFF",
+    color: colors.background,
     fontSize: 16,
     fontWeight: "700",
   },
@@ -191,7 +198,7 @@ const styles = StyleSheet.create({
     width: 6,
     height: 6,
     borderRadius: 3,
-    backgroundColor: colors.primary,
+    backgroundColor: colors.accent,
   },
   itemDotTaken: {
     backgroundColor: colors.synergy,
@@ -205,6 +212,9 @@ const styles = StyleSheet.create({
     ...typography.caption,
     color: colors.textTertiary,
     fontVariant: ["tabular-nums"],
+  },
+  itemDosageTaken: {
+    color: colors.synergy,
   },
   textTaken: {
     opacity: 0.5,
@@ -220,6 +230,6 @@ const styles = StyleSheet.create({
     borderRadius: 1,
   },
   connectorDone: {
-    backgroundColor: "rgba(5, 150, 105, 0.3)",
+    backgroundColor: "rgba(91, 166, 107, 0.4)",
   },
 });

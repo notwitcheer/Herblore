@@ -9,18 +9,18 @@ const EVIDENCE_CONFIG: Record<
 > = {
   clinical_trial: {
     color: colors.evidenceClinical,
-    bg: "rgba(22, 163, 74, 0.08)",
-    dot: "rgba(22, 163, 74, 0.6)",
+    bg: "rgba(91, 166, 107, 0.12)",
+    dot: "rgba(91, 166, 107, 0.7)",
   },
   observational: {
     color: colors.evidenceObservational,
-    bg: "rgba(234, 179, 8, 0.08)",
-    dot: "rgba(234, 179, 8, 0.6)",
+    bg: "rgba(212, 168, 71, 0.12)",
+    dot: "rgba(212, 168, 71, 0.7)",
   },
   traditional: {
     color: colors.evidenceTraditional,
-    bg: "rgba(249, 115, 22, 0.08)",
-    dot: "rgba(249, 115, 22, 0.6)",
+    bg: "rgba(196, 129, 61, 0.12)",
+    dot: "rgba(196, 129, 61, 0.7)",
   },
 };
 
@@ -40,7 +40,7 @@ export function EvidenceBadge({ level, compact = false }: EvidenceBadgeProps) {
   }
 
   return (
-    <View style={[styles.badge, { backgroundColor: config.bg }]}>
+    <View style={[styles.badge, { backgroundColor: config.bg, borderColor: `${config.color}30` }]}>
       <View style={[styles.dot, { backgroundColor: config.color }]} />
       <Text style={[styles.label, { color: config.color }]}>
         {t(`evidence.${level}`)}
@@ -73,6 +73,7 @@ const styles = StyleSheet.create({
     borderRadius: radii.full,
     gap: spacing.xs,
     alignSelf: "flex-start",
+    borderWidth: 1,
   },
   dot: {
     width: 7,

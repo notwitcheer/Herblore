@@ -144,7 +144,7 @@ const styles = StyleSheet.create({
   },
   sectionLabel: {
     ...typography.label,
-    color: colors.textTertiary,
+    color: colors.accent,
     textTransform: "uppercase",
     letterSpacing: 1,
     paddingHorizontal: spacing.xs,
@@ -153,11 +153,8 @@ const styles = StyleSheet.create({
     backgroundColor: colors.surface,
     borderRadius: radii.lg,
     overflow: "hidden",
-    shadowColor: "#1B4332",
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.04,
-    shadowRadius: 8,
-    elevation: 2,
+    borderWidth: 1,
+    borderColor: colors.border,
   },
   settingsRow: {
     flexDirection: "row",
@@ -200,5 +197,6 @@ const styles = StyleSheet.create({
     color: colors.textTertiary,
     textAlign: "center",
     marginTop: spacing.lg,
+    fontStyle: "italic",
   },
 });
