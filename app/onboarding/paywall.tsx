@@ -8,11 +8,11 @@ import { colors, spacing, radii, typography } from "@/lib/constants";
 
 type Plan = "weekly" | "yearly";
 
-const FEATURES = [
-  { icon: "📚", key: "200+ evidence-based supplement cards" },
-  { icon: "⏰", key: "Personalized daily timing schedule" },
-  { icon: "⚡", key: "Smart interaction checker" },
-  { icon: "🎯", key: "Goal-based recommendations" },
+const FEATURE_KEYS = [
+  { icon: "📚", key: "feature1" },
+  { icon: "⏰", key: "feature2" },
+  { icon: "⚡", key: "feature3" },
+  { icon: "🎯", key: "feature4" },
 ];
 
 export default function PaywallScreen() {
@@ -44,10 +44,12 @@ export default function PaywallScreen() {
           entering={FadeInDown.delay(200).duration(400).springify()}
           style={styles.features}
         >
-          {FEATURES.map((feature, i) => (
+          {FEATURE_KEYS.map((feature, i) => (
             <View key={i} style={styles.featureRow}>
               <Text style={styles.featureIcon}>{feature.icon}</Text>
-              <Text style={styles.featureText}>{feature.key}</Text>
+              <Text style={styles.featureText}>
+                {t(`paywall.${feature.key}`)}
+              </Text>
             </View>
           ))}
         </Animated.View>
@@ -71,7 +73,9 @@ export default function PaywallScreen() {
             </View>
             <Text style={styles.planName}>{t("paywall.yearly")}</Text>
             <Text style={styles.planPrice}>{t("paywall.yearlyPrice")}</Text>
-            <Text style={styles.planBreakdown}>$2.50/month</Text>
+            <Text style={styles.planBreakdown}>
+              {t("paywall.yearlyBreakdown")}
+            </Text>
           </Pressable>
 
           <Pressable
@@ -92,7 +96,7 @@ export default function PaywallScreen() {
           style={styles.socialProof}
         >
           <Text style={styles.socialText}>
-            Join 2,000+ health-conscious people optimizing their stacks
+            {t("paywall.socialProof")}
           </Text>
         </Animated.View>
       </ScrollView>

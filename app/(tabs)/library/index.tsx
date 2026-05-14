@@ -10,19 +10,19 @@ import { AlimentCard } from "@/components/AlimentCard";
 import { SearchBar } from "@/components/ui/SearchBar";
 import Animated, { FadeIn } from "react-native-reanimated";
 
-const CATEGORY_FILTERS: { key: string; label: string }[] = [
-  { key: "all", label: "All" },
-  { key: "vitamin", label: "Vitamins" },
-  { key: "mineral", label: "Minerals" },
-  { key: "adaptogen", label: "Adaptogens" },
-  { key: "mushroom", label: "Mushrooms" },
-  { key: "superfood", label: "Superfoods" },
-  { key: "herb", label: "Herbs" },
-  { key: "amino_acid", label: "Amino Acids" },
-  { key: "fatty_acid", label: "Fatty Acids" },
-  { key: "probiotic", label: "Probiotics" },
-  { key: "spice", label: "Spices" },
-];
+const CATEGORY_KEYS = [
+  "all",
+  "vitamin",
+  "mineral",
+  "adaptogen",
+  "mushroom",
+  "superfood",
+  "herb",
+  "amino_acid",
+  "fatty_acid",
+  "probiotic",
+  "spice",
+] as const;
 
 export default function LibraryScreen() {
   const { t, i18n } = useTranslation();
@@ -31,6 +31,15 @@ export default function LibraryScreen() {
 
   const [search, setSearch] = useState("");
   const [categoryFilter, setCategoryFilter] = useState("all");
+
+  const categoryFilters = useMemo(
+    () =>
+      CATEGORY_KEYS.map((key) => ({
+        key,
+        label: key === "all" ? t("library.all") : t(`categories.${key}`),
+      })),
+    [t],
+  );
 
   const filtered = useMemo(() => {
     let results = MOCK_ALIMENTS;
@@ -64,7 +73,7 @@ export default function LibraryScreen() {
           placeholder={t("library.search")}
           value={search}
           onChangeText={setSearch}
-          filters={CATEGORY_FILTERS}
+          filters={categoryFilters}
           activeFilter={categoryFilter}
           onFilterChange={setCategoryFilter}
         />

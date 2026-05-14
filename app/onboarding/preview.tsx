@@ -98,7 +98,7 @@ export default function PreviewScreen() {
           >
             <Text style={styles.emptyEmoji}>📋</Text>
             <Text style={styles.emptyText}>
-              Add supplements in the previous step to see your preview.
+              {t("onboarding.previewEmpty", "Add supplements in the previous step to see your preview.")}
             </Text>
           </Animated.View>
         )}
