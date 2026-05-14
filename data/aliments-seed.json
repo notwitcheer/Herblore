@@ -425,5 +425,926 @@
         "goalTags": ["skin"]
       }
     ]
+  },
+  {
+    "slug": "vitamin-c",
+    "category": "vitamin",
+    "name": { "en": "Vitamin C", "fr": "Vitamine C", "it": "Vitamina C" },
+    "summary": {
+      "en": "A water-soluble antioxidant essential for collagen synthesis, immune defense, and iron absorption. Cannot be stored by the body.",
+      "fr": "Un antioxydant hydrosoluble essentiel pour la synthèse du collagène, la défense immunitaire et l'absorption du fer. Ne peut pas être stocké par le corps.",
+      "it": "Un antiossidante idrosolubile essenziale per la sintesi del collagene, la difesa immunitaria e l'assorbimento del ferro. Non può essere immagazzinato dall'organismo."
+    },
+    "dosageMin": 500,
+    "dosageMax": 2000,
+    "dosageUnit": "mg",
+    "bestTime": ["morning", "afternoon"],
+    "withFood": true,
+    "useMode": "continuous",
+    "contraindications": {
+      "en": ["History of kidney stones (oxalate type)", "Hemochromatosis (enhances iron absorption)", "Doses above 2000mg/day may cause digestive upset"],
+      "fr": ["Antécédents de calculs rénaux (type oxalate)", "Hémochromatose (améliore l'absorption du fer)", "Des doses supérieures à 2000mg/jour peuvent causer des troubles digestifs"],
+      "it": ["Storia di calcoli renali (tipo ossalato)", "Emocromatosi (migliora l'assorbimento del ferro)", "Dosi superiori a 2000mg/giorno possono causare disturbi digestivi"]
+    },
+    "sourceRefs": ["PMID:29099763", "PMID:28353648"],
+    "isPopular": true,
+    "benefits": [
+      {
+        "benefit": { "en": "Supports immune cell function and may reduce duration of common cold", "fr": "Soutient la fonction des cellules immunitaires et peut réduire la durée du rhume", "it": "Supporta la funzione delle cellule immunitarie e può ridurre la durata del raffreddore" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["immunity"],
+        "sourceRef": "PMID:29099763"
+      },
+      {
+        "benefit": { "en": "Essential cofactor for collagen synthesis, supporting skin elasticity and wound healing", "fr": "Cofacteur essentiel pour la synthèse du collagène, favorisant l'élasticité de la peau et la cicatrisation", "it": "Cofattore essenziale per la sintesi del collagene, favorendo l'elasticità della pelle e la guarigione delle ferite" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["skin"],
+        "sourceRef": "PMID:28353648"
+      },
+      {
+        "benefit": { "en": "Potent antioxidant that may help protect cells from oxidative damage", "fr": "Puissant antioxydant qui peut aider à protéger les cellules des dommages oxydatifs", "it": "Potente antiossidante che può aiutare a proteggere le cellule dai danni ossidativi" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["longevity"]
+      }
+    ]
+  },
+  {
+    "slug": "b-complex",
+    "category": "vitamin",
+    "name": { "en": "B Complex", "fr": "Complexe B", "it": "Complesso B" },
+    "summary": {
+      "en": "A group of eight essential B vitamins that work together to support energy metabolism, nervous system function, and red blood cell formation.",
+      "fr": "Un groupe de huit vitamines B essentielles qui agissent ensemble pour soutenir le métabolisme énergétique, le système nerveux et la formation des globules rouges.",
+      "it": "Un gruppo di otto vitamine B essenziali che lavorano insieme per supportare il metabolismo energetico, il sistema nervoso e la formazione dei globuli rossi."
+    },
+    "dosageMin": 1,
+    "dosageMax": 1,
+    "dosageUnit": "capsule",
+    "bestTime": ["morning"],
+    "withFood": true,
+    "useMode": "continuous",
+    "contraindications": {
+      "en": ["B6 doses above 100mg/day may cause peripheral neuropathy with long-term use", "May cause bright yellow urine (harmless, from riboflavin)", "May interact with levodopa and certain chemotherapy drugs"],
+      "fr": ["Des doses de B6 supérieures à 100mg/jour peuvent causer une neuropathie périphérique avec un usage prolongé", "Peut causer une urine jaune vif (inoffensif, dû à la riboflavine)", "Peut interagir avec la lévodopa et certains médicaments de chimiothérapie"],
+      "it": ["Dosi di B6 superiori a 100mg/giorno possono causare neuropatia periferica con uso prolungato", "Può causare urina giallo brillante (innocuo, dalla riboflavina)", "Può interagire con levodopa e alcuni farmaci chemioterapici"]
+    },
+    "sourceRefs": ["PMID:27067872", "PMID:31475962"],
+    "isPopular": true,
+    "benefits": [
+      {
+        "benefit": { "en": "Supports cellular energy production and may reduce fatigue", "fr": "Soutient la production d'énergie cellulaire et peut réduire la fatigue", "it": "Supporta la produzione di energia cellulare e può ridurre la stanchezza" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["energy"],
+        "sourceRef": "PMID:27067872"
+      },
+      {
+        "benefit": { "en": "May support mood regulation and reduce symptoms of stress", "fr": "Peut soutenir la régulation de l'humeur et réduire les symptômes du stress", "it": "Può supportare la regolazione dell'umore e ridurre i sintomi dello stress" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["stress"],
+        "sourceRef": "PMID:31475962"
+      },
+      {
+        "benefit": { "en": "Essential for healthy nervous system function and neurotransmitter synthesis", "fr": "Essentiel pour le bon fonctionnement du système nerveux et la synthèse des neurotransmetteurs", "it": "Essenziale per il corretto funzionamento del sistema nervoso e la sintesi dei neurotrasmettitori" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["focus"]
+      }
+    ]
+  },
+  {
+    "slug": "iron-bisglycinate",
+    "category": "mineral",
+    "name": { "en": "Iron (Bisglycinate)", "fr": "Fer (Bisglycinate)", "it": "Ferro (Bisglicinato)" },
+    "summary": {
+      "en": "An essential mineral for oxygen transport and energy production. Bisglycinate form is gentle on the stomach with superior absorption.",
+      "fr": "Un minéral essentiel pour le transport de l'oxygène et la production d'énergie. La forme bisglycinate est douce pour l'estomac avec une absorption supérieure.",
+      "it": "Un minerale essenziale per il trasporto dell'ossigeno e la produzione di energia. La forma bisglicinato è delicata per lo stomaco con assorbimento superiore."
+    },
+    "dosageMin": 18,
+    "dosageMax": 45,
+    "dosageUnit": "mg",
+    "bestTime": ["morning"],
+    "withFood": false,
+    "useMode": "continuous",
+    "contraindications": {
+      "en": ["Hemochromatosis or iron overload disorders", "Do not take with calcium, zinc, or dairy (reduces absorption)", "Take with vitamin C to enhance absorption", "May cause constipation or dark stools"],
+      "fr": ["Hémochromatose ou troubles de surcharge en fer", "Ne pas prendre avec du calcium, du zinc ou des produits laitiers (réduit l'absorption)", "Prendre avec de la vitamine C pour améliorer l'absorption", "Peut causer de la constipation ou des selles foncées"],
+      "it": ["Emocromatosi o disturbi da sovraccarico di ferro", "Non assumere con calcio, zinco o latticini (riduce l'assorbimento)", "Assumere con vitamina C per migliorare l'assorbimento", "Può causare stitichezza o feci scure"]
+    },
+    "sourceRefs": ["PMID:29137797", "PMID:26314231"],
+    "isPopular": true,
+    "benefits": [
+      {
+        "benefit": { "en": "Restores iron levels and may resolve fatigue associated with iron deficiency", "fr": "Restaure les niveaux de fer et peut résoudre la fatigue associée à la carence en fer", "it": "Ripristina i livelli di ferro e può risolvere la stanchezza associata alla carenza di ferro" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["energy"],
+        "sourceRef": "PMID:29137797"
+      },
+      {
+        "benefit": { "en": "Supports oxygen transport and aerobic exercise capacity", "fr": "Soutient le transport de l'oxygène et la capacité d'exercice aérobie", "it": "Supporta il trasporto dell'ossigeno e la capacità di esercizio aerobico" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["energy", "recovery"]
+      },
+      {
+        "benefit": { "en": "May support cognitive function in iron-deficient individuals", "fr": "Peut soutenir la fonction cognitive chez les personnes carencées en fer", "it": "Può supportare la funzione cognitiva negli individui carenti di ferro" },
+        "evidenceLevel": "observational",
+        "goalTags": ["focus"]
+      }
+    ]
+  },
+  {
+    "slug": "creatine-monohydrate",
+    "category": "amino_acid",
+    "name": { "en": "Creatine Monohydrate", "fr": "Créatine Monohydrate", "it": "Creatina Monoidrato" },
+    "summary": {
+      "en": "One of the most researched supplements in sports science. Supports ATP regeneration for high-intensity performance and has emerging cognitive benefits.",
+      "fr": "L'un des suppléments les plus étudiés en sciences du sport. Soutient la régénération de l'ATP pour les performances de haute intensité et présente des bénéfices cognitifs émergents.",
+      "it": "Uno degli integratori più studiati nelle scienze dello sport. Supporta la rigenerazione dell'ATP per prestazioni ad alta intensità e presenta benefici cognitivi emergenti."
+    },
+    "dosageMin": 3,
+    "dosageMax": 5,
+    "dosageUnit": "g",
+    "bestTime": ["morning"],
+    "withFood": true,
+    "useMode": "continuous",
+    "contraindications": {
+      "en": ["Pre-existing kidney disease (consult physician)", "May cause water retention during initial loading phase", "Stay well hydrated during supplementation"],
+      "fr": ["Maladie rénale préexistante (consulter un médecin)", "Peut causer une rétention d'eau pendant la phase de charge initiale", "Rester bien hydraté pendant la supplémentation"],
+      "it": ["Malattia renale preesistente (consultare un medico)", "Può causare ritenzione idrica durante la fase di carico iniziale", "Mantenersi ben idratati durante la supplementazione"]
+    },
+    "sourceRefs": ["PMID:28615996", "PMID:29704637"],
+    "isPopular": true,
+    "benefits": [
+      {
+        "benefit": { "en": "Increases muscle strength and power output during high-intensity exercise", "fr": "Augmente la force musculaire et la puissance lors d'exercices de haute intensité", "it": "Aumenta la forza muscolare e la potenza durante esercizi ad alta intensità" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["energy", "recovery"],
+        "sourceRef": "PMID:28615996"
+      },
+      {
+        "benefit": { "en": "May support cognitive function, especially under sleep deprivation or mental fatigue", "fr": "Peut soutenir la fonction cognitive, surtout en cas de privation de sommeil ou de fatigue mentale", "it": "Può supportare la funzione cognitiva, specialmente in caso di privazione del sonno o affaticamento mentale" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["focus"],
+        "sourceRef": "PMID:29704637"
+      },
+      {
+        "benefit": { "en": "May support lean muscle mass preservation during aging", "fr": "Peut soutenir la préservation de la masse musculaire maigre pendant le vieillissement", "it": "Può supportare la conservazione della massa muscolare magra durante l'invecchiamento" },
+        "evidenceLevel": "observational",
+        "goalTags": ["longevity", "recovery"]
+      }
+    ]
+  },
+  {
+    "slug": "rhodiola-rosea",
+    "category": "adaptogen",
+    "name": { "en": "Rhodiola Rosea", "fr": "Rhodiola Rosea", "it": "Rhodiola Rosea" },
+    "summary": {
+      "en": "An arctic adaptogen traditionally used to combat fatigue and enhance mental performance under stress. Works primarily on the HPA axis.",
+      "fr": "Un adaptogène arctique traditionnellement utilisé pour combattre la fatigue et améliorer les performances mentales sous stress. Agit principalement sur l'axe HPA.",
+      "it": "Un adattogeno artico tradizionalmente usato per combattere la fatica e migliorare le prestazioni mentali sotto stress. Agisce principalmente sull'asse HPA."
+    },
+    "dosageMin": 200,
+    "dosageMax": 600,
+    "dosageUnit": "mg",
+    "bestTime": ["morning"],
+    "withFood": false,
+    "useMode": "cure",
+    "cureOnWeeks": 8,
+    "cureOffWeeks": 2,
+    "cureRationale": {
+      "en": "As an adaptogen, rhodiola's effects may diminish with continuous use due to receptor adaptation. An 8-week on / 2-week off cycle helps preserve efficacy.",
+      "fr": "En tant qu'adaptogène, les effets de la rhodiola peuvent diminuer avec un usage continu en raison de l'adaptation des récepteurs. Un cycle de 8 semaines on / 2 semaines off aide à préserver l'efficacité.",
+      "it": "Come adattogeno, gli effetti della rhodiola possono diminuire con l'uso continuo a causa dell'adattamento dei recettori. Un ciclo di 8 settimane on / 2 settimane off aiuta a preservare l'efficacia."
+    },
+    "contraindications": {
+      "en": ["Bipolar disorder (may trigger mania in susceptible individuals)", "May interact with antidepressants (SSRIs, MAOIs)", "Pregnancy and breastfeeding", "May cause insomnia if taken late in the day"],
+      "fr": ["Trouble bipolaire (peut déclencher une manie chez les individus susceptibles)", "Peut interagir avec les antidépresseurs (ISRS, IMAO)", "Grossesse et allaitement", "Peut causer de l'insomnie si pris tard dans la journée"],
+      "it": ["Disturbo bipolare (può scatenare mania in individui suscettibili)", "Può interagire con antidepressivi (SSRI, IMAO)", "Gravidanza e allattamento", "Può causare insonnia se assunta tardi nella giornata"]
+    },
+    "sourceRefs": ["PMID:22228617", "PMID:26502953"],
+    "isPopular": false,
+    "benefits": [
+      {
+        "benefit": { "en": "May reduce mental fatigue and improve cognitive performance under stress", "fr": "Peut réduire la fatigue mentale et améliorer les performances cognitives sous stress", "it": "Può ridurre la fatica mentale e migliorare le prestazioni cognitive sotto stress" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["focus", "energy"],
+        "sourceRef": "PMID:22228617"
+      },
+      {
+        "benefit": { "en": "May reduce symptoms of burnout and stress-related exhaustion", "fr": "Peut réduire les symptômes du burn-out et de l'épuisement lié au stress", "it": "Può ridurre i sintomi del burnout e dell'esaurimento legato allo stress" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["stress"],
+        "sourceRef": "PMID:26502953"
+      },
+      {
+        "benefit": { "en": "May improve physical endurance and exercise performance", "fr": "Peut améliorer l'endurance physique et les performances sportives", "it": "Può migliorare la resistenza fisica e le prestazioni sportive" },
+        "evidenceLevel": "observational",
+        "goalTags": ["energy", "recovery"]
+      }
+    ]
+  },
+  {
+    "slug": "maca-root",
+    "category": "superfood",
+    "name": { "en": "Maca Root", "fr": "Racine de Maca", "it": "Radice di Maca" },
+    "summary": {
+      "en": "A Peruvian cruciferous root vegetable traditionally used for energy, libido, and hormonal balance. Rich in glucosinolates and polyphenols.",
+      "fr": "Un légume-racine crucifère péruvien traditionnellement utilisé pour l'énergie, la libido et l'équilibre hormonal. Riche en glucosinolates et polyphénols.",
+      "it": "Un tubero crucifero peruviano tradizionalmente usato per energia, libido e equilibrio ormonale. Ricco di glucosinolati e polifenoli."
+    },
+    "dosageMin": 1500,
+    "dosageMax": 3000,
+    "dosageUnit": "mg",
+    "bestTime": ["morning"],
+    "withFood": true,
+    "useMode": "cure",
+    "cureOnWeeks": 12,
+    "cureOffWeeks": 4,
+    "cureRationale": {
+      "en": "Maca's hormonal modulation effects may plateau with extended use. Cycling 12 weeks on / 4 weeks off is a common practitioner recommendation to maintain responsiveness.",
+      "fr": "Les effets de modulation hormonale de la maca peuvent atteindre un plateau avec un usage prolongé. Un cycle de 12 semaines on / 4 semaines off est une recommandation courante pour maintenir la réactivité.",
+      "it": "Gli effetti di modulazione ormonale della maca possono raggiungere un plateau con l'uso prolungato. Un ciclo di 12 settimane on / 4 settimane off è una raccomandazione comune per mantenere la reattività."
+    },
+    "contraindications": {
+      "en": ["Thyroid conditions (contains goitrogens)", "Hormone-sensitive conditions (breast cancer, endometriosis)", "Pregnancy and breastfeeding"],
+      "fr": ["Troubles thyroïdiens (contient des goitrogènes)", "Conditions hormono-sensibles (cancer du sein, endométriose)", "Grossesse et allaitement"],
+      "it": ["Condizioni tiroidee (contiene goitrogeni)", "Condizioni ormono-sensibili (cancro al seno, endometriosi)", "Gravidanza e allattamento"]
+    },
+    "sourceRefs": ["PMID:24931003", "PMID:19781622"],
+    "isPopular": false,
+    "benefits": [
+      {
+        "benefit": { "en": "May improve energy levels and reduce self-reported fatigue", "fr": "Peut améliorer les niveaux d'énergie et réduire la fatigue auto-déclarée", "it": "Può migliorare i livelli di energia e ridurre la stanchezza auto-riferita" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["energy"],
+        "sourceRef": "PMID:24931003"
+      },
+      {
+        "benefit": { "en": "May support libido and sexual function in both men and women", "fr": "Peut soutenir la libido et la fonction sexuelle chez les hommes et les femmes", "it": "Può supportare la libido e la funzione sessuale in uomini e donne" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["energy"],
+        "sourceRef": "PMID:19781622"
+      },
+      {
+        "benefit": { "en": "Traditionally used for hormonal balance and menopausal symptom relief", "fr": "Traditionnellement utilisé pour l'équilibre hormonal et le soulagement des symptômes de la ménopause", "it": "Tradizionalmente usata per l'equilibrio ormonale e il sollievo dei sintomi della menopausa" },
+        "evidenceLevel": "traditional",
+        "goalTags": ["stress"]
+      }
+    ]
+  },
+  {
+    "slug": "reishi-mushroom",
+    "category": "mushroom",
+    "name": { "en": "Reishi Mushroom", "fr": "Champignon Reishi", "it": "Fungo Reishi" },
+    "summary": {
+      "en": "Known as the 'mushroom of immortality' in traditional Chinese medicine. Valued for immune modulation, stress relief, and sleep support.",
+      "fr": "Connu comme le « champignon de l'immortalité » en médecine traditionnelle chinoise. Apprécié pour la modulation immunitaire, le soulagement du stress et le soutien du sommeil.",
+      "it": "Conosciuto come il 'fungo dell'immortalità' nella medicina tradizionale cinese. Apprezzato per la modulazione immunitaria, il sollievo dallo stress e il supporto del sonno."
+    },
+    "dosageMin": 1000,
+    "dosageMax": 3000,
+    "dosageUnit": "mg",
+    "bestTime": ["evening"],
+    "withFood": true,
+    "useMode": "cure",
+    "cureOnWeeks": 8,
+    "cureOffWeeks": 2,
+    "cureRationale": {
+      "en": "Reishi's immunomodulatory triterpenes may cause immune system adaptation with prolonged continuous use. Cycling 8 weeks on / 2 weeks off is recommended.",
+      "fr": "Les triterpènes immunomodulateurs du reishi peuvent causer une adaptation du système immunitaire avec un usage continu prolongé. Un cycle de 8 semaines on / 2 semaines off est recommandé.",
+      "it": "I triterpeni immunomodulatori del reishi possono causare un adattamento del sistema immunitario con l'uso continuo prolungato. Un ciclo di 8 settimane on / 2 settimane off è raccomandato."
+    },
+    "contraindications": {
+      "en": ["Mushroom allergy", "May interact with anticoagulants and blood pressure medications", "Autoimmune conditions", "Discontinue 2 weeks before surgery"],
+      "fr": ["Allergie aux champignons", "Peut interagir avec les anticoagulants et les médicaments pour la tension artérielle", "Maladies auto-immunes", "Arrêter 2 semaines avant une chirurgie"],
+      "it": ["Allergia ai funghi", "Può interagire con anticoagulanti e farmaci per la pressione sanguigna", "Condizioni autoimmuni", "Interrompere 2 settimane prima di un intervento"]
+    },
+    "sourceRefs": ["PMID:27408987", "PMID:28436985"],
+    "isPopular": false,
+    "benefits": [
+      {
+        "benefit": { "en": "May modulate immune system function and support natural killer cell activity", "fr": "Peut moduler la fonction du système immunitaire et soutenir l'activité des cellules tueuses naturelles", "it": "Può modulare la funzione del sistema immunitario e supportare l'attività delle cellule natural killer" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["immunity"],
+        "sourceRef": "PMID:27408987"
+      },
+      {
+        "benefit": { "en": "May promote relaxation and improve sleep quality", "fr": "Peut favoriser la relaxation et améliorer la qualité du sommeil", "it": "Può favorire il rilassamento e migliorare la qualità del sonno" },
+        "evidenceLevel": "observational",
+        "goalTags": ["sleep", "stress"]
+      },
+      {
+        "benefit": { "en": "Rich in triterpenes and polysaccharides with antioxidant properties associated with longevity", "fr": "Riche en triterpènes et polysaccharides aux propriétés antioxydantes associées à la longévité", "it": "Ricco di triterpeni e polisaccaridi con proprietà antiossidanti associate alla longevità" },
+        "evidenceLevel": "traditional",
+        "goalTags": ["longevity"]
+      }
+    ]
+  },
+  {
+    "slug": "cordyceps",
+    "category": "mushroom",
+    "name": { "en": "Cordyceps", "fr": "Cordyceps", "it": "Cordyceps" },
+    "summary": {
+      "en": "A functional mushroom traditionally used to enhance stamina and oxygen utilization. Modern research supports its role in energy metabolism and exercise performance.",
+      "fr": "Un champignon fonctionnel traditionnellement utilisé pour améliorer l'endurance et l'utilisation de l'oxygène. La recherche moderne soutient son rôle dans le métabolisme énergétique et la performance sportive.",
+      "it": "Un fungo funzionale tradizionalmente usato per migliorare la resistenza e l'utilizzo dell'ossigeno. La ricerca moderna supporta il suo ruolo nel metabolismo energetico e le prestazioni sportive."
+    },
+    "dosageMin": 1000,
+    "dosageMax": 3000,
+    "dosageUnit": "mg",
+    "bestTime": ["morning"],
+    "withFood": true,
+    "useMode": "cure",
+    "cureOnWeeks": 8,
+    "cureOffWeeks": 2,
+    "cureRationale": {
+      "en": "Cordyceps' adaptogenic effects may diminish with prolonged continuous use. Cycling 8 weeks on / 2 weeks off helps maintain benefit response.",
+      "fr": "Les effets adaptogènes du cordyceps peuvent diminuer avec un usage continu prolongé. Un cycle de 8 semaines on / 2 semaines off aide à maintenir la réponse bénéfique.",
+      "it": "Gli effetti adattogeni del cordyceps possono diminuire con l'uso continuo prolungato. Un ciclo di 8 settimane on / 2 settimane off aiuta a mantenere la risposta benefica."
+    },
+    "contraindications": {
+      "en": ["Mushroom allergy", "May interact with anticoagulants and immunosuppressants", "Autoimmune conditions", "Diabetes medications (may lower blood sugar)"],
+      "fr": ["Allergie aux champignons", "Peut interagir avec les anticoagulants et les immunosuppresseurs", "Maladies auto-immunes", "Médicaments pour le diabète (peut abaisser la glycémie)"],
+      "it": ["Allergia ai funghi", "Può interagire con anticoagulanti e immunosoppressori", "Condizioni autoimmuni", "Farmaci per il diabete (può abbassare la glicemia)"]
+    },
+    "sourceRefs": ["PMID:27274781", "PMID:28094746"],
+    "isPopular": false,
+    "benefits": [
+      {
+        "benefit": { "en": "May improve aerobic capacity and oxygen utilization during exercise", "fr": "Peut améliorer la capacité aérobie et l'utilisation de l'oxygène pendant l'exercice", "it": "Può migliorare la capacità aerobica e l'utilizzo dell'ossigeno durante l'esercizio" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["energy", "recovery"],
+        "sourceRef": "PMID:28094746"
+      },
+      {
+        "benefit": { "en": "May support cellular energy production through enhanced ATP synthesis", "fr": "Peut soutenir la production d'énergie cellulaire via une synthèse accrue d'ATP", "it": "Può supportare la produzione di energia cellulare attraverso una sintesi potenziata di ATP" },
+        "evidenceLevel": "observational",
+        "goalTags": ["energy"]
+      },
+      {
+        "benefit": { "en": "Traditionally used to support respiratory health and immune function", "fr": "Traditionnellement utilisé pour soutenir la santé respiratoire et la fonction immunitaire", "it": "Tradizionalmente usato per supportare la salute respiratoria e la funzione immunitaria" },
+        "evidenceLevel": "traditional",
+        "goalTags": ["immunity"]
+      }
+    ]
+  },
+  {
+    "slug": "collagen-peptides",
+    "category": "specialty_compound",
+    "name": { "en": "Collagen Peptides", "fr": "Peptides de Collagène", "it": "Peptidi di Collagene" },
+    "summary": {
+      "en": "Hydrolyzed collagen protein broken into bioavailable peptides. The most abundant protein in the body, critical for skin, joints, bones, and connective tissue.",
+      "fr": "Protéine de collagène hydrolysée en peptides biodisponibles. La protéine la plus abondante du corps, essentielle pour la peau, les articulations, les os et le tissu conjonctif.",
+      "it": "Proteina di collagene idrolizzata in peptidi biodisponibili. La proteina più abbondante del corpo, fondamentale per pelle, articolazioni, ossa e tessuto connettivo."
+    },
+    "dosageMin": 5,
+    "dosageMax": 15,
+    "dosageUnit": "g",
+    "bestTime": ["morning"],
+    "withFood": true,
+    "useMode": "continuous",
+    "contraindications": {
+      "en": ["Allergy to source animal (bovine, marine, porcine)", "Histamine intolerance (some collagen products may be high in histamine)", "Kidney disease (high protein content)"],
+      "fr": ["Allergie à l'animal source (bovin, marin, porcin)", "Intolérance à l'histamine (certains produits de collagène peuvent être riches en histamine)", "Maladie rénale (teneur élevée en protéines)"],
+      "it": ["Allergia all'animale di origine (bovino, marino, suino)", "Intolleranza all'istamina (alcuni prodotti di collagene possono essere ricchi di istamina)", "Malattia renale (alto contenuto proteico)"]
+    },
+    "sourceRefs": ["PMID:30681787", "PMID:28786550"],
+    "isPopular": true,
+    "benefits": [
+      {
+        "benefit": { "en": "May improve skin elasticity, hydration, and reduce wrinkle depth", "fr": "Peut améliorer l'élasticité de la peau, l'hydratation et réduire la profondeur des rides", "it": "Può migliorare l'elasticità della pelle, l'idratazione e ridurre la profondità delle rughe" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["skin"],
+        "sourceRef": "PMID:30681787"
+      },
+      {
+        "benefit": { "en": "May reduce joint pain and improve mobility in osteoarthritis", "fr": "Peut réduire la douleur articulaire et améliorer la mobilité dans l'arthrose", "it": "Può ridurre il dolore articolare e migliorare la mobilità nell'osteoartrosi" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["joint_health"],
+        "sourceRef": "PMID:28786550"
+      },
+      {
+        "benefit": { "en": "May support bone mineral density and reduce bone degradation markers", "fr": "Peut soutenir la densité minérale osseuse et réduire les marqueurs de dégradation osseuse", "it": "Può supportare la densità minerale ossea e ridurre i marcatori di degradazione ossea" },
+        "evidenceLevel": "observational",
+        "goalTags": ["joint_health", "longevity"]
+      }
+    ]
+  },
+  {
+    "slug": "coenzyme-q10",
+    "category": "specialty_compound",
+    "name": { "en": "Coenzyme Q10 (CoQ10)", "fr": "Coenzyme Q10 (CoQ10)", "it": "Coenzima Q10 (CoQ10)" },
+    "summary": {
+      "en": "A vital coenzyme for mitochondrial energy production that naturally declines with age. Exists as ubiquinone or ubiquinol (reduced, more bioavailable form).",
+      "fr": "Un coenzyme vital pour la production d'énergie mitochondriale qui diminue naturellement avec l'âge. Existe sous forme d'ubiquinone ou d'ubiquinol (forme réduite, plus biodisponible).",
+      "it": "Un coenzima vitale per la produzione di energia mitocondriale che diminuisce naturalmente con l'età. Esiste come ubichinone o ubichinolo (forma ridotta, più biodisponibile)."
+    },
+    "dosageMin": 100,
+    "dosageMax": 300,
+    "dosageUnit": "mg",
+    "bestTime": ["morning"],
+    "withFood": true,
+    "useMode": "continuous",
+    "contraindications": {
+      "en": ["May interact with blood thinners (warfarin)", "May lower blood pressure — caution with antihypertensives", "May interact with chemotherapy drugs", "Statin users may especially benefit (statins deplete CoQ10)"],
+      "fr": ["Peut interagir avec les anticoagulants (warfarine)", "Peut abaisser la tension artérielle — prudence avec les antihypertenseurs", "Peut interagir avec les médicaments de chimiothérapie", "Les utilisateurs de statines peuvent particulièrement en bénéficier (les statines épuisent le CoQ10)"],
+      "it": ["Può interagire con anticoagulanti (warfarin)", "Può abbassare la pressione sanguigna — cautela con antipertensivi", "Può interagire con farmaci chemioterapici", "Gli utilizzatori di statine possono beneficiarne particolarmente (le statine esauriscono il CoQ10)"]
+    },
+    "sourceRefs": ["PMID:28927644", "PMID:24438470"],
+    "isPopular": false,
+    "benefits": [
+      {
+        "benefit": { "en": "Supports mitochondrial energy production and may reduce fatigue", "fr": "Soutient la production d'énergie mitochondriale et peut réduire la fatigue", "it": "Supporta la produzione di energia mitocondriale e può ridurre la stanchezza" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["energy"],
+        "sourceRef": "PMID:28927644"
+      },
+      {
+        "benefit": { "en": "May support cardiovascular health and healthy blood pressure levels", "fr": "Peut soutenir la santé cardiovasculaire et des niveaux de tension artérielle sains", "it": "Può supportare la salute cardiovascolare e livelli sani di pressione sanguigna" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["longevity"],
+        "sourceRef": "PMID:24438470"
+      },
+      {
+        "benefit": { "en": "Potent lipid-soluble antioxidant that may protect cells from oxidative stress", "fr": "Puissant antioxydant liposoluble qui peut protéger les cellules du stress oxydatif", "it": "Potente antiossidante liposolubile che può proteggere le cellule dallo stress ossidativo" },
+        "evidenceLevel": "observational",
+        "goalTags": ["longevity", "skin"]
+      }
+    ]
+  },
+  {
+    "slug": "berberine",
+    "category": "herb",
+    "name": { "en": "Berberine", "fr": "Berbérine", "it": "Berberina" },
+    "summary": {
+      "en": "A bioactive alkaloid found in several plants (goldenseal, barberry). Researched extensively for blood sugar regulation and metabolic health.",
+      "fr": "Un alcaloïde bioactif présent dans plusieurs plantes (hydraste, épine-vinette). Largement étudié pour la régulation de la glycémie et la santé métabolique.",
+      "it": "Un alcaloide bioattivo presente in diverse piante (idraste, crespino). Ampiamente studiato per la regolazione della glicemia e la salute metabolica."
+    },
+    "dosageMin": 500,
+    "dosageMax": 1500,
+    "dosageUnit": "mg",
+    "bestTime": ["morning", "evening"],
+    "withFood": true,
+    "useMode": "cure",
+    "cureOnWeeks": 8,
+    "cureOffWeeks": 4,
+    "cureRationale": {
+      "en": "Berberine has potent effects on gut microbiome and liver enzymes. Cycling 8 weeks on / 4 weeks off may help maintain gut flora balance and reduce liver enzyme stress.",
+      "fr": "La berbérine a des effets puissants sur le microbiome intestinal et les enzymes hépatiques. Un cycle de 8 semaines on / 4 semaines off peut aider à maintenir l'équilibre de la flore intestinale et réduire le stress des enzymes hépatiques.",
+      "it": "La berberina ha potenti effetti sul microbioma intestinale e sugli enzimi epatici. Un ciclo di 8 settimane on / 4 settimane off può aiutare a mantenere l'equilibrio della flora intestinale e ridurre lo stress degli enzimi epatici."
+    },
+    "contraindications": {
+      "en": ["Pregnancy and breastfeeding (may cause uterine contractions)", "May interact with diabetes medications (risk of hypoglycemia)", "May interact with CYP enzyme-metabolized drugs", "May cause gastrointestinal upset at high doses"],
+      "fr": ["Grossesse et allaitement (peut causer des contractions utérines)", "Peut interagir avec les médicaments pour le diabète (risque d'hypoglycémie)", "Peut interagir avec les médicaments métabolisés par les enzymes CYP", "Peut causer des troubles gastro-intestinaux à doses élevées"],
+      "it": ["Gravidanza e allattamento (può causare contrazioni uterine)", "Può interagire con farmaci per il diabete (rischio di ipoglicemia)", "Può interagire con farmaci metabolizzati dagli enzimi CYP", "Può causare disturbi gastrointestinali ad alte dosi"]
+    },
+    "sourceRefs": ["PMID:24753076", "PMID:32268543"],
+    "isPopular": false,
+    "benefits": [
+      {
+        "benefit": { "en": "May support healthy blood sugar levels and improve insulin sensitivity", "fr": "Peut soutenir des niveaux de glycémie sains et améliorer la sensibilité à l'insuline", "it": "Può supportare livelli sani di glicemia e migliorare la sensibilità all'insulina" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["longevity"],
+        "sourceRef": "PMID:24753076"
+      },
+      {
+        "benefit": { "en": "May reduce LDL cholesterol and triglyceride levels", "fr": "Peut réduire les niveaux de cholestérol LDL et de triglycérides", "it": "Può ridurre i livelli di colesterolo LDL e trigliceridi" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["longevity"],
+        "sourceRef": "PMID:32268543"
+      },
+      {
+        "benefit": { "en": "May support healthy gut microbiome composition", "fr": "Peut soutenir une composition saine du microbiome intestinal", "it": "Può supportare una composizione sana del microbioma intestinale" },
+        "evidenceLevel": "observational",
+        "goalTags": ["digestion"]
+      }
+    ]
+  },
+  {
+    "slug": "melatonin",
+    "category": "specialty_compound",
+    "name": { "en": "Melatonin", "fr": "Mélatonine", "it": "Melatonina" },
+    "summary": {
+      "en": "A hormone naturally produced by the pineal gland that regulates the sleep-wake cycle. Low doses are effective for sleep onset and jet lag.",
+      "fr": "Une hormone naturellement produite par la glande pinéale qui régule le cycle veille-sommeil. De faibles doses sont efficaces pour l'endormissement et le décalage horaire.",
+      "it": "Un ormone prodotto naturalmente dalla ghiandola pineale che regola il ciclo sonno-veglia. Basse dosi sono efficaci per l'addormentamento e il jet lag."
+    },
+    "dosageMin": 0.5,
+    "dosageMax": 5,
+    "dosageUnit": "mg",
+    "bestTime": ["bedtime"],
+    "withFood": false,
+    "useMode": "cure",
+    "cureOnWeeks": 4,
+    "cureOffWeeks": 2,
+    "cureRationale": {
+      "en": "Exogenous melatonin may suppress natural production with prolonged use. Short-term use (up to 4 weeks) is generally recommended, with breaks to allow the body to recalibrate its own production.",
+      "fr": "La mélatonine exogène peut supprimer la production naturelle avec un usage prolongé. Un usage à court terme (jusqu'à 4 semaines) est généralement recommandé, avec des pauses pour permettre au corps de recalibrer sa propre production.",
+      "it": "La melatonina esogena può sopprimere la produzione naturale con uso prolungato. L'uso a breve termine (fino a 4 settimane) è generalmente raccomandato, con pause per permettere al corpo di ricalibrare la propria produzione."
+    },
+    "contraindications": {
+      "en": ["Autoimmune disorders", "May interact with blood thinners, diabetes medications, and immunosuppressants", "May cause morning grogginess at high doses", "Not recommended for children without physician guidance"],
+      "fr": ["Troubles auto-immuns", "Peut interagir avec les anticoagulants, les médicaments pour le diabète et les immunosuppresseurs", "Peut causer une somnolence matinale à doses élevées", "Non recommandé pour les enfants sans avis médical"],
+      "it": ["Disturbi autoimmuni", "Può interagire con anticoagulanti, farmaci per il diabete e immunosoppressori", "Può causare sonnolenza mattutina ad alte dosi", "Non raccomandato per bambini senza guida medica"]
+    },
+    "sourceRefs": ["PMID:24587564", "PMID:28460563"],
+    "isPopular": true,
+    "benefits": [
+      {
+        "benefit": { "en": "Reduces time to fall asleep and may improve overall sleep quality", "fr": "Réduit le temps d'endormissement et peut améliorer la qualité globale du sommeil", "it": "Riduce il tempo di addormentamento e può migliorare la qualità complessiva del sonno" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["sleep"],
+        "sourceRef": "PMID:24587564"
+      },
+      {
+        "benefit": { "en": "Effective for managing jet lag and shift-work sleep disruption", "fr": "Efficace pour gérer le décalage horaire et les troubles du sommeil liés au travail posté", "it": "Efficace per gestire il jet lag e i disturbi del sonno da lavoro a turni" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["sleep"],
+        "sourceRef": "PMID:28460563"
+      },
+      {
+        "benefit": { "en": "May have antioxidant properties and support immune function", "fr": "Peut avoir des propriétés antioxydantes et soutenir la fonction immunitaire", "it": "Può avere proprietà antiossidanti e supportare la funzione immunitaria" },
+        "evidenceLevel": "observational",
+        "goalTags": ["immunity", "longevity"]
+      }
+    ]
+  },
+  {
+    "slug": "ginkgo-biloba",
+    "category": "herb",
+    "name": { "en": "Ginkgo Biloba", "fr": "Ginkgo Biloba", "it": "Ginkgo Biloba" },
+    "summary": {
+      "en": "One of the oldest living tree species, used for millennia in traditional medicine. Standardized leaf extract supports cerebral blood flow and cognitive function.",
+      "fr": "L'une des plus anciennes espèces d'arbres vivants, utilisée depuis des millénaires en médecine traditionnelle. L'extrait de feuille standardisé soutient le flux sanguin cérébral et la fonction cognitive.",
+      "it": "Una delle più antiche specie di alberi viventi, usata da millenni nella medicina tradizionale. L'estratto di foglia standardizzato supporta il flusso sanguigno cerebrale e la funzione cognitiva."
+    },
+    "dosageMin": 120,
+    "dosageMax": 240,
+    "dosageUnit": "mg",
+    "bestTime": ["morning"],
+    "withFood": true,
+    "useMode": "cure",
+    "cureOnWeeks": 12,
+    "cureOffWeeks": 4,
+    "cureRationale": {
+      "en": "Cognitive benefits of ginkgo require sustained use (8-12 weeks to manifest). Cycling 12 weeks on / 4 weeks off is recommended to avoid long-term tolerance effects.",
+      "fr": "Les bénéfices cognitifs du ginkgo nécessitent un usage soutenu (8-12 semaines pour se manifester). Un cycle de 12 semaines on / 4 semaines off est recommandé pour éviter les effets de tolérance à long terme.",
+      "it": "I benefici cognitivi del ginkgo richiedono un uso prolungato (8-12 settimane per manifestarsi). Un ciclo di 12 settimane on / 4 settimane off è raccomandato per evitare effetti di tolleranza a lungo termine."
+    },
+    "contraindications": {
+      "en": ["May interact with blood thinners (increased bleeding risk)", "Discontinue at least 2 weeks before surgery", "May interact with antidepressants (MAOIs)", "Seizure disorders"],
+      "fr": ["Peut interagir avec les anticoagulants (risque accru de saignement)", "Arrêter au moins 2 semaines avant une chirurgie", "Peut interagir avec les antidépresseurs (IMAO)", "Troubles épileptiques"],
+      "it": ["Può interagire con anticoagulanti (rischio aumentato di sanguinamento)", "Interrompere almeno 2 settimane prima di un intervento", "Può interagire con antidepressivi (IMAO)", "Disturbi convulsivi"]
+    },
+    "sourceRefs": ["PMID:26268332", "PMID:29150202"],
+    "isPopular": false,
+    "benefits": [
+      {
+        "benefit": { "en": "May improve cerebral blood flow and support cognitive function in older adults", "fr": "Peut améliorer le flux sanguin cérébral et soutenir la fonction cognitive chez les personnes âgées", "it": "Può migliorare il flusso sanguigno cerebrale e supportare la funzione cognitiva negli anziani" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["focus"],
+        "sourceRef": "PMID:26268332"
+      },
+      {
+        "benefit": { "en": "May support working memory and attention in healthy adults", "fr": "Peut soutenir la mémoire de travail et l'attention chez les adultes en bonne santé", "it": "Può supportare la memoria di lavoro e l'attenzione negli adulti sani" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["focus"],
+        "sourceRef": "PMID:29150202"
+      },
+      {
+        "benefit": { "en": "Rich in flavonoid glycosides with antioxidant and neuroprotective properties", "fr": "Riche en glycosides flavonoïdes aux propriétés antioxydantes et neuroprotectrices", "it": "Ricco di glicosidi flavonoidi con proprietà antiossidanti e neuroprotettive" },
+        "evidenceLevel": "observational",
+        "goalTags": ["longevity"]
+      }
+    ]
+  },
+  {
+    "slug": "elderberry",
+    "category": "herb",
+    "name": { "en": "Elderberry", "fr": "Sureau", "it": "Sambuco" },
+    "summary": {
+      "en": "A dark purple berry rich in anthocyanins and vitamin C, traditionally used for immune support during cold and flu season.",
+      "fr": "Une baie violet foncé riche en anthocyanes et en vitamine C, traditionnellement utilisée pour le soutien immunitaire pendant la saison des rhumes et de la grippe.",
+      "it": "Una bacca viola scuro ricca di antociani e vitamina C, tradizionalmente usata per il supporto immunitario durante la stagione di raffreddori e influenza."
+    },
+    "dosageMin": 500,
+    "dosageMax": 1000,
+    "dosageUnit": "mg",
+    "bestTime": ["morning"],
+    "withFood": true,
+    "useMode": "cure",
+    "cureOnWeeks": 12,
+    "cureOffWeeks": 4,
+    "cureRationale": {
+      "en": "Best used seasonally during cold and flu season. Prolonged immune stimulation may not be desirable year-round, especially for those with autoimmune tendencies.",
+      "fr": "Meilleur usage saisonnier pendant la saison des rhumes et de la grippe. Une stimulation immunitaire prolongée peut ne pas être souhaitable toute l'année, surtout pour ceux ayant des tendances auto-immunes.",
+      "it": "Miglior uso stagionale durante la stagione di raffreddori e influenza. Una stimolazione immunitaria prolungata potrebbe non essere desiderabile tutto l'anno, specialmente per chi ha tendenze autoimmuni."
+    },
+    "contraindications": {
+      "en": ["Raw or unripe elderberries are toxic (must be cooked or processed)", "Autoimmune conditions (may overstimulate immune system)", "May interact with immunosuppressants and diabetes medications"],
+      "fr": ["Les baies de sureau crues ou non mûres sont toxiques (doivent être cuites ou transformées)", "Maladies auto-immunes (peut sur-stimuler le système immunitaire)", "Peut interagir avec les immunosuppresseurs et les médicaments pour le diabète"],
+      "it": ["Le bacche di sambuco crude o acerbe sono tossiche (devono essere cotte o lavorate)", "Condizioni autoimmuni (può sovrastimolare il sistema immunitario)", "Può interagire con immunosoppressori e farmaci per il diabete"]
+    },
+    "sourceRefs": ["PMID:30670267", "PMID:15080016"],
+    "isPopular": false,
+    "benefits": [
+      {
+        "benefit": { "en": "May reduce the severity and duration of cold and flu symptoms", "fr": "Peut réduire la sévérité et la durée des symptômes du rhume et de la grippe", "it": "Può ridurre la gravità e la durata dei sintomi di raffreddore e influenza" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["immunity"],
+        "sourceRef": "PMID:30670267"
+      },
+      {
+        "benefit": { "en": "Rich in anthocyanins with potent antioxidant activity", "fr": "Riche en anthocyanes avec une puissante activité antioxydante", "it": "Ricco di antociani con potente attività antiossidante" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["immunity", "longevity"],
+        "sourceRef": "PMID:15080016"
+      },
+      {
+        "benefit": { "en": "Traditionally used as a natural source of vitamin C for immune resilience", "fr": "Traditionnellement utilisé comme source naturelle de vitamine C pour la résilience immunitaire", "it": "Tradizionalmente usato come fonte naturale di vitamina C per la resilienza immunitaria" },
+        "evidenceLevel": "traditional",
+        "goalTags": ["immunity"]
+      }
+    ]
+  },
+  {
+    "slug": "milk-thistle",
+    "category": "herb",
+    "name": { "en": "Milk Thistle (Silymarin)", "fr": "Chardon-Marie (Silymarine)", "it": "Cardo Mariano (Silimarina)" },
+    "summary": {
+      "en": "A flowering plant whose seeds contain silymarin, a flavonoid complex extensively studied for liver protection and detoxification support.",
+      "fr": "Une plante à fleurs dont les graines contiennent la silymarine, un complexe flavonoïde largement étudié pour la protection du foie et le soutien à la détoxification.",
+      "it": "Una pianta da fiore i cui semi contengono silimarina, un complesso flavonoide ampiamente studiato per la protezione del fegato e il supporto alla detossificazione."
+    },
+    "dosageMin": 200,
+    "dosageMax": 400,
+    "dosageUnit": "mg",
+    "bestTime": ["morning", "evening"],
+    "withFood": true,
+    "useMode": "cure",
+    "cureOnWeeks": 8,
+    "cureOffWeeks": 4,
+    "cureRationale": {
+      "en": "Liver-protective benefits are often sought during periods of increased hepatic stress. Cycling 8 weeks on / 4 weeks off allows periodic liver support without continuous supplementation.",
+      "fr": "Les bénéfices hépatoprotecteurs sont souvent recherchés pendant les périodes de stress hépatique accru. Un cycle de 8 semaines on / 4 semaines off permet un soutien hépatique périodique sans supplémentation continue.",
+      "it": "I benefici epatoprotettivi sono spesso ricercati durante periodi di maggiore stress epatico. Un ciclo di 8 settimane on / 4 settimane off consente un supporto epatico periodico senza supplementazione continua."
+    },
+    "contraindications": {
+      "en": ["Allergy to plants in the Asteraceae family (ragweed, daisies)", "May interact with medications metabolized by CYP enzymes", "Hormone-sensitive conditions (weak estrogenic activity)", "May lower blood sugar — caution with diabetes medications"],
+      "fr": ["Allergie aux plantes de la famille des Astéracées (ambroisie, marguerites)", "Peut interagir avec les médicaments métabolisés par les enzymes CYP", "Conditions hormono-sensibles (faible activité estrogénique)", "Peut abaisser la glycémie — prudence avec les médicaments pour le diabète"],
+      "it": ["Allergia alle piante della famiglia delle Asteraceae (ambrosia, margherite)", "Può interagire con farmaci metabolizzati dagli enzimi CYP", "Condizioni ormono-sensibili (debole attività estrogenica)", "Può abbassare la glicemia — cautela con farmaci per il diabete"]
+    },
+    "sourceRefs": ["PMID:27517806", "PMID:28698043"],
+    "isPopular": false,
+    "benefits": [
+      {
+        "benefit": { "en": "May support liver health and protect hepatocytes from toxic damage", "fr": "Peut soutenir la santé du foie et protéger les hépatocytes des dommages toxiques", "it": "Può supportare la salute del fegato e proteggere gli epatociti dai danni tossici" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["digestion", "longevity"],
+        "sourceRef": "PMID:27517806"
+      },
+      {
+        "benefit": { "en": "May support the body's natural detoxification pathways", "fr": "Peut soutenir les voies de détoxification naturelles du corps", "it": "Può supportare le vie di detossificazione naturali del corpo" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["digestion"],
+        "sourceRef": "PMID:28698043"
+      },
+      {
+        "benefit": { "en": "Antioxidant properties that may help protect cells from oxidative stress", "fr": "Propriétés antioxydantes qui peuvent aider à protéger les cellules du stress oxydatif", "it": "Proprietà antiossidanti che possono aiutare a proteggere le cellule dallo stress ossidativo" },
+        "evidenceLevel": "observational",
+        "goalTags": ["longevity"]
+      }
+    ]
+  },
+  {
+    "slug": "nac",
+    "category": "amino_acid",
+    "name": { "en": "NAC (N-Acetyl Cysteine)", "fr": "NAC (N-Acétyl Cystéine)", "it": "NAC (N-Acetil Cisteina)" },
+    "summary": {
+      "en": "A precursor to glutathione, the body's master antioxidant. Supports detoxification, respiratory health, and has emerging mental health applications.",
+      "fr": "Un précurseur du glutathion, le maître antioxydant du corps. Soutient la détoxification, la santé respiratoire et présente des applications émergentes en santé mentale.",
+      "it": "Un precursore del glutatione, il principale antiossidante del corpo. Supporta la detossificazione, la salute respiratoria e presenta applicazioni emergenti nella salute mentale."
+    },
+    "dosageMin": 600,
+    "dosageMax": 1800,
+    "dosageUnit": "mg",
+    "bestTime": ["morning"],
+    "withFood": false,
+    "useMode": "cure",
+    "cureOnWeeks": 8,
+    "cureOffWeeks": 4,
+    "cureRationale": {
+      "en": "NAC's powerful influence on glutathione metabolism and redox balance warrants periodic cycling. 8 weeks on / 4 weeks off helps prevent potential over-reduction of oxidative signaling needed for normal cell function.",
+      "fr": "L'influence puissante de la NAC sur le métabolisme du glutathion et l'équilibre redox justifie un cyclage périodique. 8 semaines on / 4 semaines off aide à prévenir une sur-réduction potentielle de la signalisation oxydative nécessaire au fonctionnement cellulaire normal.",
+      "it": "La potente influenza della NAC sul metabolismo del glutatione e sull'equilibrio redox giustifica un ciclo periodico. 8 settimane on / 4 settimane off aiuta a prevenire una potenziale sovra-riduzione della segnalazione ossidativa necessaria per la normale funzione cellulare."
+    },
+    "contraindications": {
+      "en": ["Asthma (may cause bronchospasm in some individuals)", "May interact with nitroglycerin and blood pressure medications", "May increase bleeding risk with anticoagulants", "Take on empty stomach for best absorption"],
+      "fr": ["Asthme (peut causer un bronchospasme chez certains individus)", "Peut interagir avec la nitroglycérine et les médicaments pour la tension artérielle", "Peut augmenter le risque de saignement avec les anticoagulants", "Prendre à jeun pour une meilleure absorption"],
+      "it": ["Asma (può causare broncospasmo in alcuni individui)", "Può interagire con nitroglicerina e farmaci per la pressione sanguigna", "Può aumentare il rischio di sanguinamento con anticoagulanti", "Assumere a stomaco vuoto per un migliore assorbimento"]
+    },
+    "sourceRefs": ["PMID:24019151", "PMID:30170731"],
+    "isPopular": false,
+    "benefits": [
+      {
+        "benefit": { "en": "Replenishes glutathione, the body's primary intracellular antioxidant", "fr": "Reconstitue le glutathion, le principal antioxydant intracellulaire du corps", "it": "Reintegra il glutatione, il principale antiossidante intracellulare del corpo" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["longevity"],
+        "sourceRef": "PMID:24019151"
+      },
+      {
+        "benefit": { "en": "May support respiratory health by reducing mucus viscosity", "fr": "Peut soutenir la santé respiratoire en réduisant la viscosité du mucus", "it": "Può supportare la salute respiratoria riducendo la viscosità del muco" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["immunity"],
+        "sourceRef": "PMID:30170731"
+      },
+      {
+        "benefit": { "en": "May support liver detoxification and protect against acetaminophen-induced liver damage", "fr": "Peut soutenir la détoxification hépatique et protéger contre les dommages hépatiques induits par le paracétamol", "it": "Può supportare la detossificazione epatica e proteggere dai danni epatici indotti dal paracetamolo" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["digestion", "longevity"]
+      }
+    ]
+  },
+  {
+    "slug": "black-seed-oil",
+    "category": "functional_food",
+    "name": { "en": "Black Seed Oil (Nigella Sativa)", "fr": "Huile de Nigelle (Nigella Sativa)", "it": "Olio di Nigella (Nigella Sativa)" },
+    "summary": {
+      "en": "A traditional remedy from the seeds of Nigella sativa, rich in thymoquinone. Used across cultures for immune support, inflammation, and metabolic health.",
+      "fr": "Un remède traditionnel issu des graines de Nigella sativa, riche en thymoquinone. Utilisé à travers les cultures pour le soutien immunitaire, l'inflammation et la santé métabolique.",
+      "it": "Un rimedio tradizionale dai semi di Nigella sativa, ricco di timochinone. Usato in diverse culture per il supporto immunitario, l'infiammazione e la salute metabolica."
+    },
+    "dosageMin": 1,
+    "dosageMax": 3,
+    "dosageUnit": "g",
+    "bestTime": ["morning"],
+    "withFood": true,
+    "useMode": "cure",
+    "cureOnWeeks": 8,
+    "cureOffWeeks": 4,
+    "cureRationale": {
+      "en": "Thymoquinone's potent bioactive effects benefit from periodic breaks. Cycling 8 weeks on / 4 weeks off is a common traditional recommendation to maintain responsiveness.",
+      "fr": "Les effets bioactifs puissants de la thymoquinone bénéficient de pauses périodiques. Un cycle de 8 semaines on / 4 semaines off est une recommandation traditionnelle courante pour maintenir la réactivité.",
+      "it": "I potenti effetti bioattivi del timochinone beneficiano di pause periodiche. Un ciclo di 8 settimane on / 4 settimane off è una raccomandazione tradizionale comune per mantenere la reattività."
+    },
+    "contraindications": {
+      "en": ["Pregnancy (may stimulate uterine contractions)", "May interact with blood thinners and blood pressure medications", "May interact with diabetes medications (risk of hypoglycemia)", "May slow blood clotting — discontinue before surgery"],
+      "fr": ["Grossesse (peut stimuler les contractions utérines)", "Peut interagir avec les anticoagulants et les médicaments pour la tension artérielle", "Peut interagir avec les médicaments pour le diabète (risque d'hypoglycémie)", "Peut ralentir la coagulation — arrêter avant une chirurgie"],
+      "it": ["Gravidanza (può stimolare le contrazioni uterine)", "Può interagire con anticoagulanti e farmaci per la pressione sanguigna", "Può interagire con farmaci per il diabete (rischio di ipoglicemia)", "Può rallentare la coagulazione — interrompere prima di un intervento"]
+    },
+    "sourceRefs": ["PMID:27613078", "PMID:28411446"],
+    "isPopular": false,
+    "benefits": [
+      {
+        "benefit": { "en": "Thymoquinone may support healthy inflammatory response and reduce oxidative stress", "fr": "La thymoquinone peut soutenir une réponse inflammatoire saine et réduire le stress oxydatif", "it": "Il timochinone può supportare una risposta infiammatoria sana e ridurre lo stress ossidativo" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["immunity", "recovery"],
+        "sourceRef": "PMID:27613078"
+      },
+      {
+        "benefit": { "en": "May support healthy blood sugar and cholesterol levels", "fr": "Peut soutenir des niveaux sains de glycémie et de cholestérol", "it": "Può supportare livelli sani di glicemia e colesterolo" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["longevity"],
+        "sourceRef": "PMID:28411446"
+      },
+      {
+        "benefit": { "en": "Traditionally used across many cultures for immune resilience and general vitality", "fr": "Traditionnellement utilisé dans de nombreuses cultures pour la résilience immunitaire et la vitalité générale", "it": "Tradizionalmente usato in molte culture per la resilienza immunitaria e la vitalità generale" },
+        "evidenceLevel": "traditional",
+        "goalTags": ["immunity", "energy"]
+      }
+    ]
+  },
+  {
+    "slug": "shilajit",
+    "category": "specialty_compound",
+    "name": { "en": "Shilajit", "fr": "Shilajit", "it": "Shilajit" },
+    "summary": {
+      "en": "A mineral-rich resin found in Himalayan rock formations, formed over centuries from decomposed plant matter. Contains fulvic acid and over 80 trace minerals.",
+      "fr": "Une résine riche en minéraux trouvée dans les formations rocheuses himalayennes, formée au fil des siècles à partir de matière végétale décomposée. Contient de l'acide fulvique et plus de 80 oligo-éléments.",
+      "it": "Una resina ricca di minerali trovata nelle formazioni rocciose himalayane, formatasi nel corso dei secoli dalla materia vegetale decomposta. Contiene acido fulvico e oltre 80 oligoelementi."
+    },
+    "dosageMin": 250,
+    "dosageMax": 500,
+    "dosageUnit": "mg",
+    "bestTime": ["morning"],
+    "withFood": false,
+    "useMode": "cure",
+    "cureOnWeeks": 8,
+    "cureOffWeeks": 4,
+    "cureRationale": {
+      "en": "Shilajit's mineral and fulvic acid content may accumulate with extended use. Cycling 8 weeks on / 4 weeks off helps prevent mineral overload and maintains the body's responsiveness.",
+      "fr": "La teneur en minéraux et en acide fulvique du shilajit peut s'accumuler avec un usage prolongé. Un cycle de 8 semaines on / 4 semaines off aide à prévenir la surcharge minérale et maintient la réactivité du corps.",
+      "it": "Il contenuto di minerali e acido fulvico dello shilajit può accumularsi con l'uso prolungato. Un ciclo di 8 settimane on / 4 settimane off aiuta a prevenire il sovraccarico minerale e mantiene la reattività del corpo."
+    },
+    "contraindications": {
+      "en": ["Gout or high uric acid levels", "Hemochromatosis (contains iron)", "Ensure purified form to avoid heavy metal contamination", "Pregnancy and breastfeeding"],
+      "fr": ["Goutte ou taux élevés d'acide urique", "Hémochromatose (contient du fer)", "Assurer une forme purifiée pour éviter la contamination par les métaux lourds", "Grossesse et allaitement"],
+      "it": ["Gotta o livelli elevati di acido urico", "Emocromatosi (contiene ferro)", "Assicurare una forma purificata per evitare contaminazione da metalli pesanti", "Gravidanza e allattamento"]
+    },
+    "sourceRefs": ["PMID:22482077", "PMID:31559942"],
+    "isPopular": false,
+    "benefits": [
+      {
+        "benefit": { "en": "May enhance mitochondrial function and cellular energy production via fulvic acid", "fr": "Peut améliorer la fonction mitochondriale et la production d'énergie cellulaire via l'acide fulvique", "it": "Può migliorare la funzione mitocondriale e la produzione di energia cellulare tramite l'acido fulvico" },
+        "evidenceLevel": "observational",
+        "goalTags": ["energy"],
+        "sourceRef": "PMID:22482077"
+      },
+      {
+        "benefit": { "en": "May support testosterone levels and reproductive health in men", "fr": "Peut soutenir les niveaux de testostérone et la santé reproductive chez les hommes", "it": "Può supportare i livelli di testosterone e la salute riproduttiva negli uomini" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["energy", "recovery"],
+        "sourceRef": "PMID:31559942"
+      },
+      {
+        "benefit": { "en": "Traditionally used in Ayurvedic medicine for vitality and longevity", "fr": "Traditionnellement utilisé en médecine ayurvédique pour la vitalité et la longévité", "it": "Tradizionalmente usato nella medicina ayurvedica per la vitalità e la longevità" },
+        "evidenceLevel": "traditional",
+        "goalTags": ["longevity"]
+      }
+    ]
+  },
+  {
+    "slug": "boswellia",
+    "category": "herb",
+    "name": { "en": "Boswellia (Indian Frankincense)", "fr": "Boswellia (Encens Indien)", "it": "Boswellia (Incenso Indiano)" },
+    "summary": {
+      "en": "A resin extract from the Boswellia serrata tree containing boswellic acids, researched for joint health and inflammatory conditions. A traditional Ayurvedic remedy.",
+      "fr": "Un extrait de résine de l'arbre Boswellia serrata contenant des acides boswelliques, étudié pour la santé articulaire et les conditions inflammatoires. Un remède ayurvédique traditionnel.",
+      "it": "Un estratto di resina dall'albero Boswellia serrata contenente acidi boswellici, studiato per la salute articolare e le condizioni infiammatorie. Un rimedio ayurvedico tradizionale."
+    },
+    "dosageMin": 300,
+    "dosageMax": 500,
+    "dosageUnit": "mg",
+    "bestTime": ["morning", "evening"],
+    "withFood": true,
+    "useMode": "continuous",
+    "contraindications": {
+      "en": ["May interact with anti-inflammatory medications (NSAIDs, corticosteroids)", "Pregnancy and breastfeeding", "May interact with immunosuppressants", "Gastrointestinal sensitivity at high doses"],
+      "fr": ["Peut interagir avec les médicaments anti-inflammatoires (AINS, corticostéroïdes)", "Grossesse et allaitement", "Peut interagir avec les immunosuppresseurs", "Sensibilité gastro-intestinale à doses élevées"],
+      "it": ["Può interagire con farmaci antinfiammatori (FANS, corticosteroidi)", "Gravidanza e allattamento", "Può interagire con immunosoppressori", "Sensibilità gastrointestinale ad alte dosi"]
+    },
+    "sourceRefs": ["PMID:30838435", "PMID:24946862"],
+    "isPopular": false,
+    "benefits": [
+      {
+        "benefit": { "en": "May reduce joint pain and improve physical function in osteoarthritis", "fr": "Peut réduire la douleur articulaire et améliorer la fonction physique dans l'arthrose", "it": "Può ridurre il dolore articolare e migliorare la funzione fisica nell'osteoartrosi" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["joint_health"],
+        "sourceRef": "PMID:30838435"
+      },
+      {
+        "benefit": { "en": "May inhibit 5-lipoxygenase, reducing leukotriene-mediated inflammation", "fr": "Peut inhiber la 5-lipoxygénase, réduisant l'inflammation médiée par les leucotriènes", "it": "Può inibire la 5-lipossigenasi, riducendo l'infiammazione mediata dai leucotrieni" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["recovery", "joint_health"],
+        "sourceRef": "PMID:24946862"
+      },
+      {
+        "benefit": { "en": "Traditionally used in Ayurvedic medicine for inflammatory conditions and respiratory health", "fr": "Traditionnellement utilisé en médecine ayurvédique pour les conditions inflammatoires et la santé respiratoire", "it": "Tradizionalmente usata nella medicina ayurvedica per condizioni infiammatorie e salute respiratoria" },
+        "evidenceLevel": "traditional",
+        "goalTags": ["joint_health", "immunity"]
+      }
+    ]
+  },
+  {
+    "slug": "quercetin",
+    "category": "specialty_compound",
+    "name": { "en": "Quercetin", "fr": "Quercétine", "it": "Quercetina" },
+    "summary": {
+      "en": "A flavonoid antioxidant found in many fruits and vegetables (onions, apples, berries). Researched for anti-inflammatory, anti-histamine, and senolytic properties.",
+      "fr": "Un antioxydant flavonoïde présent dans de nombreux fruits et légumes (oignons, pommes, baies). Étudié pour ses propriétés anti-inflammatoires, antihistaminiques et sénolytiques.",
+      "it": "Un antiossidante flavonoide presente in molti frutti e verdure (cipolle, mele, bacche). Studiato per le sue proprietà antinfiammatorie, antistaminiche e senolitiche."
+    },
+    "dosageMin": 500,
+    "dosageMax": 1000,
+    "dosageUnit": "mg",
+    "bestTime": ["morning"],
+    "withFood": true,
+    "useMode": "continuous",
+    "contraindications": {
+      "en": ["May interact with antibiotics (quinolones)", "May interact with blood thinners", "May interact with cyclosporine", "Kidney disease (high doses)"],
+      "fr": ["Peut interagir avec les antibiotiques (quinolones)", "Peut interagir avec les anticoagulants", "Peut interagir avec la cyclosporine", "Maladie rénale (doses élevées)"],
+      "it": ["Può interagire con antibiotici (chinoloni)", "Può interagire con anticoagulanti", "Può interagire con ciclosporina", "Malattia renale (dosi elevate)"]
+    },
+    "sourceRefs": ["PMID:27187333", "PMID:31159270"],
+    "isPopular": false,
+    "benefits": [
+      {
+        "benefit": { "en": "May support healthy inflammatory response and reduce markers of oxidative stress", "fr": "Peut soutenir une réponse inflammatoire saine et réduire les marqueurs de stress oxydatif", "it": "Può supportare una risposta infiammatoria sana e ridurre i marcatori di stress ossidativo" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["recovery", "longevity"],
+        "sourceRef": "PMID:27187333"
+      },
+      {
+        "benefit": { "en": "May act as a natural antihistamine and support respiratory comfort during allergy season", "fr": "Peut agir comme antihistaminique naturel et soutenir le confort respiratoire pendant la saison des allergies", "it": "Può agire come antistaminico naturale e supportare il comfort respiratorio durante la stagione delle allergie" },
+        "evidenceLevel": "clinical_trial",
+        "goalTags": ["immunity"],
+        "sourceRef": "PMID:31159270"
+      },
+      {
+        "benefit": { "en": "Emerging research suggests senolytic properties that may support healthy aging", "fr": "La recherche émergente suggère des propriétés sénolytiques qui peuvent soutenir un vieillissement sain", "it": "La ricerca emergente suggerisce proprietà senolitiche che possono supportare un invecchiamento sano" },
+        "evidenceLevel": "observational",
+        "goalTags": ["longevity"]
+      }
+    ]
   }
 ]

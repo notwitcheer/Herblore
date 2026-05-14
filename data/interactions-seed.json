@@ -12,7 +12,7 @@
   },
   {
     "aliment_a": "zinc",
-    "aliment_b_name": "Iron supplements",
+    "aliment_b": "iron-bisglycinate",
     "type": "timing_separation",
     "severity": "warning",
     "separationHours": 2,
@@ -132,6 +132,162 @@
       "en": "Antibiotics kill probiotic bacteria. Take probiotics at least 2 hours after antibiotics to maintain some benefit. Continue probiotics for 2 weeks after completing antibiotics course.",
       "fr": "Les antibiotiques tuent les bactéries probiotiques. Prendre les probiotiques au moins 2 heures après les antibiotiques. Continuer les probiotiques 2 semaines après la fin du traitement.",
       "it": "Gli antibiotici uccidono i batteri probiotici. Assumere i probiotici almeno 2 ore dopo gli antibiotici. Continuare i probiotici per 2 settimane dopo il completamento del ciclo."
+    }
+  },
+  {
+    "aliment_a": "vitamin-c",
+    "aliment_b": "iron-bisglycinate",
+    "type": "synergy",
+    "severity": "info",
+    "description": {
+      "en": "Vitamin C dramatically increases non-heme iron absorption (up to 6x). Always take iron with vitamin C for maximum benefit.",
+      "fr": "La vitamine C augmente considérablement l'absorption du fer non héminique (jusqu'à 6x). Toujours prendre le fer avec de la vitamine C pour un bénéfice maximal.",
+      "it": "La vitamina C aumenta drasticamente l'assorbimento del ferro non eme (fino a 6x). Assumere sempre il ferro con vitamina C per il massimo beneficio."
+    }
+  },
+  {
+    "aliment_a": "vitamin-c",
+    "aliment_b": "collagen-peptides",
+    "type": "synergy",
+    "severity": "info",
+    "description": {
+      "en": "Vitamin C is essential for collagen synthesis. Taking vitamin C with collagen peptides supports the body's ability to build and repair connective tissue.",
+      "fr": "La vitamine C est essentielle pour la synthèse du collagène. Prendre de la vitamine C avec des peptides de collagène soutient la capacité du corps à construire et réparer le tissu conjonctif.",
+      "it": "La vitamina C è essenziale per la sintesi del collagene. Assumere vitamina C con peptidi di collagene supporta la capacità del corpo di costruire e riparare il tessuto connettivo."
+    }
+  },
+  {
+    "aliment_a": "iron-bisglycinate",
+    "aliment_b_name": "Calcium supplements",
+    "type": "timing_separation",
+    "severity": "warning",
+    "separationHours": 2,
+    "description": {
+      "en": "Calcium inhibits iron absorption. Take iron and calcium supplements at least 2 hours apart.",
+      "fr": "Le calcium inhibe l'absorption du fer. Prendre les suppléments de fer et de calcium à au moins 2 heures d'intervalle.",
+      "it": "Il calcio inibisce l'assorbimento del ferro. Assumere integratori di ferro e calcio a distanza di almeno 2 ore."
+    }
+  },
+  {
+    "aliment_a": "creatine-monohydrate",
+    "aliment_b_name": "Caffeine",
+    "type": "timing_separation",
+    "severity": "info",
+    "separationHours": 1,
+    "description": {
+      "en": "Some research suggests caffeine may slightly reduce creatine's ergogenic benefits. Consider taking creatine separately from high-caffeine beverages.",
+      "fr": "Certaines recherches suggèrent que la caféine pourrait légèrement réduire les bénéfices ergogéniques de la créatine. Envisagez de prendre la créatine séparément des boissons riches en caféine.",
+      "it": "Alcune ricerche suggeriscono che la caffeina potrebbe ridurre leggermente i benefici ergogenici della creatina. Considerare di assumere la creatina separatamente dalle bevande ad alto contenuto di caffeina."
+    }
+  },
+  {
+    "aliment_a": "rhodiola-rosea",
+    "aliment_b": "ashwagandha",
+    "type": "synergy",
+    "severity": "info",
+    "description": {
+      "en": "Two complementary adaptogens: Rhodiola provides acute energy and focus, while Ashwagandha offers sustained stress resilience. Effective together for demanding periods.",
+      "fr": "Deux adaptogènes complémentaires : la Rhodiola apporte énergie et concentration aiguës, tandis que l'Ashwagandha offre une résilience au stress durable. Efficaces ensemble en période exigeante.",
+      "it": "Due adattogeni complementari: la Rhodiola fornisce energia e concentrazione acute, mentre l'Ashwagandha offre resilienza allo stress duratura. Efficaci insieme nei periodi impegnativi."
+    }
+  },
+  {
+    "aliment_a": "cordyceps",
+    "aliment_b": "coenzyme-q10",
+    "type": "synergy",
+    "severity": "info",
+    "description": {
+      "en": "Both support cellular energy production through complementary mechanisms. Cordyceps enhances oxygen utilization while CoQ10 is essential for mitochondrial ATP synthesis.",
+      "fr": "Les deux soutiennent la production d'énergie cellulaire par des mécanismes complémentaires. Le Cordyceps améliore l'utilisation de l'oxygène tandis que le CoQ10 est essentiel pour la synthèse mitochondriale d'ATP.",
+      "it": "Entrambi supportano la produzione di energia cellulare attraverso meccanismi complementari. Il Cordyceps migliora l'utilizzo dell'ossigeno mentre il CoQ10 è essenziale per la sintesi mitocondriale di ATP."
+    }
+  },
+  {
+    "aliment_a": "berberine",
+    "aliment_b_name": "Metformin",
+    "type": "conflict",
+    "severity": "danger",
+    "description": {
+      "en": "Both berberine and metformin lower blood glucose through similar mechanisms. Combining them may cause dangerously low blood sugar (hypoglycemia). Consult your doctor.",
+      "fr": "La berbérine et la metformine abaissent toutes deux la glycémie par des mécanismes similaires. Les combiner peut provoquer une hypoglycémie dangereuse. Consultez votre médecin.",
+      "it": "Sia la berberina che la metformina abbassano la glicemia attraverso meccanismi simili. Combinarle può causare un'ipoglicemia pericolosa. Consultare il medico."
+    }
+  },
+  {
+    "aliment_a": "melatonin",
+    "aliment_b": "magnesium-glycinate",
+    "type": "synergy",
+    "severity": "info",
+    "description": {
+      "en": "Magnesium and melatonin complement each other for sleep: magnesium relaxes muscles and calms the nervous system, while melatonin regulates the sleep-wake cycle.",
+      "fr": "Le magnésium et la mélatonine se complètent pour le sommeil : le magnésium détend les muscles et calme le système nerveux, tandis que la mélatonine régule le cycle veille-sommeil.",
+      "it": "Magnesio e melatonina si completano per il sonno: il magnesio rilassa i muscoli e calma il sistema nervoso, mentre la melatonina regola il ciclo sonno-veglia."
+    }
+  },
+  {
+    "aliment_a": "quercetin",
+    "aliment_b": "vitamin-c",
+    "type": "synergy",
+    "severity": "info",
+    "description": {
+      "en": "Quercetin and vitamin C enhance each other's antioxidant effects. Vitamin C helps regenerate quercetin, extending its protective duration in the body.",
+      "fr": "La quercétine et la vitamine C renforcent mutuellement leurs effets antioxydants. La vitamine C aide à régénérer la quercétine, prolongeant sa durée de protection dans le corps.",
+      "it": "La quercetina e la vitamina C potenziano reciprocamente i loro effetti antiossidanti. La vitamina C aiuta a rigenerare la quercetina, prolungando la sua durata protettiva nel corpo."
+    }
+  },
+  {
+    "aliment_a": "turmeric-curcumin",
+    "aliment_b": "boswellia",
+    "type": "synergy",
+    "severity": "info",
+    "description": {
+      "en": "Curcumin and boswellic acids target different inflammatory pathways (NF-kB and 5-LOX respectively). Together they provide broader anti-inflammatory support.",
+      "fr": "La curcumine et les acides boswelliques ciblent différentes voies inflammatoires (NF-kB et 5-LOX respectivement). Ensemble, ils offrent un soutien anti-inflammatoire plus large.",
+      "it": "La curcumina e gli acidi boswellici agiscono su diverse vie infiammatorie (NF-kB e 5-LOX rispettivamente). Insieme forniscono un supporto antinfiammatorio più ampio."
+    }
+  },
+  {
+    "aliment_a": "nac",
+    "aliment_b": "milk-thistle",
+    "type": "synergy",
+    "severity": "info",
+    "description": {
+      "en": "NAC (glutathione precursor) and milk thistle (silymarin) both support liver detoxification through complementary mechanisms. A well-established liver support stack.",
+      "fr": "Le NAC (précurseur du glutathion) et le chardon-Marie (silymarine) soutiennent tous deux la détoxification hépatique par des mécanismes complémentaires. Un stack de soutien hépatique bien établi.",
+      "it": "Il NAC (precursore del glutatione) e il cardo mariano (silimarina) supportano entrambi la disintossicazione epatica attraverso meccanismi complementari. Uno stack di supporto epatico ben consolidato."
+    }
+  },
+  {
+    "aliment_a": "ginkgo-biloba",
+    "aliment_b_name": "Blood thinners (warfarin, aspirin)",
+    "type": "conflict",
+    "severity": "danger",
+    "description": {
+      "en": "Ginkgo biloba has blood-thinning properties and may increase bleeding risk when combined with anticoagulant medications. Consult your doctor before use.",
+      "fr": "Le Ginkgo biloba a des propriétés anticoagulantes et peut augmenter le risque de saignement en combinaison avec des médicaments anticoagulants. Consultez votre médecin avant utilisation.",
+      "it": "Il Ginkgo biloba ha proprietà anticoagulanti e può aumentare il rischio di sanguinamento se combinato con farmaci anticoagulanti. Consultare il medico prima dell'uso."
+    }
+  },
+  {
+    "aliment_a": "ginkgo-biloba",
+    "aliment_b": "lions-mane",
+    "type": "synergy",
+    "severity": "info",
+    "description": {
+      "en": "Ginkgo (cerebral blood flow) + Lion's Mane (nerve growth factor) target different aspects of cognitive function. Together they may provide enhanced neuroprotection.",
+      "fr": "Le Ginkgo (flux sanguin cérébral) + Crinière de Lion (facteur de croissance nerveuse) ciblent différents aspects de la fonction cognitive. Ensemble, ils peuvent offrir une neuroprotection améliorée.",
+      "it": "Il Ginkgo (flusso sanguigno cerebrale) + Criniera di Leone (fattore di crescita nervosa) agiscono su diversi aspetti della funzione cognitiva. Insieme possono offrire una neuroprotezione potenziata."
+    }
+  },
+  {
+    "aliment_a": "elderberry",
+    "aliment_b": "vitamin-c",
+    "type": "synergy",
+    "severity": "info",
+    "description": {
+      "en": "Elderberry and vitamin C both support immune function through different mechanisms. A classic immune support combination during cold and flu season.",
+      "fr": "Le sureau et la vitamine C soutiennent tous deux la fonction immunitaire par des mécanismes différents. Une combinaison classique de soutien immunitaire pendant la saison des rhumes et grippes.",
+      "it": "Il sambuco e la vitamina C supportano entrambi la funzione immunitaria attraverso meccanismi diversi. Una combinazione classica di supporto immunitario durante la stagione di raffreddori e influenze."
     }
   }
 ]
