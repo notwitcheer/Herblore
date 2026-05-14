@@ -1,0 +1,132 @@
+{
+  "tabs": {
+    "library": "Bibliothèque",
+    "stack": "Mon Stack",
+    "timeline": "Planning",
+    "profile": "Profil"
+  },
+  "library": {
+    "title": "Bibliothèque",
+    "search": "Rechercher suppléments, herbes, superaliments...",
+    "categories": "Catégories",
+    "all": "Tout",
+    "noResults": "Aucun aliment trouvé",
+    "evidence": "Preuves",
+    "benefits": "Bienfaits",
+    "dosage": "Dosage",
+    "timing": "Meilleur moment",
+    "interactions": "Interactions",
+    "contraindications": "Contre-indications",
+    "sources": "Sources",
+    "withFood": "Prendre avec de la nourriture",
+    "emptyStomach": "Prendre à jeun",
+    "continuous": "Usage continu",
+    "cure": "Cycle : {{on}}s on / {{off}}s off",
+    "cureRationale": "Pourquoi cycler ?",
+    "addToStack": "Ajouter à Mon Stack",
+    "inStack": "Dans votre stack"
+  },
+  "stack": {
+    "title": "Mon Stack",
+    "empty": "Votre stack est vide",
+    "emptySubtitle": "Ajoutez des suppléments depuis la Bibliothèque pour créer votre stack personnalisé.",
+    "browseLibrary": "Parcourir la Bibliothèque",
+    "active": "Actif",
+    "paused": "En pause",
+    "dosageLabel": "Dosage",
+    "interactions": "Interactions",
+    "synergies": "Synergies",
+    "conflicts": "Conflits",
+    "remove": "Retirer",
+    "pause": "Mettre en pause",
+    "resume": "Reprendre"
+  },
+  "timeline": {
+    "title": "Planning du jour",
+    "wake": "Réveil",
+    "breakfast": "Petit-déjeuner",
+    "lunch": "Déjeuner",
+    "afternoon": "Après-midi",
+    "dinner": "Dîner",
+    "bedtime": "Coucher",
+    "taken": "Fait",
+    "markTaken": "Marquer comme pris",
+    "empty": "Ajoutez des suppléments à votre stack pour générer votre planning quotidien."
+  },
+  "profile": {
+    "title": "Profil",
+    "language": "Langue",
+    "subscription": "Abonnement",
+    "manage": "Gérer l'abonnement",
+    "restore": "Restaurer les achats",
+    "disclaimer": "Avertissement médical",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation",
+    "version": "Version"
+  },
+  "onboarding": {
+    "goalsTitle": "Quels sont vos objectifs santé ?",
+    "goalsSubtitle": "Sélectionnez jusqu'à 5 objectifs pour personnaliser votre expérience.",
+    "stackTitle": "Prenez-vous déjà quelque chose ?",
+    "stackSubtitle": "Ajoutez rapidement vos suppléments actuels. Vous pourrez toujours modifier plus tard.",
+    "previewTitle": "Votre Planning Personnalisé",
+    "previewSubtitle": "Voici votre programme quotidien optimisé selon vos sélections.",
+    "unlock": "Débloquer votre programme complet",
+    "next": "Suivant",
+    "skip": "Passer",
+    "getStarted": "Commencer"
+  },
+  "paywall": {
+    "title": "Débloquer Herblore",
+    "subtitle": "Commencez votre essai gratuit de 3 jours",
+    "weekly": "Hebdomadaire",
+    "weeklyPrice": "4,99 $/semaine",
+    "yearly": "Annuel",
+    "yearlyPrice": "29,99 $/an",
+    "yearlySavings": "Économisez 88%",
+    "trialInfo": "3 jours d'essai gratuit, puis {{price}}",
+    "subscribe": "Commencer l'essai gratuit",
+    "restore": "Restaurer les achats",
+    "legal": "Annulez à tout moment. Renouvellement automatique.",
+    "disclaimer": "Herblore fournit des informations de bien-être général à des fins éducatives uniquement. Il n'est pas destiné à diagnostiquer, traiter, guérir ou prévenir une maladie. Consultez toujours votre professionnel de santé."
+  },
+  "goals": {
+    "energy": "Énergie",
+    "sleep": "Sommeil",
+    "immunity": "Immunité",
+    "focus": "Concentration",
+    "stress": "Stress",
+    "digestion": "Digestion",
+    "skin": "Peau",
+    "longevity": "Longévité",
+    "recovery": "Récupération",
+    "joint_health": "Articulations"
+  },
+  "evidence": {
+    "clinical_trial": "Essai clinique",
+    "observational": "Observationnel",
+    "traditional": "Usage traditionnel"
+  },
+  "categories": {
+    "vitamin": "Vitamine",
+    "mineral": "Minéral",
+    "amino_acid": "Acide aminé",
+    "adaptogen": "Adaptogène",
+    "mushroom": "Champignon",
+    "superfood": "Superaliment",
+    "herb": "Herbe",
+    "spice": "Épice",
+    "fermented_food": "Aliment fermenté",
+    "functional_food": "Aliment fonctionnel",
+    "fatty_acid": "Acide gras",
+    "probiotic": "Probiotique",
+    "specialty_compound": "Composé spécialisé"
+  },
+  "common": {
+    "cancel": "Annuler",
+    "save": "Enregistrer",
+    "delete": "Supprimer",
+    "confirm": "Confirmer",
+    "loading": "Chargement..."
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "tabs": {
+    "library": "Libreria",
+    "stack": "Il Mio Stack",
+    "timeline": "Programma",
+    "profile": "Profilo"
+  },
+  "library": {
+    "title": "Libreria",
+    "search": "Cerca integratori, erbe, superfood...",
+    "categories": "Categorie",
+    "all": "Tutto",
+    "noResults": "Nessun alimento trovato",
+    "evidence": "Evidenze",
+    "benefits": "Benefici",
+    "dosage": "Dosaggio",
+    "timing": "Momento migliore",
+    "interactions": "Interazioni",
+    "contraindications": "Controindicazioni",
+    "sources": "Fonti",
+    "withFood": "Assumere con il cibo",
+    "emptyStomach": "Assumere a stomaco vuoto",
+    "continuous": "Uso continuo",
+    "cure": "Ciclo: {{on}}s on / {{off}}s off",
+    "cureRationale": "Perché ciclare?",
+    "addToStack": "Aggiungi al Mio Stack",
+    "inStack": "Nel tuo stack"
+  },
+  "stack": {
+    "title": "Il Mio Stack",
+    "empty": "Il tuo stack è vuoto",
+    "emptySubtitle": "Aggiungi integratori dalla Libreria per creare il tuo stack personalizzato.",
+    "browseLibrary": "Sfoglia la Libreria",
+    "active": "Attivo",
+    "paused": "In pausa",
+    "dosageLabel": "Dosaggio",
+    "interactions": "Interazioni",
+    "synergies": "Sinergie",
+    "conflicts": "Conflitti",
+    "remove": "Rimuovi",
+    "pause": "Metti in pausa",
+    "resume": "Riprendi"
+  },
+  "timeline": {
+    "title": "Programma di oggi",
+    "wake": "Risveglio",
+    "breakfast": "Colazione",
+    "lunch": "Pranzo",
+    "afternoon": "Pomeriggio",
+    "dinner": "Cena",
+    "bedtime": "Prima di dormire",
+    "taken": "Fatto",
+    "markTaken": "Segna come assunto",
+    "empty": "Aggiungi integratori al tuo stack per generare il tuo programma giornaliero."
+  },
+  "profile": {
+    "title": "Profilo",
+    "language": "Lingua",
+    "subscription": "Abbonamento",
+    "manage": "Gestisci abbonamento",
+    "restore": "Ripristina acquisti",
+    "disclaimer": "Avviso medico",
+    "privacy": "Informativa sulla privacy",
+    "terms": "Termini di servizio",
+    "version": "Versione"
+  },
+  "onboarding": {
+    "goalsTitle": "Quali sono i tuoi obiettivi di salute?",
+    "goalsSubtitle": "Seleziona fino a 5 obiettivi per personalizzare la tua esperienza.",
+    "stackTitle": "Stai già assumendo qualcosa?",
+    "stackSubtitle": "Aggiungi rapidamente i tuoi integratori attuali. Puoi sempre modificare dopo.",
+    "previewTitle": "Il Tuo Programma Personalizzato",
+    "previewSubtitle": "Ecco il tuo programma giornaliero ottimizzato in base alle tue selezioni.",
+    "unlock": "Sblocca il tuo programma completo",
+    "next": "Avanti",
+    "skip": "Salta",
+    "getStarted": "Inizia"
+  },
+  "paywall": {
+    "title": "Sblocca Herblore",
+    "subtitle": "Inizia la tua prova gratuita di 3 giorni",
+    "weekly": "Settimanale",
+    "weeklyPrice": "$4,99/settimana",
+    "yearly": "Annuale",
+    "yearlyPrice": "$29,99/anno",
+    "yearlySavings": "Risparmia l'88%",
+    "trialInfo": "3 giorni di prova gratuita, poi {{price}}",
+    "subscribe": "Inizia la prova gratuita",
+    "restore": "Ripristina acquisti",
+    "legal": "Annulla in qualsiasi momento. Rinnovo automatico.",
+    "disclaimer": "Herblore fornisce informazioni generali sul benessere solo a scopo educativo. Non è destinato a diagnosticare, trattare, curare o prevenire alcuna malattia. Consulta sempre il tuo medico."
+  },
+  "goals": {
+    "energy": "Energia",
+    "sleep": "Sonno",
+    "immunity": "Immunità",
+    "focus": "Concentrazione",
+    "stress": "Stress",
+    "digestion": "Digestione",
+    "skin": "Pelle",
+    "longevity": "Longevità",
+    "recovery": "Recupero",
+    "joint_health": "Articolazioni"
+  },
+  "evidence": {
+    "clinical_trial": "Studio clinico",
+    "observational": "Osservazionale",
+    "traditional": "Uso tradizionale"
+  },
+  "categories": {
+    "vitamin": "Vitamina",
+    "mineral": "Minerale",
+    "amino_acid": "Amminoacido",
+    "adaptogen": "Adattogeno",
+    "mushroom": "Fungo",
+    "superfood": "Superfood",
+    "herb": "Erba",
+    "spice": "Spezia",
+    "fermented_food": "Alimento fermentato",
+    "functional_food": "Alimento funzionale",
+    "fatty_acid": "Acido grasso",
+    "probiotic": "Probiotico",
+    "specialty_compound": "Composto speciale"
+  },
+  "common": {
+    "cancel": "Annulla",
+    "save": "Salva",
+    "delete": "Elimina",
+    "confirm": "Conferma",
+    "loading": "Caricamento..."
+  }
+}

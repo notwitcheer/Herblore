@@ -1,0 +1,132 @@
+{
+  "tabs": {
+    "library": "Library",
+    "stack": "My Stack",
+    "timeline": "Timeline",
+    "profile": "Profile"
+  },
+  "library": {
+    "title": "Library",
+    "search": "Search supplements, herbs, superfoods...",
+    "categories": "Categories",
+    "all": "All",
+    "noResults": "No aliments found",
+    "evidence": "Evidence",
+    "benefits": "Benefits",
+    "dosage": "Dosage",
+    "timing": "Best Time",
+    "interactions": "Interactions",
+    "contraindications": "Contraindications",
+    "sources": "Sources",
+    "withFood": "Take with food",
+    "emptyStomach": "Take on empty stomach",
+    "continuous": "Continuous use",
+    "cure": "Cycle: {{on}}w on / {{off}}w off",
+    "cureRationale": "Why cycle?",
+    "addToStack": "Add to My Stack",
+    "inStack": "In your stack"
+  },
+  "stack": {
+    "title": "My Stack",
+    "empty": "Your stack is empty",
+    "emptySubtitle": "Add supplements from the Library to build your personalized stack.",
+    "browseLibrary": "Browse Library",
+    "active": "Active",
+    "paused": "Paused",
+    "dosageLabel": "Dosage",
+    "interactions": "Interactions",
+    "synergies": "Synergies",
+    "conflicts": "Conflicts",
+    "remove": "Remove",
+    "pause": "Pause",
+    "resume": "Resume"
+  },
+  "timeline": {
+    "title": "Today's Timeline",
+    "wake": "Wake Up",
+    "breakfast": "Breakfast",
+    "lunch": "Lunch",
+    "afternoon": "Afternoon",
+    "dinner": "Dinner",
+    "bedtime": "Bedtime",
+    "taken": "Done",
+    "markTaken": "Mark as taken",
+    "empty": "Add supplements to your stack to generate your daily timeline."
+  },
+  "profile": {
+    "title": "Profile",
+    "language": "Language",
+    "subscription": "Subscription",
+    "manage": "Manage Subscription",
+    "restore": "Restore Purchases",
+    "disclaimer": "Medical Disclaimer",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "version": "Version"
+  },
+  "onboarding": {
+    "goalsTitle": "What are your health goals?",
+    "goalsSubtitle": "Select up to 5 goals to personalize your experience.",
+    "stackTitle": "Are you currently taking anything?",
+    "stackSubtitle": "Quick-add from popular supplements. You can always change this later.",
+    "previewTitle": "Your Personalized Timeline",
+    "previewSubtitle": "Here's your optimized daily schedule based on your selections.",
+    "unlock": "Unlock your full schedule",
+    "next": "Next",
+    "skip": "Skip",
+    "getStarted": "Get Started"
+  },
+  "paywall": {
+    "title": "Unlock Herblore",
+    "subtitle": "Start your 3-day free trial",
+    "weekly": "Weekly",
+    "weeklyPrice": "$4.99/week",
+    "yearly": "Yearly",
+    "yearlyPrice": "$29.99/year",
+    "yearlySavings": "Save 88%",
+    "trialInfo": "3-day free trial, then {{price}}",
+    "subscribe": "Start Free Trial",
+    "restore": "Restore Purchases",
+    "legal": "Cancel anytime. Subscription auto-renews.",
+    "disclaimer": "Herblore provides general wellness information for educational purposes only. It is not intended to diagnose, treat, cure, or prevent any disease. Always consult your healthcare provider."
+  },
+  "goals": {
+    "energy": "Energy",
+    "sleep": "Sleep",
+    "immunity": "Immunity",
+    "focus": "Focus",
+    "stress": "Stress",
+    "digestion": "Digestion",
+    "skin": "Skin",
+    "longevity": "Longevity",
+    "recovery": "Recovery",
+    "joint_health": "Joint Health"
+  },
+  "evidence": {
+    "clinical_trial": "Clinical Trial",
+    "observational": "Observational",
+    "traditional": "Traditional Use"
+  },
+  "categories": {
+    "vitamin": "Vitamin",
+    "mineral": "Mineral",
+    "amino_acid": "Amino Acid",
+    "adaptogen": "Adaptogen",
+    "mushroom": "Mushroom",
+    "superfood": "Superfood",
+    "herb": "Herb",
+    "spice": "Spice",
+    "fermented_food": "Fermented Food",
+    "functional_food": "Functional Food",
+    "fatty_acid": "Fatty Acid",
+    "probiotic": "Probiotic",
+    "specialty_compound": "Specialty Compound"
+  },
+  "common": {
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "confirm": "Confirm",
+    "loading": "Loading..."
+  }
+}
