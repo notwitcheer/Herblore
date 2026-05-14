@@ -160,8 +160,9 @@ export interface TimelineItem {
   reason: string;
 }
 
-export function localizedField<T extends Record<string, unknown>>(
-  row: T,
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export function localizedField(
+  row: any,
   field: string,
   locale: SupportedLocale,
 ): string {

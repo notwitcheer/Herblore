@@ -1,0 +1,137 @@
+[
+  {
+    "aliment_a": "zinc",
+    "aliment_b": "magnesium-glycinate",
+    "type": "synergy",
+    "severity": "info",
+    "description": {
+      "en": "Zinc and magnesium work synergistically — both support sleep quality and muscle recovery. Can be taken together in the evening.",
+      "fr": "Le zinc et le magnésium fonctionnent en synergie — tous deux soutiennent la qualité du sommeil et la récupération musculaire. Peuvent être pris ensemble le soir.",
+      "it": "Zinco e magnesio funzionano in sinergia — entrambi supportano la qualità del sonno e il recupero muscolare. Possono essere assunti insieme la sera."
+    }
+  },
+  {
+    "aliment_a": "zinc",
+    "aliment_b_name": "Iron supplements",
+    "type": "timing_separation",
+    "severity": "warning",
+    "separationHours": 2,
+    "description": {
+      "en": "Zinc and iron compete for absorption. Take them at least 2 hours apart for optimal absorption of both minerals.",
+      "fr": "Le zinc et le fer entrent en compétition pour l'absorption. Les prendre à au moins 2 heures d'intervalle pour une absorption optimale des deux minéraux.",
+      "it": "Zinco e ferro competono per l'assorbimento. Assumerli a distanza di almeno 2 ore per un assorbimento ottimale di entrambi i minerali."
+    }
+  },
+  {
+    "aliment_a": "zinc",
+    "aliment_b_name": "Copper supplements",
+    "type": "conflict",
+    "severity": "warning",
+    "separationHours": 4,
+    "description": {
+      "en": "Zinc and copper compete for the same absorption pathways. High zinc intake (>40mg/day) can cause copper deficiency over time. Take at least 4 hours apart.",
+      "fr": "Le zinc et le cuivre utilisent les mêmes voies d'absorption. Un apport élevé en zinc (>40mg/jour) peut causer une carence en cuivre. Prendre à au moins 4 heures d'intervalle.",
+      "it": "Zinco e rame competono per le stesse vie di assorbimento. Un apporto elevato di zinco (>40mg/giorno) può causare carenza di rame. Assumere a distanza di almeno 4 ore."
+    }
+  },
+  {
+    "aliment_a": "vitamin-d3",
+    "aliment_b": "omega-3-epa-dha",
+    "type": "synergy",
+    "severity": "info",
+    "description": {
+      "en": "Vitamin D3 is fat-soluble — taking it with omega-3 (a fat source) significantly increases absorption. Best taken together with a meal.",
+      "fr": "La vitamine D3 est liposoluble — la prendre avec des oméga-3 (source de graisses) augmente significativement l'absorption. Mieux pris ensemble avec un repas.",
+      "it": "La vitamina D3 è liposolubile — assumerla con omega-3 (fonte di grassi) aumenta significativamente l'assorbimento. Meglio assunti insieme con un pasto."
+    }
+  },
+  {
+    "aliment_a": "vitamin-d3",
+    "aliment_b_name": "Calcium supplements",
+    "type": "synergy",
+    "severity": "info",
+    "description": {
+      "en": "Vitamin D3 is essential for calcium absorption. Taking them together maximizes bone health benefits.",
+      "fr": "La vitamine D3 est essentielle pour l'absorption du calcium. Les prendre ensemble maximise les bénéfices pour la santé osseuse.",
+      "it": "La vitamina D3 è essenziale per l'assorbimento del calcio. Assumerli insieme massimizza i benefici per la salute ossea."
+    }
+  },
+  {
+    "aliment_a": "turmeric-curcumin",
+    "aliment_b_name": "Piperine / Black pepper extract",
+    "type": "synergy",
+    "severity": "info",
+    "description": {
+      "en": "Piperine increases curcumin bioavailability by up to 2000%. Always take curcumin with piperine or in a lipid formulation.",
+      "fr": "La pipérine augmente la biodisponibilité de la curcumine jusqu'à 2000%. Toujours prendre la curcumine avec de la pipérine ou sous forme lipidique.",
+      "it": "La piperina aumenta la biodisponibilità della curcumina fino al 2000%. Assumere sempre la curcumina con piperina o in formulazione lipidica."
+    }
+  },
+  {
+    "aliment_a": "turmeric-curcumin",
+    "aliment_b_name": "Blood thinners (warfarin, aspirin)",
+    "type": "conflict",
+    "severity": "danger",
+    "description": {
+      "en": "Curcumin has antiplatelet properties and may increase bleeding risk when combined with anticoagulant medications. Consult your doctor before combining.",
+      "fr": "La curcumine a des propriétés antiplaquettaires et peut augmenter le risque de saignement en combinaison avec des anticoagulants. Consultez votre médecin avant de combiner.",
+      "it": "La curcumina ha proprietà antipiastriniche e può aumentare il rischio di sanguinamento se combinata con farmaci anticoagulanti. Consultare il medico prima di combinare."
+    }
+  },
+  {
+    "aliment_a": "l-theanine",
+    "aliment_b_name": "Caffeine",
+    "type": "synergy",
+    "severity": "info",
+    "description": {
+      "en": "L-Theanine + caffeine is one of the most well-studied synergies. L-Theanine smooths out caffeine jitters while preserving alertness and focus.",
+      "fr": "L-Théanine + caféine est l'une des synergies les plus étudiées. La L-Théanine atténue la nervosité de la caféine tout en préservant la vigilance et la concentration.",
+      "it": "L-Teanina + caffeina è una delle sinergie più studiate. La L-Teanina attenua il nervosismo della caffeina preservando la vigilanza e la concentrazione."
+    }
+  },
+  {
+    "aliment_a": "ashwagandha",
+    "aliment_b_name": "Thyroid medications (levothyroxine)",
+    "type": "conflict",
+    "severity": "danger",
+    "description": {
+      "en": "Ashwagandha may increase thyroid hormone levels (T3/T4). This can dangerously interact with thyroid medications. Consult your endocrinologist.",
+      "fr": "L'ashwagandha peut augmenter les niveaux d'hormones thyroïdiennes (T3/T4). Cela peut interagir dangereusement avec les médicaments thyroïdiens. Consultez votre endocrinologue.",
+      "it": "L'ashwagandha può aumentare i livelli di ormoni tiroidei (T3/T4). Questo può interagire pericolosamente con i farmaci tiroidei. Consultare l'endocrinologo."
+    }
+  },
+  {
+    "aliment_a": "ashwagandha",
+    "aliment_b": "l-theanine",
+    "type": "synergy",
+    "severity": "info",
+    "description": {
+      "en": "Both promote calm without sedation through different mechanisms. Ashwagandha modulates cortisol while L-Theanine increases alpha waves. Effective stack for stress + focus.",
+      "fr": "Les deux favorisent le calme sans sédation par des mécanismes différents. L'ashwagandha module le cortisol tandis que la L-Théanine augmente les ondes alpha. Stack efficace pour le stress + la concentration.",
+      "it": "Entrambi promuovono la calma senza sedazione attraverso meccanismi diversi. L'ashwagandha modula il cortisolo mentre la L-Teanina aumenta le onde alfa. Stack efficace per stress + concentrazione."
+    }
+  },
+  {
+    "aliment_a": "lions-mane",
+    "aliment_b": "ashwagandha",
+    "type": "synergy",
+    "severity": "info",
+    "description": {
+      "en": "Lion's Mane (NGF stimulation) + Ashwagandha (stress reduction) complement each other for cognitive performance under stress. Popular nootropic stack.",
+      "fr": "Crinière de Lion (stimulation du NGF) + Ashwagandha (réduction du stress) se complètent pour la performance cognitive sous stress. Stack nootropique populaire.",
+      "it": "Criniera di Leone (stimolazione NGF) + Ashwagandha (riduzione dello stress) si completano per le prestazioni cognitive sotto stress. Stack nootropico popolare."
+    }
+  },
+  {
+    "aliment_a": "probiotics-lactobacillus",
+    "aliment_b_name": "Antibiotics",
+    "type": "timing_separation",
+    "severity": "warning",
+    "separationHours": 2,
+    "description": {
+      "en": "Antibiotics kill probiotic bacteria. Take probiotics at least 2 hours after antibiotics to maintain some benefit. Continue probiotics for 2 weeks after completing antibiotics course.",
+      "fr": "Les antibiotiques tuent les bactéries probiotiques. Prendre les probiotiques au moins 2 heures après les antibiotiques. Continuer les probiotiques 2 semaines après la fin du traitement.",
+      "it": "Gli antibiotici uccidono i batteri probiotici. Assumere i probiotici almeno 2 ore dopo gli antibiotici. Continuare i probiotici per 2 settimane dopo il completamento del ciclo."
+    }
+  }
+]
