@@ -1,26 +1,27 @@
 import { View, Text, StyleSheet } from "react-native";
+import { useTranslation } from "react-i18next";
 import { colors, spacing, radii, typography } from "@/lib/constants";
 import type { InteractionType, InteractionSeverity } from "@/lib/types";
 
 const TYPE_CONFIG: Record<
   InteractionType,
-  { icon: string; label: string; color: string; bg: string }
+  { icon: string; labelKey: string; color: string; bg: string }
 > = {
   synergy: {
     icon: "↗",
-    label: "Synergy",
+    labelKey: "interactions.synergy",
     color: colors.synergy,
     bg: "rgba(5, 150, 105, 0.08)",
   },
   conflict: {
     icon: "⚠",
-    label: "Conflict",
+    labelKey: "interactions.conflict",
     color: colors.danger,
     bg: "rgba(220, 38, 38, 0.06)",
   },
   timing_separation: {
     icon: "⏱",
-    label: "Timing",
+    labelKey: "interactions.timing",
     color: colors.warning,
     bg: "rgba(245, 158, 11, 0.08)",
   },
@@ -47,14 +48,16 @@ export function InteractionBadge({
   separationHours,
   compact = false,
 }: InteractionBadgeProps) {
+  const { t } = useTranslation();
   const config = TYPE_CONFIG[type];
+  const label = t(config.labelKey);
 
   if (compact) {
     return (
       <View style={[styles.compactBadge, { backgroundColor: config.bg }]}>
         <Text style={styles.compactIcon}>{config.icon}</Text>
         <Text style={[styles.compactLabel, { color: config.color }]}>
-          {config.label}
+          {label}
         </Text>
       </View>
     );
@@ -76,10 +79,12 @@ export function InteractionBadge({
           {config.icon}
         </Text>
         <Text style={[styles.typeLabel, { color: config.color }]}>
-          {config.label}
+          {label}
         </Text>
         {separationHours != null && (
-          <Text style={styles.hours}>{separationHours}h apart</Text>
+          <Text style={styles.hours}>
+            {t("interactions.hoursApart", { hours: separationHours })}
+          </Text>
         )}
       </View>
       <Text style={styles.description}>{description}</Text>

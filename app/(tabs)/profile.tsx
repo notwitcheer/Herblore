@@ -57,7 +57,7 @@ export default function ProfileScreen() {
         <Text style={styles.title}>{t("profile.title")}</Text>
 
         <View style={styles.section}>
-          <Text style={styles.sectionLabel}>PREFERENCES</Text>
+          <Text style={styles.sectionLabel}>{t("profile.preferences")}</Text>
           <View style={styles.card}>
             <SettingsRow
               icon="🌐"
@@ -70,7 +70,7 @@ export default function ProfileScreen() {
         </View>
 
         <View style={styles.section}>
-          <Text style={styles.sectionLabel}>SUBSCRIPTION</Text>
+          <Text style={styles.sectionLabel}>{t("profile.subscription")}</Text>
           <View style={styles.card}>
             <SettingsRow
               icon="💎"
@@ -89,7 +89,7 @@ export default function ProfileScreen() {
         </View>
 
         <View style={styles.section}>
-          <Text style={styles.sectionLabel}>LEGAL</Text>
+          <Text style={styles.sectionLabel}>{t("profile.legal")}</Text>
           <View style={styles.card}>
             <SettingsRow
               icon="⚕️"

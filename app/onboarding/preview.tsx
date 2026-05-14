@@ -61,7 +61,7 @@ export default function PreviewScreen() {
                     {t(`timeline.${block.timeBlock}`)}
                   </Text>
                   <Text style={styles.previewCount}>
-                    {block.items.length} item{block.items.length > 1 ? "s" : ""}
+                    {block.items.length}
                   </Text>
                 </View>
 

@@ -57,8 +57,10 @@
   },
   "profile": {
     "title": "Profile",
+    "preferences": "Preferences",
     "language": "Language",
     "subscription": "Subscription",
+    "legal": "Legal",
     "manage": "Manage Subscription",
     "restore": "Restore Purchases",
     "disclaimer": "Medical Disclaimer",
@@ -130,6 +132,12 @@
     "fatty_acid": "Fatty Acid",
     "probiotic": "Probiotic",
     "specialty_compound": "Specialty Compound"
+  },
+  "interactions": {
+    "synergy": "Synergy",
+    "conflict": "Conflict",
+    "timing": "Timing",
+    "hoursApart": "{{hours}}h apart"
   },
   "common": {
     "cancel": "Cancel",

@@ -57,8 +57,10 @@
   },
   "profile": {
     "title": "Profil",
+    "preferences": "Préférences",
     "language": "Langue",
     "subscription": "Abonnement",
+    "legal": "Juridique",
     "manage": "Gérer l'abonnement",
     "restore": "Restaurer les achats",
     "disclaimer": "Avertissement médical",
@@ -130,6 +132,12 @@
     "fatty_acid": "Acide gras",
     "probiotic": "Probiotique",
     "specialty_compound": "Composé spécialisé"
+  },
+  "interactions": {
+    "synergy": "Synergie",
+    "conflict": "Conflit",
+    "timing": "Timing",
+    "hoursApart": "{{hours}}h d'écart"
   },
   "common": {
     "cancel": "Annuler",
