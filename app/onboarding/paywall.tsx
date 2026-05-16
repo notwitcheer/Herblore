@@ -7,6 +7,7 @@ import Animated, { FadeInDown, FadeIn } from "react-native-reanimated";
 import { colors, spacing, radii, typography, shadows, withAlpha } from "@/lib/constants";
 import { ProgressDots } from "@/components/ProgressDots";
 import { OrnamentDivider } from "@/components/OrnamentDivider";
+import { Emblem } from "@/components/icons";
 
 type Plan = "weekly" | "yearly";
 
@@ -31,7 +32,7 @@ export default function PaywallScreen() {
         <Animated.View entering={FadeIn.duration(600)} style={styles.header}>
           <ProgressDots step={3} total={4} />
 
-          <Text style={styles.brandIcon}>🌿</Text>
+          <Emblem size={90} />
           <Text style={styles.title}>{t("paywall.title")}</Text>
           <OrnamentDivider width="60%" />
           <Text style={styles.subtitle}>{t("paywall.subtitle")}</Text>
@@ -140,9 +141,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     gap: spacing.sm,
     marginBottom: spacing.xl,
-  },
-  brandIcon: {
-    fontSize: 56,
   },
   title: {
     ...typography.h1,

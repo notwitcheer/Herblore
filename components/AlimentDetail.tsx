@@ -14,6 +14,7 @@ import type { Aliment, SupportedLocale } from "@/lib/types";
 import { EvidenceBadge } from "./EvidenceBadge";
 import { InteractionBadge } from "./InteractionBadge";
 import { OrnamentDivider } from "./OrnamentDivider";
+import { CATEGORY_ICON_MAP } from "./icons";
 
 interface AlimentDetailProps {
   aliment: Aliment;
@@ -76,6 +77,10 @@ export function AlimentDetail({
             { backgroundColor: `${categoryColor}18`, borderColor: `${categoryColor}30` },
           ]}
         >
+          {(() => {
+            const CatIcon = CATEGORY_ICON_MAP[aliment.category];
+            return CatIcon ? <CatIcon size={14} color={categoryColor} /> : null;
+          })()}
           <Text style={[styles.categoryText, { color: categoryColor }]}>
             {t(`categories.${aliment.category}`)}
           </Text>
@@ -261,6 +266,9 @@ const styles = StyleSheet.create({
     borderBottomColor: colors.border,
   },
   categoryPill: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 4,
     alignSelf: "flex-start",
     paddingHorizontal: spacing.sm + 2,
     paddingVertical: spacing.xs,

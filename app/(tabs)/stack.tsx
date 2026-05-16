@@ -19,6 +19,7 @@ import {
   getConflicts,
 } from "@/lib/interaction-checker";
 import { InteractionBadge } from "@/components/InteractionBadge";
+import { Emblem } from "@/components/icons";
 
 const ItemSeparator = () => <View style={{ height: spacing.sm }} />;
 
@@ -41,7 +42,7 @@ export default function StackScreen() {
             entering={FadeIn.duration(600)}
             style={styles.emptyContent}
           >
-            <Text style={styles.emptyEmoji}>💊</Text>
+            <Emblem size={80} opacity={0.6} />
             <Text style={styles.emptyTitle}>{t("stack.empty")}</Text>
             <Text style={styles.emptySubtitle}>
               {t("stack.emptySubtitle")}
@@ -196,7 +197,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     gap: spacing.sm,
   },
-  emptyEmoji: { fontSize: 56 },
   emptyTitle: {
     ...typography.h2,
     color: colors.textPrimary,

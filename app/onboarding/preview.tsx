@@ -9,14 +9,31 @@ import {
   spacing,
   radii,
   typography,
-  BLOCK_ICONS,
   shadows,
   withAlpha,
 } from "@/lib/constants";
 import { localizedField, type SupportedLocale } from "@/lib/types";
+import type { TimeBlock } from "@/lib/types";
 import { useStackContext } from "@/lib/StackContext";
 import { generateTimeline } from "@/lib/timeline-engine";
 import { ProgressDots } from "@/components/ProgressDots";
+import {
+  SunriseIcon,
+  BreakfastIcon,
+  NoonSunIcon,
+  AfternoonIcon,
+  DinnerIcon,
+  BedtimeIcon,
+} from "@/components/icons";
+
+const BLOCK_ICON_COMPONENTS: Record<TimeBlock, React.ComponentType<{ size?: number; color?: string }>> = {
+  wake: SunriseIcon,
+  breakfast: BreakfastIcon,
+  lunch: NoonSunIcon,
+  afternoon: AfternoonIcon,
+  dinner: DinnerIcon,
+  bedtime: BedtimeIcon,
+};
 
 export default function PreviewScreen() {
   const { t, i18n } = useTranslation();
@@ -51,9 +68,10 @@ export default function PreviewScreen() {
                 style={styles.previewBlock}
               >
                 <View style={styles.previewBlockHeader}>
-                  <Text style={styles.previewIcon}>
-                    {BLOCK_ICONS[block.timeBlock]}
-                  </Text>
+                  {(() => {
+                    const IconComp = BLOCK_ICON_COMPONENTS[block.timeBlock];
+                    return <IconComp size={22} color={colors.accent} />;
+                  })()}
                   <Text style={styles.previewLabel}>
                     {t(`timeline.${block.timeBlock}`)}
                   </Text>
@@ -158,9 +176,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     gap: spacing.sm,
-  },
-  previewIcon: {
-    fontSize: 20,
   },
   previewLabel: {
     ...typography.h3,

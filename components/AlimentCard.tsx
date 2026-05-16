@@ -19,6 +19,7 @@ import {
 import { localizedField } from "@/lib/types";
 import type { Aliment, SupportedLocale, EvidenceLevel } from "@/lib/types";
 import { EvidenceDots } from "./EvidenceBadge";
+import { CATEGORY_ICON_MAP } from "./icons";
 
 const AnimatedPressable = Animated.createAnimatedComponent(Pressable);
 
@@ -88,6 +89,10 @@ export function AlimentCard({
               { backgroundColor: `${categoryColor}18`, borderColor: `${categoryColor}30` },
             ]}
           >
+            {(() => {
+              const CatIcon = CATEGORY_ICON_MAP[aliment.category];
+              return CatIcon ? <CatIcon size={14} color={categoryColor} /> : null;
+            })()}
             <Text style={[styles.categoryText, { color: categoryColor }]}>
               {t(`categories.${aliment.category}`)}
             </Text>
@@ -166,6 +171,9 @@ const styles = StyleSheet.create({
     fontVariant: ["tabular-nums"],
   },
   categoryPill: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 4,
     paddingHorizontal: spacing.sm,
     paddingVertical: 3,
     borderRadius: radii.full,

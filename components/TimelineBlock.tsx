@@ -11,13 +11,29 @@ import {
   spacing,
   radii,
   typography,
-  BLOCK_ICONS,
   TIME_BLOCKS,
   springs,
   withAlpha,
 } from "@/lib/constants";
 import { localizedField, type SupportedLocale } from "@/lib/types";
 import type { TimeBlock as TimeBlockType, TimelineItem } from "@/lib/types";
+import {
+  SunriseIcon,
+  BreakfastIcon,
+  NoonSunIcon,
+  AfternoonIcon,
+  DinnerIcon,
+  BedtimeIcon,
+} from "./icons";
+
+const BLOCK_ICON_COMPONENTS: Record<TimeBlockType, React.ComponentType<{ size?: number; color?: string }>> = {
+  wake: SunriseIcon,
+  breakfast: BreakfastIcon,
+  lunch: NoonSunIcon,
+  afternoon: AfternoonIcon,
+  dinner: DinnerIcon,
+  bedtime: BedtimeIcon,
+};
 
 const AnimatedPressable = Animated.createAnimatedComponent(Pressable);
 
@@ -75,9 +91,10 @@ export function TimelineBlock({
       >
         <View style={styles.header}>
           <View style={styles.timeRow}>
-            <Text style={styles.blockIcon}>
-              {BLOCK_ICONS[timeBlock]}
-            </Text>
+            {(() => {
+              const IconComp = BLOCK_ICON_COMPONENTS[timeBlock];
+              return <IconComp size={26} color={taken ? colors.synergy : colors.accent} />;
+            })()}
             <View>
               <Text style={[styles.blockLabel, taken && styles.textTaken]}>
                 {t(`timeline.${timeBlock}`)}
@@ -151,9 +168,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     gap: spacing.sm,
-  },
-  blockIcon: {
-    fontSize: 24,
   },
   blockLabel: {
     ...typography.h3,

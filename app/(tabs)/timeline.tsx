@@ -4,6 +4,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { useTranslation } from "react-i18next";
 import Animated, { FadeIn } from "react-native-reanimated";
 import { colors, spacing, typography } from "@/lib/constants";
+import { Emblem } from "@/components/icons";
 import { useStackContext } from "@/lib/StackContext";
 import { generateTimeline } from "@/lib/timeline-engine";
 import { TimelineBlock } from "@/components/TimelineBlock";
@@ -37,7 +38,7 @@ export default function TimelineScreen() {
         <Text style={styles.title}>{t("timeline.title")}</Text>
         <View style={styles.emptyState}>
           <Animated.View entering={FadeIn.duration(600)} style={styles.emptyContent}>
-            <Text style={styles.emptyEmoji}>🕐</Text>
+            <Emblem size={80} opacity={0.6} />
             <Text style={styles.emptyText}>{t("timeline.empty")}</Text>
           </Animated.View>
         </View>
@@ -137,7 +138,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     gap: spacing.md,
   },
-  emptyEmoji: { fontSize: 56 },
   emptyText: {
     ...typography.body,
     color: colors.textSecondary,
