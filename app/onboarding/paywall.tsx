@@ -4,7 +4,9 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { useRouter } from "expo-router";
 import { useTranslation } from "react-i18next";
 import Animated, { FadeInDown, FadeIn } from "react-native-reanimated";
-import { colors, spacing, radii, typography } from "@/lib/constants";
+import { colors, spacing, radii, typography, shadows, withAlpha } from "@/lib/constants";
+import { ProgressDots } from "@/components/ProgressDots";
+import { OrnamentDivider } from "@/components/OrnamentDivider";
 
 type Plan = "weekly" | "yearly";
 
@@ -27,20 +29,11 @@ export default function PaywallScreen() {
         showsVerticalScrollIndicator={false}
       >
         <Animated.View entering={FadeIn.duration(600)} style={styles.header}>
-          <View style={styles.progress}>
-            <View style={styles.progressDotDone} />
-            <View style={styles.progressDotDone} />
-            <View style={styles.progressDotDone} />
-            <View style={[styles.progressDot, styles.progressDotActive]} />
-          </View>
+          <ProgressDots step={3} total={4} />
 
           <Text style={styles.brandIcon}>🌿</Text>
           <Text style={styles.title}>{t("paywall.title")}</Text>
-          <View style={styles.ornamentDivider}>
-            <View style={styles.ornamentLine} />
-            <Text style={styles.ornamentDot}>✦</Text>
-            <View style={styles.ornamentLine} />
-          </View>
+          <OrnamentDivider width="60%" />
           <Text style={styles.subtitle}>{t("paywall.subtitle")}</Text>
         </Animated.View>
 
@@ -148,28 +141,6 @@ const styles = StyleSheet.create({
     gap: spacing.sm,
     marginBottom: spacing.xl,
   },
-  progress: {
-    flexDirection: "row",
-    gap: spacing.xs,
-    marginBottom: spacing.md,
-  },
-  progressDot: {
-    width: 8,
-    height: 8,
-    borderRadius: 4,
-    backgroundColor: colors.border,
-  },
-  progressDotActive: {
-    backgroundColor: colors.accent,
-    width: 24,
-    borderRadius: 4,
-  },
-  progressDotDone: {
-    width: 8,
-    height: 8,
-    borderRadius: 4,
-    backgroundColor: colors.accentWarm,
-  },
   brandIcon: {
     fontSize: 56,
   },
@@ -178,21 +149,6 @@ const styles = StyleSheet.create({
     color: colors.parchment,
     textAlign: "center",
     letterSpacing: -0.5,
-  },
-  ornamentDivider: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: spacing.sm,
-    width: "60%",
-  },
-  ornamentLine: {
-    flex: 1,
-    height: 1,
-    backgroundColor: colors.border,
-  },
-  ornamentDot: {
-    fontSize: 10,
-    color: colors.accent,
   },
   subtitle: {
     ...typography.body,
@@ -235,7 +191,7 @@ const styles = StyleSheet.create({
   },
   planCardSelected: {
     borderColor: colors.accent,
-    backgroundColor: "rgba(212, 168, 71, 0.06)",
+    backgroundColor: withAlpha("#D4A847", 0.06),
   },
   savingsBadge: {
     backgroundColor: colors.accent,
@@ -267,12 +223,12 @@ const styles = StyleSheet.create({
     color: colors.textTertiary,
   },
   socialProof: {
-    backgroundColor: "rgba(212, 168, 71, 0.06)",
+    backgroundColor: withAlpha("#D4A847", 0.06),
     borderRadius: radii.lg,
     padding: spacing.md,
     alignItems: "center",
     borderWidth: 1,
-    borderColor: "rgba(212, 168, 71, 0.12)",
+    borderColor: withAlpha("#D4A847", 0.12),
   },
   socialText: {
     ...typography.caption,

@@ -1,7 +1,9 @@
-import { Dimensions } from "react-native";
-
-export const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } =
-  Dimensions.get("window");
+export function withAlpha(hex: string, alpha: number): string {
+  const r = parseInt(hex.slice(1, 3), 16);
+  const g = parseInt(hex.slice(3, 5), 16);
+  const b = parseInt(hex.slice(5, 7), 16);
+  return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+}
 
 export const fonts = {
   serif: "CrimsonPro-Regular",
@@ -114,6 +116,64 @@ export const TIME_BLOCKS = [
   "dinner",
   "bedtime",
 ] as const;
+
+export const CATEGORY_COLORS: Record<string, string> = {
+  vitamin: "#6B9E78",
+  mineral: "#7B8FA8",
+  amino_acid: "#9E7CB5",
+  adaptogen: "#5BA66B",
+  mushroom: "#C4813D",
+  superfood: "#6B9E78",
+  herb: "#4A7C59",
+  spice: "#C45C4A",
+  fermented_food: "#D4A847",
+  functional_food: "#7BA8A0",
+  fatty_acid: "#7B8FA8",
+  probiotic: "#9E7CB5",
+  specialty_compound: "#7B8FA8",
+};
+
+export const BLOCK_ICONS: Record<string, string> = {
+  wake: "🌅",
+  breakfast: "🍳",
+  lunch: "🥗",
+  afternoon: "☀️",
+  dinner: "🍽",
+  bedtime: "🌙",
+};
+
+export const TIME_PERIOD_MAP: Record<string, string> = {
+  wake: "AM",
+  morning: "AM",
+  afternoon: "PM",
+  evening: "PM",
+  bedtime: "PM",
+};
+
+export const shadows = {
+  card: {
+    shadowColor: colors.accentWarm,
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.06,
+    shadowRadius: 12,
+    elevation: 3,
+  },
+  glow: {
+    shadowColor: colors.accent,
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.25,
+    shadowRadius: 8,
+    elevation: 4,
+  },
+} as const;
+
+export const springs = {
+  pressIn: { damping: 15, stiffness: 400 },
+  pressOut: { damping: 12, stiffness: 300 },
+  scaleIn: 0.97,
+  scaleInSubtle: 0.98,
+  scaleInStrong: 0.93,
+} as const;
 
 export const FREE_TIER_LIMIT = 20;
 export const AI_DAILY_LIMIT = 10;

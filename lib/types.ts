@@ -148,7 +148,6 @@ export interface IntakeLogEntry {
 
 export interface TimelineBlock {
   timeBlock: TimeBlock;
-  label: string;
   items: TimelineItem[];
   taken: boolean;
 }
@@ -160,9 +159,8 @@ export interface TimelineItem {
   reason: string;
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function localizedField(
-  row: any,
+  row: Record<string, any>,
   field: string,
   locale: SupportedLocale,
 ): string {

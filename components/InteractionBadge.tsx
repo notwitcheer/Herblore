@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet } from "react-native";
 import { useTranslation } from "react-i18next";
-import { colors, spacing, radii, typography } from "@/lib/constants";
+import { colors, spacing, radii, typography, withAlpha } from "@/lib/constants";
 import type { InteractionType, InteractionSeverity } from "@/lib/types";
 
 const TYPE_CONFIG: Record<
@@ -11,26 +11,26 @@ const TYPE_CONFIG: Record<
     icon: "↗",
     labelKey: "interactions.synergy",
     color: colors.synergy,
-    bg: "rgba(91, 166, 107, 0.10)",
+    bg: withAlpha("#5BA66B", 0.1),
   },
   conflict: {
     icon: "⚠",
     labelKey: "interactions.conflict",
     color: colors.danger,
-    bg: "rgba(196, 92, 74, 0.10)",
+    bg: withAlpha("#C45C4A", 0.1),
   },
   timing_separation: {
     icon: "⏱",
     labelKey: "interactions.timing",
     color: colors.warning,
-    bg: "rgba(212, 168, 71, 0.10)",
+    bg: withAlpha("#D4A847", 0.1),
   },
 };
 
 const SEVERITY_BORDER: Record<InteractionSeverity, string> = {
   info: colors.border,
-  warning: "rgba(212, 168, 71, 0.3)",
-  danger: "rgba(196, 92, 74, 0.3)",
+  warning: withAlpha("#D4A847", 0.3),
+  danger: withAlpha("#C45C4A", 0.3),
 };
 
 interface InteractionBadgeProps {

@@ -1,27 +1,19 @@
 import { View, Text, StyleSheet, ScrollView, Pressable } from "react-native";
 import Animated, { FadeInDown, FadeIn } from "react-native-reanimated";
 import { useTranslation } from "react-i18next";
-import { colors, spacing, radii, typography } from "@/lib/constants";
+import {
+  colors,
+  spacing,
+  radii,
+  typography,
+  CATEGORY_COLORS,
+  withAlpha,
+} from "@/lib/constants";
 import { localizedField } from "@/lib/types";
 import type { Aliment, SupportedLocale } from "@/lib/types";
 import { EvidenceBadge } from "./EvidenceBadge";
 import { InteractionBadge } from "./InteractionBadge";
-
-const CATEGORY_COLORS: Record<string, string> = {
-  vitamin: "#6B9E78",
-  mineral: "#7B8FA8",
-  amino_acid: "#9E7CB5",
-  adaptogen: "#5BA66B",
-  mushroom: "#C4813D",
-  superfood: "#6B9E78",
-  herb: "#4A7C59",
-  spice: "#C45C4A",
-  fermented_food: "#D4A847",
-  functional_food: "#7BA8A0",
-  fatty_acid: "#7B8FA8",
-  probiotic: "#9E7CB5",
-  specialty_compound: "#7B8FA8",
-};
+import { OrnamentDivider } from "./OrnamentDivider";
 
 interface AlimentDetailProps {
   aliment: Aliment;
@@ -91,11 +83,7 @@ export function AlimentDetail({
 
         <Text style={styles.heroName}>{name}</Text>
 
-        <View style={styles.ornamentDivider}>
-          <View style={styles.ornamentLine} />
-          <Text style={styles.ornamentDot}>✦</Text>
-          <View style={styles.ornamentLine} />
-        </View>
+        <OrnamentDivider />
 
         <Text style={styles.heroSummary}>{summary}</Text>
 
@@ -288,21 +276,6 @@ const styles = StyleSheet.create({
     color: colors.parchment,
     letterSpacing: -0.5,
   },
-  ornamentDivider: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: spacing.sm,
-    marginVertical: spacing.xs,
-  },
-  ornamentLine: {
-    flex: 1,
-    height: 1,
-    backgroundColor: colors.border,
-  },
-  ornamentDot: {
-    fontSize: 10,
-    color: colors.accent,
-  },
   heroSummary: {
     ...typography.body,
     color: colors.textSecondary,
@@ -410,11 +383,11 @@ const styles = StyleSheet.create({
     gap: spacing.sm,
   },
   cureCard: {
-    backgroundColor: "rgba(212, 168, 71, 0.08)",
+    backgroundColor: withAlpha("#D4A847", 0.08),
     borderRadius: radii.md,
     padding: spacing.md,
     borderWidth: 1,
-    borderColor: "rgba(212, 168, 71, 0.2)",
+    borderColor: withAlpha("#D4A847", 0.2),
     gap: spacing.sm,
   },
   cureHeader: {

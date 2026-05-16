@@ -5,7 +5,7 @@ import Animated, {
   withSpring,
 } from "react-native-reanimated";
 import { useTranslation } from "react-i18next";
-import { colors, spacing, radii, typography } from "@/lib/constants";
+import { colors, spacing, radii, typography, springs } from "@/lib/constants";
 import type { GoalSlug } from "@/lib/types";
 
 const AnimatedPressable = Animated.createAnimatedComponent(Pressable);
@@ -33,11 +33,11 @@ export function GoalChip({
   }));
 
   const handlePressIn = () => {
-    scale.value = withSpring(0.93, { damping: 15, stiffness: 400 });
+    scale.value = withSpring(springs.scaleInStrong, springs.pressIn);
   };
 
   const handlePressOut = () => {
-    scale.value = withSpring(1, { damping: 12, stiffness: 300 });
+    scale.value = withSpring(1, springs.pressOut);
   };
 
   return (

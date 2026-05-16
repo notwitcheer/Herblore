@@ -6,28 +6,21 @@ import Animated, {
   FadeInDown,
 } from "react-native-reanimated";
 import { useTranslation } from "react-i18next";
-import { colors, spacing, radii, typography } from "@/lib/constants";
+import {
+  colors,
+  spacing,
+  radii,
+  typography,
+  CATEGORY_COLORS,
+  TIME_PERIOD_MAP,
+  springs,
+  withAlpha,
+} from "@/lib/constants";
 import { localizedField } from "@/lib/types";
 import type { Aliment, SupportedLocale, EvidenceLevel } from "@/lib/types";
 import { EvidenceDots } from "./EvidenceBadge";
 
 const AnimatedPressable = Animated.createAnimatedComponent(Pressable);
-
-const CATEGORY_COLORS: Record<string, string> = {
-  vitamin: "#6B9E78",
-  mineral: "#7B8FA8",
-  amino_acid: "#9E7CB5",
-  adaptogen: "#5BA66B",
-  mushroom: "#C4813D",
-  superfood: "#6B9E78",
-  herb: "#4A7C59",
-  spice: "#C45C4A",
-  fermented_food: "#D4A847",
-  functional_food: "#7BA8A0",
-  fatty_acid: "#7B8FA8",
-  probiotic: "#9E7CB5",
-  specialty_compound: "#7B8FA8",
-};
 
 interface AlimentCardProps {
   aliment: Aliment;
@@ -61,10 +54,10 @@ export function AlimentCard({
     <AnimatedPressable
       onPress={onPress}
       onPressIn={() => {
-        scale.value = withSpring(0.97, { damping: 15, stiffness: 400 });
+        scale.value = withSpring(springs.scaleIn, springs.pressIn);
       }}
       onPressOut={() => {
-        scale.value = withSpring(1, { damping: 12, stiffness: 300 });
+        scale.value = withSpring(1, springs.pressOut);
       }}
       entering={FadeInDown.delay(index * 60).duration(400).springify()}
       style={[styles.card, animatedStyle]}
@@ -111,20 +104,7 @@ export function AlimentCard({
           <View style={styles.meta}>
             {aliment.best_time.length > 0 && (
               <Text style={styles.metaText}>
-                {aliment.best_time
-                  .map((t) =>
-                    t === "wake"
-                      ? "AM"
-                      : t === "morning"
-                        ? "AM"
-                        : t === "afternoon"
-                          ? "PM"
-                          : t === "evening"
-                            ? "PM"
-                            : "PM",
-                  )
-                  .filter((v, i, a) => a.indexOf(v) === i)
-                  .join("/")}
+                {[...new Set(aliment.best_time.map((t) => TIME_PERIOD_MAP[t] ?? "PM"))].join("/")}
               </Text>
             )}
             {aliment.use_mode === "cure" && (
@@ -219,7 +199,7 @@ const styles = StyleSheet.create({
     ...typography.label,
     color: colors.accent,
     textTransform: "uppercase",
-    backgroundColor: "rgba(212, 168, 71, 0.12)",
+    backgroundColor: withAlpha("#D4A847", 0.12),
     paddingHorizontal: 6,
     paddingVertical: 2,
     borderRadius: radii.sm,
@@ -227,7 +207,7 @@ const styles = StyleSheet.create({
   },
   lockOverlay: {
     ...StyleSheet.absoluteFillObject,
-    backgroundColor: "rgba(26, 22, 18, 0.75)",
+    backgroundColor: withAlpha("#1A1612", 0.75),
     justifyContent: "center",
     alignItems: "center",
     borderRadius: radii.lg,

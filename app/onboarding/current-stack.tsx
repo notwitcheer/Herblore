@@ -1,14 +1,23 @@
-import { View, Text, StyleSheet, Pressable, ScrollView } from "react-native";
+import { View, Text, StyleSheet, Pressable, ScrollView, Dimensions } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useRouter } from "expo-router";
 import { useTranslation } from "react-i18next";
 import Animated, { FadeInDown, FadeIn } from "react-native-reanimated";
-import { colors, spacing, radii, typography } from "@/lib/constants";
+import {
+  colors,
+  spacing,
+  radii,
+  typography,
+  shadows,
+  withAlpha,
+} from "@/lib/constants";
 import { localizedField, type SupportedLocale } from "@/lib/types";
 import { MOCK_ALIMENTS } from "@/lib/mock-data";
 import { useStackContext } from "@/lib/StackContext";
+import { ProgressDots } from "@/components/ProgressDots";
 
 const popularAliments = MOCK_ALIMENTS.filter((a) => a.is_popular);
+const CARD_WIDTH = (Dimensions.get("window").width - spacing.lg * 2 - spacing.sm) / 2;
 
 export default function CurrentStackScreen() {
   const { t, i18n } = useTranslation();
@@ -24,12 +33,7 @@ export default function CurrentStackScreen() {
         showsVerticalScrollIndicator={false}
       >
         <Animated.View entering={FadeIn.duration(600)} style={styles.header}>
-          <View style={styles.progress}>
-            <View style={styles.progressDotDone} />
-            <View style={[styles.progressDot, styles.progressDotActive]} />
-            <View style={styles.progressDot} />
-            <View style={styles.progressDot} />
-          </View>
+          <ProgressDots step={1} total={4} />
 
           <Text style={styles.title}>{t("onboarding.stackTitle")}</Text>
           <Text style={styles.subtitle}>
@@ -119,28 +123,6 @@ const styles = StyleSheet.create({
     gap: spacing.sm,
     marginBottom: spacing.xl,
   },
-  progress: {
-    flexDirection: "row",
-    gap: spacing.xs,
-    marginBottom: spacing.md,
-  },
-  progressDot: {
-    width: 8,
-    height: 8,
-    borderRadius: 4,
-    backgroundColor: colors.border,
-  },
-  progressDotActive: {
-    backgroundColor: colors.accent,
-    width: 24,
-    borderRadius: 4,
-  },
-  progressDotDone: {
-    width: 8,
-    height: 8,
-    borderRadius: 4,
-    backgroundColor: colors.accentWarm,
-  },
   title: {
     ...typography.h1,
     color: colors.parchment,
@@ -160,14 +142,14 @@ const styles = StyleSheet.create({
     backgroundColor: colors.surface,
     borderRadius: radii.md,
     padding: spacing.md,
-    width: 155,
+    width: CARD_WIDTH,
     gap: spacing.xs,
     borderWidth: 1,
     borderColor: colors.border,
   },
   quickCardActive: {
     borderColor: colors.accent,
-    backgroundColor: "rgba(212, 168, 71, 0.08)",
+    backgroundColor: withAlpha("#D4A847", 0.08),
   },
   quickCardCheck: {
     ...typography.bodyBold,
@@ -215,11 +197,7 @@ const styles = StyleSheet.create({
     paddingVertical: spacing.md + 2,
     borderRadius: radii.lg,
     alignItems: "center",
-    shadowColor: colors.accent,
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.25,
-    shadowRadius: 8,
-    elevation: 4,
+    ...shadows.glow,
   },
   nextButtonText: {
     ...typography.bodyBold,

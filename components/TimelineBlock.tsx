@@ -6,20 +6,20 @@ import Animated, {
   FadeInDown,
 } from "react-native-reanimated";
 import { useTranslation } from "react-i18next";
-import { colors, spacing, radii, typography } from "@/lib/constants";
+import {
+  colors,
+  spacing,
+  radii,
+  typography,
+  BLOCK_ICONS,
+  TIME_BLOCKS,
+  springs,
+  withAlpha,
+} from "@/lib/constants";
 import { localizedField, type SupportedLocale } from "@/lib/types";
 import type { TimeBlock as TimeBlockType, TimelineItem } from "@/lib/types";
 
 const AnimatedPressable = Animated.createAnimatedComponent(Pressable);
-
-const BLOCK_ICONS: Record<TimeBlockType, string> = {
-  wake: "🌅",
-  breakfast: "🍳",
-  lunch: "🥗",
-  afternoon: "☀️",
-  dinner: "🍽",
-  bedtime: "🌙",
-};
 
 const BLOCK_TIMES: Record<TimeBlockType, string> = {
   wake: "6:30",
@@ -62,10 +62,10 @@ export function TimelineBlock({
       <AnimatedPressable
         onPress={onToggle}
         onPressIn={() => {
-          scale.value = withSpring(0.98, { damping: 15, stiffness: 400 });
+          scale.value = withSpring(springs.scaleInSubtle, springs.pressIn);
         }}
         onPressOut={() => {
-          scale.value = withSpring(1, { damping: 12, stiffness: 300 });
+          scale.value = withSpring(1, springs.pressOut);
         }}
         style={[
           styles.card,
@@ -113,7 +113,7 @@ export function TimelineBlock({
         </View>
       </AnimatedPressable>
 
-      {index < 5 && (
+      {index < TIME_BLOCKS.length - 1 && (
         <View style={styles.connector}>
           <View style={[styles.connectorLine, taken && styles.connectorDone]} />
         </View>
@@ -137,8 +137,8 @@ const styles = StyleSheet.create({
     elevation: 3,
   },
   cardTaken: {
-    backgroundColor: "rgba(91, 166, 107, 0.06)",
-    borderColor: "rgba(91, 166, 107, 0.25)",
+    backgroundColor: withAlpha("#5BA66B", 0.06),
+    borderColor: withAlpha("#5BA66B", 0.25),
     shadowColor: colors.synergy,
     shadowOpacity: 0.1,
   },
@@ -230,6 +230,6 @@ const styles = StyleSheet.create({
     borderRadius: 1,
   },
   connectorDone: {
-    backgroundColor: "rgba(91, 166, 107, 0.4)",
+    backgroundColor: withAlpha("#5BA66B", 0.4),
   },
 });

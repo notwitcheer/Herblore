@@ -2,14 +2,15 @@ import { View, Text, StyleSheet, FlatList, Pressable } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useRouter } from "expo-router";
 import { useTranslation } from "react-i18next";
-import Animated, {
-  FadeInDown,
-  FadeIn,
-  useAnimatedStyle,
-  useSharedValue,
-  withSpring,
-} from "react-native-reanimated";
-import { colors, spacing, radii, typography } from "@/lib/constants";
+import Animated, { FadeInDown, FadeIn } from "react-native-reanimated";
+import {
+  colors,
+  spacing,
+  radii,
+  typography,
+  shadows,
+  withAlpha,
+} from "@/lib/constants";
 import { localizedField, type SupportedLocale } from "@/lib/types";
 import { useStackContext } from "@/lib/StackContext";
 import {
@@ -19,7 +20,7 @@ import {
 } from "@/lib/interaction-checker";
 import { InteractionBadge } from "@/components/InteractionBadge";
 
-const AnimatedPressable = Animated.createAnimatedComponent(Pressable);
+const ItemSeparator = () => <View style={{ height: spacing.sm }} />;
 
 export default function StackScreen() {
   const { t, i18n } = useTranslation();
@@ -164,7 +165,7 @@ export default function StackScreen() {
             </Animated.View>
           );
         }}
-        ItemSeparatorComponent={() => <View style={{ height: spacing.sm }} />}
+        ItemSeparatorComponent={ItemSeparator}
       />
     </SafeAreaView>
   );
@@ -237,11 +238,7 @@ const styles = StyleSheet.create({
     gap: spacing.md,
     borderWidth: 1,
     borderColor: colors.border,
-    shadowColor: colors.accentWarm,
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.06,
-    shadowRadius: 12,
-    elevation: 3,
+    ...shadows.card,
   },
   stackCardPaused: {
     opacity: 0.55,
@@ -285,7 +282,7 @@ const styles = StyleSheet.create({
     color: colors.textSecondary,
   },
   removeButton: {
-    backgroundColor: "rgba(196, 92, 74, 0.10)",
+    backgroundColor: withAlpha("#C45C4A", 0.1),
   },
   removeText: {
     ...typography.captionBold,

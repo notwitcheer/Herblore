@@ -4,8 +4,9 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { useRouter } from "expo-router";
 import { useTranslation } from "react-i18next";
 import Animated, { FadeInDown, FadeIn } from "react-native-reanimated";
-import { colors, spacing, radii, typography, GOALS } from "@/lib/constants";
+import { colors, spacing, radii, typography, GOALS, shadows } from "@/lib/constants";
 import { GoalChip } from "@/components/GoalChip";
+import { ProgressDots } from "@/components/ProgressDots";
 import type { GoalSlug } from "@/lib/types";
 
 export default function GoalsScreen() {
@@ -25,12 +26,7 @@ export default function GoalsScreen() {
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
         <Animated.View entering={FadeIn.duration(600)} style={styles.header}>
-          <View style={styles.progress}>
-            <View style={[styles.progressDot, styles.progressDotActive]} />
-            <View style={styles.progressDot} />
-            <View style={styles.progressDot} />
-            <View style={styles.progressDot} />
-          </View>
+          <ProgressDots step={0} total={4} />
 
           <Text style={styles.title}>{t("onboarding.goalsTitle")}</Text>
           <Text style={styles.subtitle}>
@@ -90,22 +86,6 @@ const styles = StyleSheet.create({
     gap: spacing.sm,
     marginBottom: spacing.xl,
   },
-  progress: {
-    flexDirection: "row",
-    gap: spacing.xs,
-    marginBottom: spacing.md,
-  },
-  progressDot: {
-    width: 8,
-    height: 8,
-    borderRadius: 4,
-    backgroundColor: colors.border,
-  },
-  progressDotActive: {
-    backgroundColor: colors.accent,
-    width: 24,
-    borderRadius: 4,
-  },
   title: {
     ...typography.h1,
     color: colors.parchment,
@@ -131,11 +111,7 @@ const styles = StyleSheet.create({
     paddingVertical: spacing.md + 2,
     borderRadius: radii.lg,
     alignItems: "center",
-    shadowColor: colors.accent,
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.25,
-    shadowRadius: 8,
-    elevation: 4,
+    ...shadows.glow,
   },
   nextButtonDisabled: {
     backgroundColor: colors.surface,

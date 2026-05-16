@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet } from "react-native";
 import { useTranslation } from "react-i18next";
-import { colors, spacing, radii, typography } from "@/lib/constants";
+import { colors, spacing, radii, typography, withAlpha } from "@/lib/constants";
 import type { EvidenceLevel } from "@/lib/types";
 
 const EVIDENCE_CONFIG: Record<
@@ -9,18 +9,18 @@ const EVIDENCE_CONFIG: Record<
 > = {
   clinical_trial: {
     color: colors.evidenceClinical,
-    bg: "rgba(91, 166, 107, 0.12)",
-    dot: "rgba(91, 166, 107, 0.7)",
+    bg: withAlpha("#5BA66B", 0.12),
+    dot: withAlpha("#5BA66B", 0.7),
   },
   observational: {
     color: colors.evidenceObservational,
-    bg: "rgba(212, 168, 71, 0.12)",
-    dot: "rgba(212, 168, 71, 0.7)",
+    bg: withAlpha("#D4A847", 0.12),
+    dot: withAlpha("#D4A847", 0.7),
   },
   traditional: {
     color: colors.evidenceTraditional,
-    bg: "rgba(196, 129, 61, 0.12)",
-    dot: "rgba(196, 129, 61, 0.7)",
+    bg: withAlpha("#C4813D", 0.12),
+    dot: withAlpha("#C4813D", 0.7),
   },
 };
 

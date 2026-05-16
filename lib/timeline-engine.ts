@@ -1,3 +1,4 @@
+import { TIME_BLOCKS } from "./constants";
 import type {
   Aliment,
   UserStackItem,
@@ -5,15 +6,6 @@ import type {
   TimelineBlock,
   TimelineItem,
 } from "./types";
-
-const TIME_ORDER: TimeBlock[] = [
-  "wake",
-  "breakfast",
-  "lunch",
-  "afternoon",
-  "dinner",
-  "bedtime",
-];
 
 const TIME_MAP: Record<string, TimeBlock> = {
   wake: "wake",
@@ -23,20 +15,11 @@ const TIME_MAP: Record<string, TimeBlock> = {
   bedtime: "bedtime",
 };
 
-const BLOCK_LABELS: Record<TimeBlock, string> = {
-  wake: "Wake Up",
-  breakfast: "Breakfast",
-  lunch: "Lunch",
-  afternoon: "Afternoon",
-  dinner: "Dinner",
-  bedtime: "Bedtime",
-};
-
 export function generateTimeline(
   stackItems: UserStackItem[],
 ): TimelineBlock[] {
   const blocks = new Map<TimeBlock, TimelineItem[]>();
-  for (const tb of TIME_ORDER) {
+  for (const tb of TIME_BLOCKS) {
     blocks.set(tb, []);
   }
 
@@ -74,9 +57,8 @@ export function generateTimeline(
     }
   }
 
-  return TIME_ORDER.map((tb) => ({
+  return TIME_BLOCKS.map((tb) => ({
     timeBlock: tb,
-    label: BLOCK_LABELS[tb],
     items: blocks.get(tb) ?? [],
     taken: false,
   })).filter((b) => b.items.length > 0);
