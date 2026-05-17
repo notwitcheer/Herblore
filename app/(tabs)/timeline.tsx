@@ -4,7 +4,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { useTranslation } from "react-i18next";
 import Animated, { FadeIn } from "react-native-reanimated";
 import { colors, spacing, typography } from "@/lib/constants";
-import { Emblem } from "@/components/icons";
+import { OwlMascot } from "@/components/icons";
 import { useStackContext } from "@/lib/StackContext";
 import { generateTimeline } from "@/lib/timeline-engine";
 import { TimelineBlock } from "@/components/TimelineBlock";
@@ -38,7 +38,7 @@ export default function TimelineScreen() {
         <Text style={styles.title}>{t("timeline.title")}</Text>
         <View style={styles.emptyState}>
           <Animated.View entering={FadeIn.duration(600)} style={styles.emptyContent}>
-            <Emblem size={80} opacity={0.6} />
+            <OwlMascot pose="sleeping" size={140} />
             <Text style={styles.emptyText}>{t("timeline.empty")}</Text>
           </Animated.View>
         </View>

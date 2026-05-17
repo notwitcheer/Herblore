@@ -1,4 +1,5 @@
 export { Emblem } from "./Emblem";
+export { OwlMascot, type OwlPose } from "./OwlMascot";
 export {
   GrimoireIcon,
   FlaskIcon,

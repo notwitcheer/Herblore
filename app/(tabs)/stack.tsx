@@ -19,7 +19,7 @@ import {
   getConflicts,
 } from "@/lib/interaction-checker";
 import { InteractionBadge } from "@/components/InteractionBadge";
-import { Emblem } from "@/components/icons";
+import { OwlMascot } from "@/components/icons";
 
 const ItemSeparator = () => <View style={{ height: spacing.sm }} />;
 
@@ -42,7 +42,7 @@ export default function StackScreen() {
             entering={FadeIn.duration(600)}
             style={styles.emptyContent}
           >
-            <Emblem size={80} opacity={0.6} />
+            <OwlMascot pose="waving" size={140} />
             <Text style={styles.emptyTitle}>{t("stack.empty")}</Text>
             <Text style={styles.emptySubtitle}>
               {t("stack.emptySubtitle")}
