@@ -1,0 +1,56 @@
+{
+  "appName": "Herblore: Supplement & Health Guide",
+  "subtitle": "Stack Builder, Timing & Interactions",
+  "category": "Health & Fitness",
+  "ageRating": "4+",
+  "privacyPolicyUrl": "https://notwitcheer.github.io/Herblore/legal/privacy-policy.html",
+  "termsOfServiceUrl": "https://notwitcheer.github.io/Herblore/legal/terms-of-service.html",
+  "supportUrl": "mailto:support@herblore.app",
+  "locales": {
+    "en": {
+      "name": "Herblore: Supplement & Health Guide",
+      "subtitle": "Stack Builder, Timing & Interactions",
+      "keywords": "supplements,vitamins,herbs,health,stack,timing,interactions,wellness,adaptogens,superfoods,dosage,evidence,natural,holistic,schedule",
+      "description": "Your personal supplement encyclopedia and stack optimizer.\n\nHerblore helps you build the perfect supplement stack with evidence-based information, smart interaction checking, and optimized daily timing.\n\n--- WHAT YOU GET ---\n\n• 200+ Supplement Cards — Vitamins, minerals, herbs, adaptogens, superfoods, and more. Each card includes dosage ranges, timing advice, benefits with evidence levels, and contraindications.\n\n• Smart Stack Builder — Build your personal supplement stack. Herblore automatically checks for interactions, synergies, and conflicts between everything in your stack.\n\n• Daily Timeline — Get an optimized daily schedule that tells you exactly what to take and when, based on absorption science and your personal stack.\n\n• AI Wellness Coach — Ask questions about your supplements, timing, and interactions. Powered by AI with medical disclaimers on every response.\n\n• Evidence-Based — Every benefit is tagged with its evidence level: clinical trial, observational study, or traditional use. Real PubMed references included.\n\n• Goal-Based Discovery — Filter supplements by your health goals: Energy, Sleep, Focus, Immunity, Stress, Digestion, Skin, Longevity, Recovery, or Joint Health.\n\n--- IMPORTANT ---\n\nHerblore is an educational wellness reference. It does not diagnose, treat, cure, or prevent any disease. Always consult a healthcare provider before starting any supplement.\n\nSubscription options:\n• Weekly: $4.99/week (3-day free trial)\n• Yearly: $29.99/year (3-day free trial)\n\nPayment is charged to your Apple ID account. Subscriptions automatically renew unless cancelled at least 24 hours before the end of the current period.",
+      "whatsNew": "Initial release! Browse 200+ evidence-based supplement cards, build your personal stack, get optimized daily timing, and check interactions.",
+      "promotionalText": "Build your perfect supplement stack with evidence-based information and smart interaction checking."
+    },
+    "fr": {
+      "name": "Herblore : Guide Suppléments & Santé",
+      "subtitle": "Stack Builder, Timing & Interactions",
+      "keywords": "suppléments,vitamines,herbes,santé,stack,timing,interactions,bien-être,adaptogènes,superaliments,dosage,naturel,holistique",
+      "description": "Votre encyclopédie personnelle de suppléments et optimiseur de stack.\n\nHerblore vous aide à construire le stack de suppléments parfait avec des informations basées sur la science, une vérification intelligente des interactions et un timing quotidien optimisé.\n\n--- CE QUE VOUS OBTENEZ ---\n\n• 200+ Fiches Suppléments — Vitamines, minéraux, herbes, adaptogènes, superaliments et plus. Chaque fiche inclut les dosages, conseils de timing, bienfaits avec niveaux de preuve et contre-indications.\n\n• Constructeur de Stack Intelligent — Créez votre stack personnel. Herblore vérifie automatiquement les interactions, synergies et conflits.\n\n• Planning Quotidien — Un programme quotidien optimisé qui vous dit exactement quoi prendre et quand.\n\n• Coach IA — Posez vos questions sur vos suppléments, le timing et les interactions.\n\n--- IMPORTANT ---\n\nHerblore est une référence éducative. Il ne diagnostique, traite, guérit ou prévient aucune maladie. Consultez toujours un professionnel de santé.",
+      "whatsNew": "Première version ! Parcourez 200+ fiches de suppléments, construisez votre stack et obtenez un timing quotidien optimisé.",
+      "promotionalText": "Construisez votre stack de suppléments parfait avec des informations basées sur la science."
+    },
+    "it": {
+      "name": "Herblore: Guida Integratori & Salute",
+      "subtitle": "Stack Builder, Tempi & Interazioni",
+      "keywords": "integratori,vitamine,erbe,salute,stack,timing,interazioni,benessere,adattogeni,superfood,dosaggio,naturale,olistico",
+      "description": "La tua enciclopedia personale di integratori e ottimizzatore di stack.\n\nHerblore ti aiuta a costruire lo stack di integratori perfetto con informazioni basate sulle evidenze, controllo intelligente delle interazioni e tempistiche giornaliere ottimizzate.\n\n--- COSA OTTIENI ---\n\n• 200+ Schede Integratori — Vitamine, minerali, erbe, adattogeni, superfood e altro. Ogni scheda include dosaggi, consigli sui tempi, benefici con livelli di evidenza e controindicazioni.\n\n• Costruttore di Stack Intelligente — Crea il tuo stack personale. Herblore controlla automaticamente interazioni, sinergie e conflitti.\n\n• Programma Giornaliero — Un programma ottimizzato che ti dice esattamente cosa prendere e quando.\n\n• Coach IA — Fai domande sui tuoi integratori, tempistiche e interazioni.\n\n--- IMPORTANTE ---\n\nHerblore è un riferimento educativo. Non diagnostica, tratta, cura o previene alcuna malattia. Consulta sempre un professionista sanitario.",
+      "whatsNew": "Prima versione! Sfoglia 200+ schede di integratori, costruisci il tuo stack e ottieni tempistiche giornaliere ottimizzate.",
+      "promotionalText": "Costruisci il tuo stack di integratori perfetto con informazioni basate sulle evidenze."
+    }
+  },
+  "privacyNutritionLabels": {
+    "dataUsedToTrackYou": [],
+    "dataLinkedToYou": [
+      "Health & Fitness Data (supplement stack, health goals)",
+      "Identifiers (Apple user ID)",
+      "Usage Data (app interactions)",
+      "Purchases (subscription status)"
+    ],
+    "dataNotLinkedToYou": []
+  },
+  "screenshots": {
+    "note": "6 screenshots per locale (EN/FR/IT) for iPhone 6.7\" and 6.1\" displays",
+    "screens": [
+      "Library with category filters",
+      "Aliment detail card (e.g. Ashwagandha)",
+      "Stack with interaction warnings",
+      "Daily Timeline with progress",
+      "AI Coach conversation",
+      "Onboarding goals selection"
+    ]
+  }
+}
