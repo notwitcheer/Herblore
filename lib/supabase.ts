@@ -10,6 +10,16 @@ const ExpoSecureStoreAdapter = {
   removeItem: (key: string) => SecureStore.deleteItemAsync(key),
 };
 
+const notConfigured = { data: null, error: { message: "Supabase not configured" } };
+
+function createStubClient(): SupabaseClient {
+  const handler: ProxyHandler<any> = {
+    get: () =>
+      new Proxy(() => Promise.resolve(notConfigured), { get: handler.get! }),
+  };
+  return new Proxy({} as SupabaseClient, handler);
+}
+
 export const supabase: SupabaseClient = supabaseUrl
   ? createClient(supabaseUrl, supabaseAnonKey, {
       auth: {
@@ -19,6 +29,4 @@ export const supabase: SupabaseClient = supabaseUrl
         detectSessionInUrl: false,
       },
     })
-  : (new Proxy({} as SupabaseClient, {
-      get: () => () => ({ data: null, error: { message: "Supabase not configured" } }),
-    }));
+  : createStubClient();

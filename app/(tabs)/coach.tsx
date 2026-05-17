@@ -49,10 +49,6 @@ export default function CoachScreen() {
     setLoading(true);
 
     try {
-      const {
-        data: { session },
-      } = await supabase.auth.getSession();
-
       const res = await supabase.functions.invoke("ai-coach", {
         body: { message: text },
       });
