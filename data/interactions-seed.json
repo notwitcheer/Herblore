@@ -289,5 +289,171 @@
       "fr": "Le sureau et la vitamine C soutiennent tous deux la fonction immunitaire par des mécanismes différents. Une combinaison classique de soutien immunitaire pendant la saison des rhumes et grippes.",
       "it": "Il sambuco e la vitamina C supportano entrambi la funzione immunitaria attraverso meccanismi diversi. Una combinazione classica di supporto immunitario durante la stagione di raffreddori e influenze."
     }
+  },
+  {
+    "aliment_a": "vitamin-k2",
+    "aliment_b": "vitamin-d3",
+    "type": "synergy",
+    "severity": "info",
+    "description": {
+      "en": "Vitamin K2 directs calcium to bones and teeth, preventing arterial calcification. Essential partner for high-dose vitamin D3 supplementation.",
+      "fr": "La vitamine K2 dirige le calcium vers les os et les dents, prévenant la calcification artérielle. Partenaire essentiel pour la supplémentation en vitamine D3 à haute dose.",
+      "it": "La vitamina K2 dirige il calcio verso ossa e denti, prevenendo la calcificazione arteriosa. Partner essenziale per l'integrazione di vitamina D3 ad alto dosaggio."
+    }
+  },
+  {
+    "aliment_a": "green-tea-egcg",
+    "aliment_b": "iron-bisglycinate",
+    "type": "timing_separation",
+    "severity": "warning",
+    "separationHours": 2,
+    "description": {
+      "en": "EGCG in green tea chelates iron, reducing its absorption by up to 60%. Take iron supplements at least 2 hours apart from green tea.",
+      "fr": "L'EGCG du thé vert chélate le fer, réduisant son absorption jusqu'à 60%. Prendre les suppléments de fer à au moins 2 heures du thé vert.",
+      "it": "L'EGCG del tè verde chela il ferro, riducendo il suo assorbimento fino al 60%. Assumere gli integratori di ferro almeno 2 ore lontano dal tè verde."
+    }
+  },
+  {
+    "aliment_a": "valerian-root",
+    "aliment_b": "melatonin",
+    "type": "synergy",
+    "severity": "info",
+    "description": {
+      "en": "Valerian (GABA modulation) + melatonin (circadian signaling) address different aspects of sleep onset. Together they may reduce time to fall asleep more than either alone.",
+      "fr": "La valériane (modulation GABA) + mélatonine (signal circadien) adressent différents aspects de l'endormissement. Ensemble, ils peuvent réduire le temps d'endormissement plus que séparément.",
+      "it": "La valeriana (modulazione GABA) + melatonina (segnale circadiano) affrontano diversi aspetti dell'addormentamento. Insieme possono ridurre il tempo per addormentarsi più di ciascuno singolarmente."
+    }
+  },
+  {
+    "aliment_a": "alpha-lipoic-acid",
+    "aliment_b": "coenzyme-q10",
+    "type": "synergy",
+    "severity": "info",
+    "description": {
+      "en": "Both are mitochondrial antioxidants. ALA regenerates CoQ10's reduced form (ubiquinol), extending its protective effects in the electron transport chain.",
+      "fr": "Les deux sont des antioxydants mitochondriaux. L'ALA régénère la forme réduite du CoQ10 (ubiquinol), prolongeant ses effets protecteurs dans la chaîne de transport d'électrons.",
+      "it": "Entrambi sono antiossidanti mitocondriali. L'ALA rigenera la forma ridotta del CoQ10 (ubiquinolo), prolungando i suoi effetti protettivi nella catena di trasporto degli elettroni."
+    }
+  },
+  {
+    "aliment_a": "nmn",
+    "aliment_b": "resveratrol",
+    "type": "synergy",
+    "severity": "info",
+    "description": {
+      "en": "NMN raises NAD+ levels while resveratrol activates sirtuins that consume NAD+. Together they fuel and activate the longevity pathway simultaneously.",
+      "fr": "Le NMN élève les niveaux de NAD+ tandis que le resvératrol active les sirtuines qui consomment le NAD+. Ensemble, ils alimentent et activent la voie de la longévité simultanément.",
+      "it": "Il NMN alza i livelli di NAD+ mentre il resveratrolo attiva le sirtuine che consumano NAD+. Insieme alimentano e attivano simultaneamente il percorso della longevità."
+    }
+  },
+  {
+    "aliment_a": "glycine",
+    "aliment_b": "magnesium-glycinate",
+    "type": "synergy",
+    "severity": "info",
+    "description": {
+      "en": "Both glycine and magnesium promote relaxation and sleep quality. Magnesium glycinate already contains glycine — supplementing extra glycine (3g) before bed amplifies the calming effect.",
+      "fr": "La glycine et le magnésium favorisent tous deux la relaxation et la qualité du sommeil. Le glycinate de magnésium contient déjà de la glycine — supplémenter en glycine extra (3g) avant le coucher amplifie l'effet calmant.",
+      "it": "Sia la glicina che il magnesio promuovono il rilassamento e la qualità del sonno. Il glicinato di magnesio contiene già glicina — integrare glicina extra (3g) prima di dormire amplifica l'effetto calmante."
+    }
+  },
+  {
+    "aliment_a": "holy-basil-tulsi",
+    "aliment_b_name": "Blood sugar medications",
+    "type": "conflict",
+    "severity": "warning",
+    "description": {
+      "en": "Holy basil may lower blood sugar levels. Combining with diabetes medications may cause hypoglycemia. Monitor blood glucose closely and consult your doctor.",
+      "fr": "Le basilic sacré peut abaisser la glycémie. En combinaison avec des médicaments antidiabétiques, il peut causer une hypoglycémie. Surveiller la glycémie et consulter votre médecin.",
+      "it": "Il basilico sacro può abbassare i livelli di zucchero nel sangue. In combinazione con farmaci per il diabete può causare ipoglicemia. Monitorare la glicemia e consultare il medico."
+    }
+  },
+  {
+    "aliment_a": "krill-oil",
+    "aliment_b": "coenzyme-q10",
+    "type": "synergy",
+    "severity": "info",
+    "description": {
+      "en": "Krill oil's phospholipid form enhances absorption of fat-soluble compounds. CoQ10 taken with krill oil shows better bioavailability than with standard fish oil.",
+      "fr": "La forme phospholipidique de l'huile de krill améliore l'absorption des composés liposolubles. Le CoQ10 pris avec l'huile de krill montre une meilleure biodisponibilité qu'avec l'huile de poisson standard.",
+      "it": "La forma fosfolipidica dell'olio di krill migliora l'assorbimento dei composti liposolubili. Il CoQ10 assunto con olio di krill mostra una migliore biodisponibilità rispetto all'olio di pesce standard."
+    }
+  },
+  {
+    "aliment_a": "taurine",
+    "aliment_b": "magnesium-glycinate",
+    "type": "synergy",
+    "severity": "info",
+    "description": {
+      "en": "Taurine enhances magnesium retention in cells and both support cardiovascular function. Together they improve heart rhythm stability and reduce muscle cramps.",
+      "fr": "La taurine améliore la rétention du magnésium dans les cellules et tous deux soutiennent la fonction cardiovasculaire. Ensemble, ils améliorent la stabilité du rythme cardiaque et réduisent les crampes.",
+      "it": "La taurina migliora la ritenzione del magnesio nelle cellule ed entrambi supportano la funzione cardiovascolare. Insieme migliorano la stabilità del ritmo cardiaco e riducono i crampi."
+    }
+  },
+  {
+    "aliment_a": "echinacea",
+    "aliment_b_name": "Immunosuppressant medications",
+    "type": "conflict",
+    "severity": "danger",
+    "description": {
+      "en": "Echinacea stimulates immune function, which directly opposes immunosuppressant medications (cyclosporine, tacrolimus). Do not combine without medical supervision.",
+      "fr": "L'échinacée stimule la fonction immunitaire, ce qui s'oppose directement aux médicaments immunosuppresseurs (ciclosporine, tacrolimus). Ne pas combiner sans supervision médicale.",
+      "it": "L'echinacea stimola la funzione immunitaria, opponendosi direttamente ai farmaci immunosoppressori (ciclosporina, tacrolimus). Non combinare senza supervisione medica."
+    }
+  },
+  {
+    "aliment_a": "l-glutamine",
+    "aliment_b": "probiotics-lactobacillus",
+    "type": "synergy",
+    "severity": "info",
+    "description": {
+      "en": "L-Glutamine repairs intestinal lining while probiotics restore healthy gut flora. Together they provide comprehensive gut restoration support.",
+      "fr": "La L-Glutamine répare la muqueuse intestinale tandis que les probiotiques restaurent la flore intestinale saine. Ensemble, ils offrent un soutien complet à la restauration intestinale.",
+      "it": "La L-Glutamina ripara il rivestimento intestinale mentre i probiotici ripristinano la flora intestinale sana. Insieme forniscono un supporto completo alla restaurazione intestinale."
+    }
+  },
+  {
+    "aliment_a": "pqq",
+    "aliment_b": "coenzyme-q10",
+    "type": "synergy",
+    "severity": "info",
+    "description": {
+      "en": "PQQ stimulates mitochondrial biogenesis (new mitochondria) while CoQ10 optimizes existing mitochondrial function. A powerful cellular energy stack.",
+      "fr": "Le PQQ stimule la biogenèse mitochondriale (nouvelles mitochondries) tandis que le CoQ10 optimise la fonction mitochondriale existante. Un puissant stack d'énergie cellulaire.",
+      "it": "Il PQQ stimola la biogenesi mitocondriale (nuovi mitocondri) mentre il CoQ10 ottimizza la funzione mitocondriale esistente. Un potente stack di energia cellulare."
+    }
+  },
+  {
+    "aliment_a": "saw-palmetto",
+    "aliment_b_name": "Hormone therapies (finasteride, dutasteride)",
+    "type": "conflict",
+    "severity": "warning",
+    "description": {
+      "en": "Saw palmetto inhibits 5-alpha reductase similarly to finasteride. Combining may lead to excessive DHT suppression. Consult your urologist before combining.",
+      "fr": "Le palmier nain inhibe la 5-alpha réductase de manière similaire au finastéride. Combiner peut mener à une suppression excessive de la DHT. Consultez votre urologue avant de combiner.",
+      "it": "La serenoa repens inibisce la 5-alfa reduttasi in modo simile alla finasteride. Combinare può portare a una soppressione eccessiva del DHT. Consultare l'urologo prima di combinare."
+    }
+  },
+  {
+    "aliment_a": "spirulina",
+    "aliment_b": "vitamin-c",
+    "type": "synergy",
+    "severity": "info",
+    "description": {
+      "en": "Spirulina's plant-based iron is better absorbed with vitamin C. Also, both are potent antioxidants with complementary mechanisms for immune support.",
+      "fr": "Le fer végétal de la spiruline est mieux absorbé avec la vitamine C. De plus, les deux sont de puissants antioxydants avec des mécanismes complémentaires pour le soutien immunitaire.",
+      "it": "Il ferro vegetale della spirulina è meglio assorbito con la vitamina C. Inoltre, entrambi sono potenti antiossidanti con meccanismi complementari per il supporto immunitario."
+    }
+  },
+  {
+    "aliment_a": "chaga-mushroom",
+    "aliment_b_name": "Blood thinners (warfarin, aspirin)",
+    "type": "conflict",
+    "severity": "warning",
+    "description": {
+      "en": "Chaga contains compounds that may inhibit platelet aggregation. Combined with anticoagulants, this increases bleeding risk. Consult your doctor before use.",
+      "fr": "Le chaga contient des composés qui peuvent inhiber l'agrégation plaquettaire. Combiné avec des anticoagulants, cela augmente le risque de saignement. Consultez votre médecin.",
+      "it": "Il chaga contiene composti che possono inibire l'aggregazione piastrinica. Combinato con anticoagulanti, questo aumenta il rischio di sanguinamento. Consultare il medico."
+    }
   }
 ]

@@ -33,7 +33,7 @@ export default function CurrentStackScreen() {
         showsVerticalScrollIndicator={false}
       >
         <Animated.View entering={FadeIn.duration(600)} style={styles.header}>
-          <ProgressDots step={1} total={4} />
+          <ProgressDots step={2} total={5} />
 
           <Text style={styles.title}>{t("onboarding.stackTitle")}</Text>
           <Text style={styles.subtitle}>

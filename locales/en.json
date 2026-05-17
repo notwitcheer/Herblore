@@ -12,6 +12,7 @@
     "all": "All",
     "noResults": "No aliments found",
     "evidence": "Evidence",
+    "goal": "Goal",
     "benefits": "Benefits",
     "dosage": "Dosage",
     "timing": "Best Time",
@@ -138,6 +139,24 @@
     "conflict": "Conflict",
     "timing": "Timing",
     "hoursApart": "{{hours}}h apart"
+  },
+  "disclaimer": {
+    "title": "Before We Begin",
+    "body1": "Herblore is an educational wellness reference. The information provided is for general knowledge and is not medical advice.",
+    "body2": "Never replace professional medical guidance with information from this app. Always consult a qualified healthcare provider before starting any supplement.",
+    "body3": "If you are pregnant, nursing, taking medication, or have a medical condition, seek professional advice before use.",
+    "bullet1": "This app does not diagnose, treat, cure, or prevent any disease.",
+    "bullet2": "Supplement dosages are general guidelines from published research.",
+    "bullet3": "Individual responses may vary — what works for others may not work for you.",
+    "bullet4": "Interactions listed may not be exhaustive. Always inform your doctor.",
+    "accept": "I Understand & Accept",
+    "footerNote": "You can review this disclaimer anytime in Settings."
+  },
+  "gating": {
+    "locked": "Premium",
+    "upgradeTitle": "Unlock Full Access",
+    "upgradeBody": "Subscribe to access all 200+ supplement cards, stack builder, and daily timeline.",
+    "upgrade": "See Plans"
   },
   "common": {
     "cancel": "Cancel",

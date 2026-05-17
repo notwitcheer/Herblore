@@ -1,8 +1,24 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 import type { Aliment, UserStackItem } from "@/lib/types";
+import { storage } from "@/lib/storage";
 
 export function useStack() {
   const [items, setItems] = useState<UserStackItem[]>([]);
+  const [loaded, setLoaded] = useState(false);
+  const skipPersist = useRef(true);
+
+  useEffect(() => {
+    storage.getStack().then((saved) => {
+      if (saved.length > 0) setItems(saved);
+      setLoaded(true);
+      skipPersist.current = false;
+    });
+  }, []);
+
+  useEffect(() => {
+    if (skipPersist.current) return;
+    storage.setStack(items);
+  }, [items]);
 
   const addToStack = useCallback((aliment: Aliment, dosage?: number) => {
     setItems((prev) => {
@@ -58,5 +74,6 @@ export function useStack() {
     toggleActive,
     updateDosage,
     isInStack,
+    loaded,
   };
 }

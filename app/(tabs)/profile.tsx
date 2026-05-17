@@ -1,8 +1,12 @@
-import { View, Text, StyleSheet, Pressable, ScrollView } from "react-native";
+import { View, Text, StyleSheet, Pressable, ScrollView, Alert } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { useRouter } from "expo-router";
 import { useTranslation } from "react-i18next";
 import Animated, { FadeInDown } from "react-native-reanimated";
+import * as Haptics from "expo-haptics";
 import { colors, spacing, radii, typography } from "@/lib/constants";
+import { storage } from "@/lib/storage";
+import { useSubscription } from "@/lib/SubscriptionContext";
 import type { SupportedLocale } from "@/lib/types";
 
 const LANGUAGES: { code: SupportedLocale; label: string; flag: string }[] = [
@@ -40,12 +44,52 @@ function SettingsRow({
 
 export default function ProfileScreen() {
   const { t, i18n } = useTranslation();
+  const router = useRouter();
   const currentLang = LANGUAGES.find((l) => l.code === i18n.language);
+  const { isSubscribed } = useSubscription();
 
   const cycleLanguage = () => {
+    Haptics.selectionAsync();
     const idx = LANGUAGES.findIndex((l) => l.code === i18n.language);
     const next = LANGUAGES[(idx + 1) % LANGUAGES.length];
     i18n.changeLanguage(next.code);
+    storage.setLanguage(next.code);
+  };
+
+  const showDisclaimer = () => {
+    Alert.alert(
+      t("disclaimer.title"),
+      `${t("disclaimer.body1")}\n\n${t("disclaimer.body2")}\n\n${t("disclaimer.body3")}`,
+      [{ text: "OK" }],
+    );
+  };
+
+  const showPrivacy = () => {
+    Alert.alert(
+      t("profile.privacy"),
+      "Privacy Policy content will be available at launch. Your data is stored locally on your device and is never shared with third parties without your consent.",
+      [{ text: "OK" }],
+    );
+  };
+
+  const showTerms = () => {
+    Alert.alert(
+      t("profile.terms"),
+      "Terms of Service content will be available at launch. By using Herblore, you agree to use the app for educational purposes only.",
+      [{ text: "OK" }],
+    );
+  };
+
+  const handleManageSubscription = () => {
+    if (!isSubscribed) {
+      router.push("/onboarding/paywall");
+    } else {
+      Alert.alert(
+        t("profile.manage"),
+        "Subscription management will be available through the App Store.",
+        [{ text: "OK" }],
+      );
+    }
   };
 
   return (
@@ -75,14 +119,15 @@ export default function ProfileScreen() {
             <SettingsRow
               icon="💎"
               label={t("profile.manage")}
-              onPress={() => {}}
+              value={isSubscribed ? "Active" : "Free"}
+              onPress={handleManageSubscription}
               delay={200}
             />
             <View style={styles.rowDivider} />
             <SettingsRow
               icon="🔄"
               label={t("profile.restore")}
-              onPress={() => {}}
+              onPress={handleManageSubscription}
               delay={250}
             />
           </View>
@@ -94,21 +139,21 @@ export default function ProfileScreen() {
             <SettingsRow
               icon="⚕️"
               label={t("profile.disclaimer")}
-              onPress={() => {}}
+              onPress={showDisclaimer}
               delay={300}
             />
             <View style={styles.rowDivider} />
             <SettingsRow
               icon="🔒"
               label={t("profile.privacy")}
-              onPress={() => {}}
+              onPress={showPrivacy}
               delay={350}
             />
             <View style={styles.rowDivider} />
             <SettingsRow
               icon="📄"
               label={t("profile.terms")}
-              onPress={() => {}}
+              onPress={showTerms}
               delay={400}
             />
           </View>

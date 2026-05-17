@@ -8,6 +8,8 @@ import { colors, spacing, radii, typography, shadows, withAlpha } from "@/lib/co
 import { ProgressDots } from "@/components/ProgressDots";
 import { OrnamentDivider } from "@/components/OrnamentDivider";
 import { OwlMascot } from "@/components/icons";
+import { useOnboarding } from "@/lib/OnboardingContext";
+import { storage } from "@/lib/storage";
 
 type Plan = "weekly" | "yearly";
 
@@ -21,7 +23,19 @@ const FEATURE_KEYS = [
 export default function PaywallScreen() {
   const { t } = useTranslation();
   const router = useRouter();
+  const { completeOnboarding } = useOnboarding();
   const [selectedPlan, setSelectedPlan] = useState<Plan>("yearly");
+
+  const handleSubscribe = () => {
+    storage.setSubscribed(true);
+    completeOnboarding();
+    router.replace("/(tabs)/library");
+  };
+
+  const handleSkip = () => {
+    completeOnboarding();
+    router.replace("/(tabs)/library");
+  };
 
   return (
     <SafeAreaView style={styles.container}>
@@ -30,7 +44,7 @@ export default function PaywallScreen() {
         showsVerticalScrollIndicator={false}
       >
         <Animated.View entering={FadeIn.duration(600)} style={styles.header}>
-          <ProgressDots step={3} total={4} />
+          <ProgressDots step={4} total={5} />
 
           <OwlMascot pose="default" size={130} />
           <Text style={styles.title}>{t("paywall.title")}</Text>
@@ -103,9 +117,7 @@ export default function PaywallScreen() {
       >
         <Pressable
           style={styles.ctaButton}
-          onPress={() => {
-            router.replace("/(tabs)/library");
-          }}
+          onPress={handleSubscribe}
         >
           <Text style={styles.ctaText}>{t("paywall.subscribe")}</Text>
         </Pressable>
@@ -117,7 +129,7 @@ export default function PaywallScreen() {
                 : t("paywall.weeklyPrice"),
           })}
         </Text>
-        <Pressable onPress={() => router.replace("/(tabs)/library")}>
+        <Pressable onPress={handleSkip}>
           <Text style={styles.restoreText}>{t("paywall.restore")}</Text>
         </Pressable>
         <Text style={styles.legal}>{t("paywall.legal")}</Text>

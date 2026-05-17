@@ -12,6 +12,7 @@
     "all": "Tutto",
     "noResults": "Nessun alimento trovato",
     "evidence": "Evidenze",
+    "goal": "Obiettivo",
     "benefits": "Benefici",
     "dosage": "Dosaggio",
     "timing": "Momento migliore",
@@ -138,6 +139,24 @@
     "conflict": "Conflitto",
     "timing": "Tempistica",
     "hoursApart": "{{hours}}h di distanza"
+  },
+  "disclaimer": {
+    "title": "Prima di iniziare",
+    "body1": "Herblore è un riferimento educativo sul benessere. Le informazioni fornite sono a scopo informativo e non costituiscono un parere medico.",
+    "body2": "Non sostituire mai il parere medico professionale con le informazioni di questa app. Consulta sempre un professionista sanitario prima di assumere qualsiasi integratore.",
+    "body3": "Se sei incinta, stai allattando, assumi farmaci o hai una patologia, chiedi consiglio al tuo medico.",
+    "bullet1": "Questa app non diagnostica, tratta, cura o previene alcuna malattia.",
+    "bullet2": "I dosaggi sono linee guida generali dalla ricerca pubblicata.",
+    "bullet3": "Le risposte individuali variano — ciò che funziona per altri potrebbe non funzionare per te.",
+    "bullet4": "Le interazioni elencate potrebbero non essere esaustive. Informa sempre il tuo medico.",
+    "accept": "Comprendo e accetto",
+    "footerNote": "Puoi consultare questo avviso in qualsiasi momento nelle Impostazioni."
+  },
+  "gating": {
+    "locked": "Premium",
+    "upgradeTitle": "Accesso completo",
+    "upgradeBody": "Abbonati per accedere a tutte le 200+ schede di integratori, al costruttore di stack e al programma giornaliero.",
+    "upgrade": "Vedi piani"
   },
   "common": {
     "cancel": "Annulla",

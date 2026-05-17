@@ -1,6 +1,7 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import * as Localization from "expo-localization";
+import { storage } from "@/lib/storage";
 
 import en from "@/locales/en.json";
 import fr from "@/locales/fr.json";
@@ -15,6 +16,12 @@ i18n.use(initReactI18next).init({
   lng: supportedLngs.includes(deviceLocale) ? deviceLocale : fallbackLng,
   fallbackLng,
   interpolation: { escapeValue: false },
+});
+
+storage.getLanguage().then((saved) => {
+  if (saved && supportedLngs.includes(saved)) {
+    i18n.changeLanguage(saved);
+  }
 });
 
 export default i18n;

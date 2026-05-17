@@ -1,5 +1,6 @@
 import { View, Text, StyleSheet, ScrollView, Pressable } from "react-native";
 import Animated, { FadeInDown, FadeIn } from "react-native-reanimated";
+import * as Haptics from "expo-haptics";
 import { useTranslation } from "react-i18next";
 import {
   colors,
@@ -227,7 +228,10 @@ export function AlimentDetail({
           style={styles.ctaContainer}
         >
           <Pressable
-            onPress={onAddToStack}
+            onPress={() => {
+              Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+              onAddToStack();
+            }}
             style={[styles.ctaButton, isInStack && styles.ctaButtonInStack]}
             disabled={isInStack}
           >

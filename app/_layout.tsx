@@ -5,6 +5,8 @@ import { StatusBar } from "expo-status-bar";
 import * as SplashScreen from "expo-splash-screen";
 import { useFonts } from "expo-font";
 import { StackProvider } from "@/lib/StackContext";
+import { OnboardingProvider } from "@/lib/OnboardingContext";
+import { SubscriptionProvider } from "@/lib/SubscriptionContext";
 import "@/lib/i18n";
 
 LogBox.ignoreLogs(["Require cycle"]);
@@ -27,15 +29,19 @@ export default function RootLayout() {
   if (!fontsLoaded) return null;
 
   return (
-    <StackProvider>
-      <StatusBar style="light" />
-      <Stack screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="(tabs)" />
-        <Stack.Screen
-          name="onboarding"
-          options={{ gestureEnabled: false }}
-        />
-      </Stack>
-    </StackProvider>
+    <OnboardingProvider>
+      <SubscriptionProvider>
+        <StackProvider>
+          <StatusBar style="light" />
+          <Stack screenOptions={{ headerShown: false }}>
+            <Stack.Screen name="(tabs)" />
+            <Stack.Screen
+              name="onboarding"
+              options={{ gestureEnabled: false }}
+            />
+          </Stack>
+        </StackProvider>
+      </SubscriptionProvider>
+    </OnboardingProvider>
   );
 }

@@ -1,36 +1,57 @@
-import { useState, useMemo } from "react";
-import { View, Text, StyleSheet, ScrollView } from "react-native";
+import { useState, useMemo, useEffect, useCallback } from "react";
+import { View, Text, StyleSheet, ScrollView, ActivityIndicator } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useTranslation } from "react-i18next";
 import Animated, { FadeIn } from "react-native-reanimated";
+import * as Haptics from "expo-haptics";
 import { colors, spacing, typography } from "@/lib/constants";
 import { OwlMascot } from "@/components/icons";
 import { useStackContext } from "@/lib/StackContext";
 import { generateTimeline } from "@/lib/timeline-engine";
 import { TimelineBlock } from "@/components/TimelineBlock";
+import { storage } from "@/lib/storage";
 import type { TimeBlock as TimeBlockType } from "@/lib/types";
 
 export default function TimelineScreen() {
   const { t } = useTranslation();
-  const { items } = useStackContext();
+  const { items, loaded } = useStackContext();
   const [takenBlocks, setTakenBlocks] = useState<Set<TimeBlockType>>(new Set());
 
   const timeline = useMemo(() => generateTimeline(items), [items]);
 
-  const toggleBlock = (block: TimeBlockType) => {
+  useEffect(() => {
+    storage.getIntake().then(({ blocks }) => {
+      if (blocks.length > 0) setTakenBlocks(new Set(blocks as TimeBlockType[]));
+    });
+  }, []);
+
+  const toggleBlock = useCallback((block: TimeBlockType) => {
     setTakenBlocks((prev) => {
       const next = new Set(prev);
       if (next.has(block)) {
         next.delete(block);
       } else {
         next.add(block);
+        Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
       }
+      storage.setIntakeBlocks(Array.from(next));
       return next;
     });
-  };
+  }, []);
 
   const totalBlocks = timeline.length;
   const doneBlocks = timeline.filter((b) => takenBlocks.has(b.timeBlock)).length;
+
+  if (!loaded) {
+    return (
+      <SafeAreaView style={styles.container} edges={["top"]}>
+        <Text style={styles.title}>{t("timeline.title")}</Text>
+        <View style={styles.emptyState}>
+          <ActivityIndicator color={colors.accent} size="large" />
+        </View>
+      </SafeAreaView>
+    );
+  }
 
   if (timeline.length === 0) {
     return (

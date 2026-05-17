@@ -1,8 +1,9 @@
-import { View, Text, StyleSheet, FlatList, Pressable } from "react-native";
+import { View, Text, StyleSheet, FlatList, Pressable, ActivityIndicator } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useRouter } from "expo-router";
 import { useTranslation } from "react-i18next";
 import Animated, { FadeInDown, FadeIn } from "react-native-reanimated";
+import * as Haptics from "expo-haptics";
 import {
   colors,
   spacing,
@@ -27,11 +28,22 @@ export default function StackScreen() {
   const { t, i18n } = useTranslation();
   const locale = i18n.language as SupportedLocale;
   const router = useRouter();
-  const { items, removeFromStack, toggleActive } = useStackContext();
+  const { items, removeFromStack, toggleActive, loaded } = useStackContext();
 
   const interactions = checkStackInteractions(items);
   const synergies = getSynergies(interactions);
   const conflicts = getConflicts(interactions);
+
+  if (!loaded) {
+    return (
+      <SafeAreaView style={styles.container} edges={["top"]}>
+        <Text style={styles.title}>{t("stack.title")}</Text>
+        <View style={styles.emptyState}>
+          <ActivityIndicator color={colors.accent} size="large" />
+        </View>
+      </SafeAreaView>
+    );
+  }
 
   if (items.length === 0) {
     return (
@@ -150,7 +162,10 @@ export default function StackScreen() {
               <View style={styles.cardActions}>
                 <Pressable
                   style={styles.actionButton}
-                  onPress={() => toggleActive(item.aliment_id)}
+                  onPress={() => {
+                    Haptics.selectionAsync();
+                    toggleActive(item.aliment_id);
+                  }}
                 >
                   <Text style={styles.actionText}>
                     {item.is_active ? t("stack.pause") : t("stack.resume")}
@@ -158,7 +173,10 @@ export default function StackScreen() {
                 </Pressable>
                 <Pressable
                   style={[styles.actionButton, styles.removeButton]}
-                  onPress={() => removeFromStack(item.aliment_id)}
+                  onPress={() => {
+                    Haptics.notificationAsync(Haptics.NotificationFeedbackType.Warning);
+                    removeFromStack(item.aliment_id);
+                  }}
                 >
                   <Text style={styles.removeText}>{t("stack.remove")}</Text>
                 </Pressable>

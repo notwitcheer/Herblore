@@ -7,12 +7,14 @@ import Animated, { FadeInDown, FadeIn } from "react-native-reanimated";
 import { colors, spacing, radii, typography, GOALS, shadows } from "@/lib/constants";
 import { GoalChip } from "@/components/GoalChip";
 import { ProgressDots } from "@/components/ProgressDots";
+import { useOnboarding } from "@/lib/OnboardingContext";
 import type { GoalSlug } from "@/lib/types";
 
 export default function GoalsScreen() {
   const { t } = useTranslation();
   const router = useRouter();
-  const [selected, setSelected] = useState<GoalSlug[]>([]);
+  const { goals: savedGoals, setGoals } = useOnboarding();
+  const [selected, setSelected] = useState<GoalSlug[]>(savedGoals);
 
   const toggleGoal = (slug: GoalSlug) => {
     setSelected((prev) => {
@@ -22,11 +24,16 @@ export default function GoalsScreen() {
     });
   };
 
+  const handleNext = () => {
+    setGoals(selected);
+    router.push("/onboarding/current-stack");
+  };
+
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
         <Animated.View entering={FadeIn.duration(600)} style={styles.header}>
-          <ProgressDots step={0} total={4} />
+          <ProgressDots step={1} total={5} />
 
           <Text style={styles.title}>{t("onboarding.goalsTitle")}</Text>
           <Text style={styles.subtitle}>
@@ -60,7 +67,7 @@ export default function GoalsScreen() {
             styles.nextButton,
             selected.length === 0 && styles.nextButtonDisabled,
           ]}
-          onPress={() => router.push("/onboarding/current-stack")}
+          onPress={handleNext}
           disabled={selected.length === 0}
         >
           <Text style={[styles.nextButtonText, selected.length === 0 && styles.nextButtonTextDisabled]}>

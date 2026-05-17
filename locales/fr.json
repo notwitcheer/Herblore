@@ -12,6 +12,7 @@
     "all": "Tout",
     "noResults": "Aucun aliment trouvé",
     "evidence": "Preuves",
+    "goal": "Objectif",
     "benefits": "Bienfaits",
     "dosage": "Dosage",
     "timing": "Meilleur moment",
@@ -138,6 +139,24 @@
     "conflict": "Conflit",
     "timing": "Timing",
     "hoursApart": "{{hours}}h d'écart"
+  },
+  "disclaimer": {
+    "title": "Avant de commencer",
+    "body1": "Herblore est une référence éducative en bien-être. Les informations fournies sont à titre indicatif et ne constituent pas un avis médical.",
+    "body2": "Ne remplacez jamais un suivi médical professionnel par les informations de cette application. Consultez toujours un professionnel de santé avant de prendre un supplément.",
+    "body3": "Si vous êtes enceinte, allaitez, prenez des médicaments ou souffrez d'une pathologie, demandez l'avis d'un professionnel.",
+    "bullet1": "Cette application ne diagnostique, traite, guérit ou prévient aucune maladie.",
+    "bullet2": "Les dosages sont des recommandations générales issues de la recherche publiée.",
+    "bullet3": "Les réponses individuelles varient — ce qui fonctionne pour d'autres peut ne pas vous convenir.",
+    "bullet4": "Les interactions listées peuvent ne pas être exhaustives. Informez toujours votre médecin.",
+    "accept": "Je comprends et j'accepte",
+    "footerNote": "Vous pouvez consulter cet avertissement à tout moment dans les Réglages."
+  },
+  "gating": {
+    "locked": "Premium",
+    "upgradeTitle": "Accès complet",
+    "upgradeBody": "Abonnez-vous pour accéder aux 200+ fiches de suppléments, au constructeur de stack et au planning quotidien.",
+    "upgrade": "Voir les offres"
   },
   "common": {
     "cancel": "Annuler",

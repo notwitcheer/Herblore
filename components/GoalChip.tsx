@@ -5,6 +5,7 @@ import Animated, {
   withSpring,
 } from "react-native-reanimated";
 import { useTranslation } from "react-i18next";
+import * as Haptics from "expo-haptics";
 import { colors, spacing, radii, typography, springs } from "@/lib/constants";
 import type { GoalSlug } from "@/lib/types";
 
@@ -33,6 +34,7 @@ export function GoalChip({
   }));
 
   const handlePressIn = () => {
+    Haptics.selectionAsync();
     scale.value = withSpring(springs.scaleInStrong, springs.pressIn);
   };
 

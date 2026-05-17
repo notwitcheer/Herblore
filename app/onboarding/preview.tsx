@@ -49,7 +49,7 @@ export default function PreviewScreen() {
         showsVerticalScrollIndicator={false}
       >
         <Animated.View entering={FadeIn.duration(600)} style={styles.header}>
-          <ProgressDots step={2} total={4} />
+          <ProgressDots step={3} total={5} />
 
           <Text style={styles.title}>{t("onboarding.previewTitle")}</Text>
           <Text style={styles.subtitle}>
