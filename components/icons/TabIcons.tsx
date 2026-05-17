@@ -1,4 +1,4 @@
-import Svg, { Path, G, Circle, Rect } from "react-native-svg";
+import Svg, { Path, G, Circle, Rect, Line } from "react-native-svg";
 
 interface IconProps {
   size?: number;
@@ -76,6 +76,28 @@ export function CandleIcon({
         {/* Base plate */}
         <Path d="M7 20 L17 20" />
         <Path d="M8 20 C8 21, 9 21.5, 12 21.5 C15 21.5, 16 21, 16 20" />
+      </G>
+    </Svg>
+  );
+}
+
+export function ScrollIcon({
+  size = 24,
+  color = "#D4A847",
+  strokeWidth = 1.6,
+}: IconProps) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 24 24" fill="none">
+      <G stroke={color} strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round">
+        {/* Scroll body */}
+        <Path d="M8 4 C6 4, 5 5, 5 6 C5 7, 6 8, 8 8 L19 8 L19 18 C19 19, 18 20, 17 20 L6 20 C5 20, 4 19, 4 18 L4 6" />
+        {/* Top curl */}
+        <Path d="M8 4 L19 4 C20 4, 21 5, 21 6 C21 7, 20 8, 19 8" />
+        {/* Text lines */}
+        <Line x1={8} y1={12} x2={16} y2={12} strokeWidth={1} opacity={0.5} />
+        <Line x1={8} y1={15} x2={14} y2={15} strokeWidth={1} opacity={0.5} />
+        {/* Quill */}
+        <Path d="M13 18 L15 16 C15.5 15.5, 16.5 15.5, 17 16 L15 18 Z" strokeWidth={1} />
       </G>
     </Svg>
   );

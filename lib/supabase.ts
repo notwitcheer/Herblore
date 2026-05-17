@@ -1,4 +1,4 @@
-import { createClient } from "@supabase/supabase-js";
+import { createClient, type SupabaseClient } from "@supabase/supabase-js";
 import * as SecureStore from "expo-secure-store";
 
 const supabaseUrl = process.env.EXPO_PUBLIC_SUPABASE_URL ?? "";
@@ -10,11 +10,15 @@ const ExpoSecureStoreAdapter = {
   removeItem: (key: string) => SecureStore.deleteItemAsync(key),
 };
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
-  auth: {
-    storage: ExpoSecureStoreAdapter,
-    autoRefreshToken: true,
-    persistSession: true,
-    detectSessionInUrl: false,
-  },
-});
+export const supabase: SupabaseClient = supabaseUrl
+  ? createClient(supabaseUrl, supabaseAnonKey, {
+      auth: {
+        storage: ExpoSecureStoreAdapter,
+        autoRefreshToken: true,
+        persistSession: true,
+        detectSessionInUrl: false,
+      },
+    })
+  : (new Proxy({} as SupabaseClient, {
+      get: () => () => ({ data: null, error: { message: "Supabase not configured" } }),
+    }));

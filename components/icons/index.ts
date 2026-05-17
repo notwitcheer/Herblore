@@ -4,6 +4,7 @@ export {
   GrimoireIcon,
   FlaskIcon,
   CandleIcon,
+  ScrollIcon,
   CrystalBallIcon,
 } from "./TabIcons";
 export {

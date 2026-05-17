@@ -3,6 +3,7 @@
     "library": "Libreria",
     "stack": "Il Mio Stack",
     "timeline": "Programma",
+    "coach": "Coach",
     "profile": "Profilo"
   },
   "library": {
@@ -157,6 +158,17 @@
     "upgradeTitle": "Accesso completo",
     "upgradeBody": "Abbonati per accedere a tutte le 200+ schede di integratori, al costruttore di stack e al programma giornaliero.",
     "upgrade": "Vedi piani"
+  },
+  "coach": {
+    "title": "Coach IA",
+    "welcomeTitle": "Il Tuo Coach Benessere",
+    "welcomeSubtitle": "Chiedimi qualsiasi cosa su integratori, tempistiche, interazioni o il tuo stack.",
+    "placeholder": "Chiedi del tuo stack...",
+    "disclaimer": "⚕️ Informazione educativa. Consulta sempre un professionista sanitario.",
+    "limitNote": "{{limit}} domande/giorno",
+    "gatedTitle": "Funzionalità Premium",
+    "gatedSubtitle": "Abbonati per accedere al tuo coach benessere IA personale.",
+    "error": "Si è verificato un errore. Riprova."
   },
   "common": {
     "cancel": "Annulla",

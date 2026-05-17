@@ -5,6 +5,7 @@ import {
   GrimoireIcon,
   FlaskIcon,
   CandleIcon,
+  ScrollIcon,
   CrystalBallIcon,
 } from "@/components/icons";
 
@@ -48,6 +49,13 @@ export default function TabLayout() {
         options={{
           title: t("tabs.timeline"),
           tabBarIcon: ({ color }) => <CandleIcon color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="coach"
+        options={{
+          title: t("tabs.coach"),
+          tabBarIcon: ({ color }) => <ScrollIcon color={color} />,
         }}
       />
       <Tabs.Screen

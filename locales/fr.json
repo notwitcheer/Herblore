@@ -3,6 +3,7 @@
     "library": "Bibliothèque",
     "stack": "Mon Stack",
     "timeline": "Planning",
+    "coach": "Coach",
     "profile": "Profil"
   },
   "library": {
@@ -157,6 +158,17 @@
     "upgradeTitle": "Accès complet",
     "upgradeBody": "Abonnez-vous pour accéder aux 200+ fiches de suppléments, au constructeur de stack et au planning quotidien.",
     "upgrade": "Voir les offres"
+  },
+  "coach": {
+    "title": "Coach IA",
+    "welcomeTitle": "Votre Coach Bien-être",
+    "welcomeSubtitle": "Posez-moi vos questions sur les suppléments, le timing, les interactions ou votre stack.",
+    "placeholder": "Posez une question sur votre stack...",
+    "disclaimer": "⚕️ Information éducative uniquement. Consultez toujours un professionnel de santé.",
+    "limitNote": "{{limit}} questions/jour",
+    "gatedTitle": "Fonctionnalité Premium",
+    "gatedSubtitle": "Abonnez-vous pour accéder à votre coach bien-être IA personnel.",
+    "error": "Une erreur s'est produite. Veuillez réessayer."
   },
   "common": {
     "cancel": "Annuler",

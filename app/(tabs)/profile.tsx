@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Pressable, ScrollView, Alert } from "react-native";
+import { View, Text, StyleSheet, Pressable, ScrollView, Alert, Linking } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useRouter } from "expo-router";
 import { useTranslation } from "react-i18next";
@@ -8,6 +8,9 @@ import { colors, spacing, radii, typography } from "@/lib/constants";
 import { storage } from "@/lib/storage";
 import { useSubscription } from "@/lib/SubscriptionContext";
 import type { SupportedLocale } from "@/lib/types";
+
+const PRIVACY_URL = "https://notwitcheer.github.io/Herblore/legal/privacy-policy.html";
+const TERMS_URL = "https://notwitcheer.github.io/Herblore/legal/terms-of-service.html";
 
 const LANGUAGES: { code: SupportedLocale; label: string; flag: string }[] = [
   { code: "en", label: "English", flag: "🇬🇧" },
@@ -65,30 +68,18 @@ export default function ProfileScreen() {
   };
 
   const showPrivacy = () => {
-    Alert.alert(
-      t("profile.privacy"),
-      "Privacy Policy content will be available at launch. Your data is stored locally on your device and is never shared with third parties without your consent.",
-      [{ text: "OK" }],
-    );
+    Linking.openURL(PRIVACY_URL);
   };
 
   const showTerms = () => {
-    Alert.alert(
-      t("profile.terms"),
-      "Terms of Service content will be available at launch. By using Herblore, you agree to use the app for educational purposes only.",
-      [{ text: "OK" }],
-    );
+    Linking.openURL(TERMS_URL);
   };
 
   const handleManageSubscription = () => {
     if (!isSubscribed) {
       router.push("/onboarding/paywall");
     } else {
-      Alert.alert(
-        t("profile.manage"),
-        "Subscription management will be available through the App Store.",
-        [{ text: "OK" }],
-      );
+      Linking.openURL("https://apps.apple.com/account/subscriptions");
     }
   };
 

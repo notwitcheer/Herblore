@@ -3,6 +3,7 @@
     "library": "Library",
     "stack": "My Stack",
     "timeline": "Timeline",
+    "coach": "Coach",
     "profile": "Profile"
   },
   "library": {
@@ -157,6 +158,17 @@
     "upgradeTitle": "Unlock Full Access",
     "upgradeBody": "Subscribe to access all 200+ supplement cards, stack builder, and daily timeline.",
     "upgrade": "See Plans"
+  },
+  "coach": {
+    "title": "AI Coach",
+    "welcomeTitle": "Your Wellness Coach",
+    "welcomeSubtitle": "Ask me anything about supplements, timing, interactions, or your stack.",
+    "placeholder": "Ask about your stack...",
+    "disclaimer": "⚕️ Educational information only. Always consult a healthcare professional.",
+    "limitNote": "{{limit}} questions/day",
+    "gatedTitle": "Premium Feature",
+    "gatedSubtitle": "Subscribe to access your personal AI wellness coach.",
+    "error": "Something went wrong. Please try again."
   },
   "common": {
     "cancel": "Cancel",
