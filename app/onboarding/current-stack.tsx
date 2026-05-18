@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import { View, Text, StyleSheet, Pressable, ScrollView, Dimensions } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useRouter } from "expo-router";
@@ -12,11 +13,10 @@ import {
   withAlpha,
 } from "@/lib/constants";
 import { localizedField, type SupportedLocale } from "@/lib/types";
-import { MOCK_ALIMENTS } from "@/lib/mock-data";
+import { useAliments } from "@/hooks/useAliments";
 import { useStackContext } from "@/lib/StackContext";
 import { ProgressDots } from "@/components/ProgressDots";
 
-const popularAliments = MOCK_ALIMENTS.filter((a) => a.is_popular);
 const CARD_WIDTH = (Dimensions.get("window").width - spacing.lg * 2 - spacing.sm) / 2;
 
 export default function CurrentStackScreen() {
@@ -24,6 +24,12 @@ export default function CurrentStackScreen() {
   const locale = i18n.language as SupportedLocale;
   const router = useRouter();
   const { addToStack, removeFromStack, isInStack } = useStackContext();
+  const { aliments } = useAliments();
+
+  const popularAliments = useMemo(
+    () => aliments.filter((a) => a.is_popular),
+    [aliments],
+  );
 
   return (
     <SafeAreaView style={styles.container}>

@@ -3,7 +3,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { useTranslation } from "react-i18next";
 import { colors, spacing, typography } from "@/lib/constants";
-import { MOCK_ALIMENTS } from "@/lib/mock-data";
+import { useAliments } from "@/hooks/useAliments";
 import { useStackContext } from "@/lib/StackContext";
 import { AlimentDetail } from "@/components/AlimentDetail";
 
@@ -12,8 +12,9 @@ export default function AlimentDetailScreen() {
   const router = useRouter();
   const { t } = useTranslation();
   const { addToStack, isInStack } = useStackContext();
+  const { aliments } = useAliments();
 
-  const aliment = MOCK_ALIMENTS.find((a) => a.slug === slug);
+  const aliment = aliments.find((a) => a.slug === slug);
 
   if (!aliment) {
     return (

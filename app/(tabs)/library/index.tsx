@@ -13,7 +13,7 @@ import { useTranslation } from "react-i18next";
 import * as Haptics from "expo-haptics";
 import { colors, spacing, radii, typography } from "@/lib/constants";
 import { localizedField, type SupportedLocale, type EvidenceLevel, type GoalSlug } from "@/lib/types";
-import { MOCK_ALIMENTS } from "@/lib/mock-data";
+import { useAliments } from "@/hooks/useAliments";
 import { AlimentCard } from "@/components/AlimentCard";
 import { SearchBar } from "@/components/ui/SearchBar";
 import { useSubscription, FREE_LIBRARY_LIMIT } from "@/lib/SubscriptionContext";
@@ -64,6 +64,8 @@ export default function LibraryScreen() {
   const { isSubscribed } = useSubscription();
   const { goals: userGoals } = useOnboarding();
 
+  const { aliments } = useAliments();
+
   const [search, setSearch] = useState("");
   const [categoryFilter, setCategoryFilter] = useState("all");
   const [evidenceFilter, setEvidenceFilter] = useState<"all" | EvidenceLevel>("all");
@@ -79,7 +81,7 @@ export default function LibraryScreen() {
   );
 
   const filtered = useMemo(() => {
-    let results = [...MOCK_ALIMENTS];
+    let results = [...aliments];
 
     if (userGoals.length > 0) {
       results.sort((a, b) => {
@@ -124,7 +126,7 @@ export default function LibraryScreen() {
     }
 
     return results;
-  }, [search, categoryFilter, evidenceFilter, goalFilter, locale, userGoals]);
+  }, [aliments, search, categoryFilter, evidenceFilter, goalFilter, locale, userGoals]);
 
   const handleCardPress = useCallback(
     (slug: string, index: number) => {

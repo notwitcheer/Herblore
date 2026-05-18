@@ -12,7 +12,6 @@ import {
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useTranslation } from "react-i18next";
-import Animated, { FadeIn, FadeInDown } from "react-native-reanimated";
 import * as Haptics from "expo-haptics";
 import { colors, spacing, radii, typography } from "@/lib/constants";
 import { OwlMascot } from "@/components/icons";
@@ -79,11 +78,11 @@ export default function CoachScreen() {
       <SafeAreaView style={styles.container} edges={["top"]}>
         <Text style={styles.title}>{t("coach.title")}</Text>
         <View style={styles.gatedState}>
-          <Animated.View entering={FadeIn.duration(600)} style={styles.gatedContent}>
+          <View style={styles.gatedContent}>
             <OwlMascot pose="reading" size={140} />
             <Text style={styles.gatedTitle}>{t("coach.gatedTitle")}</Text>
             <Text style={styles.gatedSubtitle}>{t("coach.gatedSubtitle")}</Text>
-          </Animated.View>
+          </View>
         </View>
       </SafeAreaView>
     );
@@ -100,14 +99,14 @@ export default function CoachScreen() {
       >
         {messages.length === 0 ? (
           <View style={styles.emptyState}>
-            <Animated.View entering={FadeIn.duration(600)} style={styles.emptyContent}>
+            <View style={styles.emptyContent}>
               <OwlMascot pose="default" size={120} />
               <Text style={styles.emptyTitle}>{t("coach.welcomeTitle")}</Text>
               <Text style={styles.emptySubtitle}>
                 {t("coach.welcomeSubtitle")}
               </Text>
               <Text style={styles.disclaimer}>{t("coach.disclaimer")}</Text>
-            </Animated.View>
+            </View>
           </View>
         ) : (
           <FlatList
@@ -119,9 +118,8 @@ export default function CoachScreen() {
             onContentSizeChange={() =>
               flatListRef.current?.scrollToEnd({ animated: true })
             }
-            renderItem={({ item, index }) => (
-              <Animated.View
-                entering={FadeInDown.delay(50).duration(300).springify()}
+            renderItem={({ item }) => (
+              <View
                 style={[
                   styles.bubble,
                   item.role === "user" ? styles.userBubble : styles.assistantBubble,
@@ -137,7 +135,7 @@ export default function CoachScreen() {
                 >
                   {item.content}
                 </Text>
-              </Animated.View>
+              </View>
             )}
           />
         )}
